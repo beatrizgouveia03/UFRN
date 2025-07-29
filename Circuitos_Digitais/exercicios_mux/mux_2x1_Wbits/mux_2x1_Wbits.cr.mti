@@ -1,0 +1,18 @@
+/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/structural.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/structural.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture structural of mux_2x1_Wbits
+-- Loading entity mux_2x1_Wbits
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/behavior.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/behavior.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture behavior of mux_2x1_Wbits
+-- Loading entity mux_2x1_Wbits
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity mux_2x1_Wbits
+
+} {} {}}

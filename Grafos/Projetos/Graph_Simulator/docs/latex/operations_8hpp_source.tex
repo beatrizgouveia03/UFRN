@@ -1,0 +1,169 @@
+\doxysection{operations.\+hpp}
+\hypertarget{operations_8hpp_source}{}\label{operations_8hpp_source}\index{include/operations.hpp@{include/operations.hpp}}
+\mbox{\hyperlink{operations_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OPERATIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OPERATIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }std::map;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }std::vector;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }std::stack;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ }std::cin;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }std::cout;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }std::endl;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ }std::istringstream;}
+\DoxyCodeLine{00027\ \textcolor{keyword}{using\ }std::left;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }std::ostream;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }std::setfill;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{using\ }std::setw;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph_8hpp}{graph.hpp}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{digraph_8hpp}{digraph.hpp}}"{}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesml}{sml}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsml_1_1SearchResult}{SearchResult}}}
+\DoxyCodeLine{00038\ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structsml_1_1SearchResult_a7232a22d3425dba45d0896a07b9b21e5}{numNodes}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structsml_1_1SearchResult_a787da5540c6317900a89da06f4d1f864}{initialNode}};}
+\DoxyCodeLine{00041\ \ \ \ \ vector<int>\ \mbox{\hyperlink{structsml_1_1SearchResult_ad7ab84aec1673e5e69f8478562304ea8}{predecessors}};}
+\DoxyCodeLine{00042\ \ \ \ \ vector<bool>\ \mbox{\hyperlink{structsml_1_1SearchResult_aa6f8854b596722b1b4d58ecd1d71a72b}{visited}};}
+\DoxyCodeLine{00043\ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{structsml_1_1SearchResult_a27c6c3ea945602b66ad901c115884172}{backEdges}};}
+\DoxyCodeLine{00044\ \ \ \ \ map<int,\ string>\ \mbox{\hyperlink{structsml_1_1SearchResult_a8f791c15b87c6d8f3ae32d6ff631a655}{dictionary}};}
+\DoxyCodeLine{00045\ \ \ \ \ vector<int>\ \mbox{\hyperlink{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a}{lowpt}};}
+\DoxyCodeLine{00046\ \ \ \ \ vector<bool>\ \mbox{\hyperlink{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349}{demarcators}};}
+\DoxyCodeLine{00047\ \ \ \ \ vector<bool>\ \mbox{\hyperlink{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604}{articulations}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{friend}\ ostream\ \&\mbox{\hyperlink{structsml_1_1SearchResult_a423587a5300b974efed36ceef9b970fe}{operator<<}}(ostream\ \&os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structsml_1_1SearchResult}{SearchResult}}\ \&result)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ map<int,\ string>\ dic\ =\ result.\mbox{\hyperlink{structsml_1_1SearchResult_a8f791c15b87c6d8f3ae32d6ff631a655}{dictionary}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numOfSeparator\ =\ 60;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ os\ <<\ left;\ \textcolor{comment}{//\ Align\ to\ the\ left}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ header}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ os\ <<\ setw(15)\ <<\ \textcolor{stringliteral}{"{}Node"{}}\ <<\ setw(15)\ <<\ \textcolor{stringliteral}{"{}Visited"{}}\ <<\ setw(15)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}Predecessor"{}}\ <<\ setw(15);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a}{lowpt}}.empty())}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Lowpt"{}}\ <<\ setw(15);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ numOfSeparator\ +=\ 15;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349}{demarcators}}.empty())}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Demarcators"{}}\ <<\ setw(15);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ numOfSeparator\ +=\ 15;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604}{articulations}}.empty())}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Articulations"{}}\ <<\ setw(15);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ numOfSeparator\ +=\ 15;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ os\ <<\ \textcolor{stringliteral}{"{}Backedges"{}}\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ separator}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ os\ <<\ setfill(\textcolor{charliteral}{'-\/'})\ <<\ setw(numOfSeparator)\ <<\ \textcolor{stringliteral}{"{}"{}}\ <<\ setfill(\textcolor{charliteral}{'\ '})\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ each\ node's\ information}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ result.\mbox{\hyperlink{structsml_1_1SearchResult_a7232a22d3425dba45d0896a07b9b21e5}{numNodes}};\ ++i)}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ os\ <<\ setw(15)\ <<\ dic[i\ -\/\ 1]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Node\ number}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ <<\ setw(15)\ <<\ result.\mbox{\hyperlink{structsml_1_1SearchResult_aa6f8854b596722b1b4d58ecd1d71a72b}{visited}}[i]\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Visited\ status}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ <<\ setw(15)\ <<\ dic[result.\mbox{\hyperlink{structsml_1_1SearchResult_ad7ab84aec1673e5e69f8478562304ea8}{predecessors}}[i]\ -\/\ 1];\ \textcolor{comment}{//\ Predecessor}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a}{lowpt}}.empty())}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ os\ <<\ setw(15)\ <<\ result.\mbox{\hyperlink{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a}{lowpt}}[i];}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349}{demarcators}}.empty())}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ os\ <<\ setw(15)\ <<\ result.\mbox{\hyperlink{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349}{demarcators}}[i];}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604}{articulations}}.empty())}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ os\ <<\ setw(15)\ <<\ result.\mbox{\hyperlink{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604}{articulations}}[i];}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!result.\mbox{\hyperlink{structsml_1_1SearchResult_a27c6c3ea945602b66ad901c115884172}{backEdges}}[i].empty())}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ os\ <<\ setw(30);}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&edge\ :\ result.\mbox{\hyperlink{structsml_1_1SearchResult_a27c6c3ea945602b66ad901c115884172}{backEdges}}[i])}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ os\ <<\ edge\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ os\ <<\ setw(30)\ <<\ \textcolor{stringliteral}{"{}No\ backedges"{}};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ os\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};\ \textcolor{comment}{//\ Ensure\ that\ each\ node's\ info\ starts\ on\ a\ new\ line}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsml_1_1Operations}{Operations}}}
+\DoxyCodeLine{00119\ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//==\ Private\ Members}}
+\DoxyCodeLine{00121\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ graph;\ \ \ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ digraph;\ \ }
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//==\ Public\ Members}}
+\DoxyCodeLine{00126\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//\ Constructors}}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Operations_af344ca561c1a08118f686551abb08efb}{Operations}}();}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Operations_af344ca561c1a08118f686551abb08efb}{Operations}}(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g,\ \mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ d);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ Menu}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Operations_a9dc8167507e50693ce6b05190f3c345f}{runMenu}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ Update(set)\ methods}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Operations_a317c0ab50eeedd7a22620bdd467b48c9}{updateGraph}}();}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Operations_a78b3cfd5a3e39ed59d94d86dceeaa2f1}{updateDigraph}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//==\ Aux\ Members}}
+\DoxyCodeLine{00139\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ pause();}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ displayMenu();}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{string}\ handleSearch(\textcolor{keywordtype}{string}\ v);}
+\DoxyCodeLine{00143\ \ \ \ \ pair<string,\ string>\ handleSearch(pair<string,\ string>\ v);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ THE\ MATH\ AND\ SEARCH\ OPERATIONS\ FROM\ GRAPHS}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ adjListToAdjMatrix(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ adjMatrixToAdjList(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ calculateDegrees(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ adjacentsVertex(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g,\ pair<string,\ string>\ vs);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ countVertices(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ countEdges(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ connected(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ bipartite(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ dfs(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g,\ \textcolor{keywordtype}{string}\ v);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ bfs(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g,\ \textcolor{keywordtype}{string}\ v);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ articulationsAndBlocks(\mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ g,\ \textcolor{keywordtype}{string}\ v);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{comment}{//\ THE\ MATH\ AND\ SEARCH\ OPERATIONS\ FROM\ DIGRAPHS}}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ subjacentGraph(\mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ d);}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ incMatrixToDirectStar(\mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ d);}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ directStarToIncMatrix(\textcolor{comment}{/*Dont\ know*/});}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordtype}{void}\ adjMatrixToIndirectStar(\mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ d);}
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ indirectStarToAdjMatrix(\textcolor{comment}{/*Dont\ know*/});}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ dfs(\mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ d,\ \textcolor{keywordtype}{string}\ v);}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ application();}
+\DoxyCodeLine{00166\ \ \ \};}
+\DoxyCodeLine{00167\ \}\ \textcolor{comment}{//\ namespace\ sml}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ OPERATIONS\_H}}
+
+\end{DoxyCode}

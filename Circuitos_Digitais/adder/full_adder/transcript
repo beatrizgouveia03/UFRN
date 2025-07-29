@@ -1,0 +1,8 @@
+# Loading project full_adder
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Load canceled
+project open /home/usuario/Documentos/Circuitos/full_adder/full_adder
+# Loading project full_adder
+project open /home/usuario/Documentos/Circuitos/half_adder/half_adder
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project half_adder

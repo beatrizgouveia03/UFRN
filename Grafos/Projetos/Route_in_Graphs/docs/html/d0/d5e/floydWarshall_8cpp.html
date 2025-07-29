@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Referência ao ficheiro source/algorithms/floydWarshall.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="../../dir_1f1e02da0ed68619c8cd86756bb8077c.html">algorithms</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Referência ao ficheiro floydWarshall.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d6a/simulation_8h_source.html">simulation.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para floydWarshall.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/de1/floydWarshall_8cpp__incl.png" border="0" usemap="#asource_2algorithms_2floydWarshall_8cpp" alt=""/></div>
+<map name="asource_2algorithms_2floydWarshall_8cpp" id="asource_2algorithms_2floydWarshall_8cpp">
+<area shape="rect" title=" " alt="" coords="379,5,637,31"/>
+<area shape="rect" href="../../dd/d6a/simulation_8h.html" title=" " alt="" coords="567,79,670,104"/>
+<area shape="poly" title=" " alt="" coords="527,28,590,69,587,73,524,33"/>
+<area shape="rect" title=" " alt="" coords="5,152,64,177"/>
+<area shape="poly" title=" " alt="" coords="457,33,370,54,271,81,166,116,77,149,75,144,164,111,270,76,368,49,456,28"/>
+<area shape="rect" title=" " alt="" coords="88,152,168,177"/>
+<area shape="poly" title=" " alt="" coords="475,33,341,81,169,149,167,144,339,76,473,28"/>
+<area shape="rect" title=" " alt="" coords="192,152,243,177"/>
+<area shape="poly" title=" " alt="" coords="486,33,254,148,251,143,484,28"/>
+<area shape="rect" title=" " alt="" coords="1197,152,1259,177"/>
+<area shape="poly" title=" " alt="" coords="573,28,836,77,1184,149,1183,155,835,82,572,33"/>
+<area shape="rect" title=" " alt="" coords="1284,152,1343,177"/>
+<area shape="poly" title=" " alt="" coords="594,28,908,76,1089,109,1271,149,1270,154,1088,114,908,81,593,33"/>
+<area shape="poly" title=" " alt="" coords="567,98,357,116,220,132,78,155,77,149,219,127,357,110,567,93"/>
+<area shape="rect" title=" " alt="" coords="711,152,785,177"/>
+<area shape="poly" title=" " alt="" coords="641,102,716,143,713,147,638,106"/>
+<area shape="rect" title=" " alt="" coords="809,152,884,177"/>
+<area shape="poly" title=" " alt="" coords="656,101,797,145,796,150,655,107"/>
+<area shape="poly" title=" " alt="" coords="567,101,400,121,182,155,181,149,399,116,567,96"/>
+<area shape="rect" title=" " alt="" coords="908,152,993,177"/>
+<area shape="poly" title=" " alt="" coords="671,101,895,149,894,154,670,106"/>
+<area shape="poly" title=" " alt="" coords="567,102,431,121,257,155,256,149,430,116,567,96"/>
+<area shape="rect" title=" " alt="" coords="1018,152,1081,177"/>
+<area shape="poly" title=" " alt="" coords="671,96,817,117,1005,149,1004,155,816,122,670,102"/>
+<area shape="poly" title=" " alt="" coords="670,93,890,110,1034,127,1183,150,1182,155,1033,132,889,116,670,98"/>
+<area shape="rect" title=" " alt="" coords="1105,152,1172,177"/>
+<area shape="poly" title=" " alt="" coords="670,95,857,114,974,130,1092,149,1093,149,1092,155,1092,155,974,135,856,120,670,100"/>
+<area shape="rect" title=" " alt="" coords="267,152,354,177"/>
+<area shape="poly" title=" " alt="" coords="570,107,368,153,367,148,569,101"/>
+<area shape="rect" title=" " alt="" coords="378,152,454,177"/>
+<area shape="poly" title=" " alt="" coords="587,107,462,150,461,145,585,102"/>
+<area shape="poly" title=" " alt="" coords="670,92,925,107,1095,124,1271,149,1270,155,1094,129,925,112,670,97"/>
+<area shape="rect" title=" " alt="" coords="478,152,535,177"/>
+<area shape="poly" title=" " alt="" coords="602,106,538,147,535,142,599,102"/>
+<area shape="rect" title=" " alt="" coords="560,152,603,177"/>
+<area shape="poly" title=" " alt="" coords="615,106,596,141,591,139,610,103"/>
+<area shape="rect" title=" " alt="" coords="627,152,687,177"/>
+<area shape="poly" title=" " alt="" coords="627,103,647,139,642,141,623,106"/>
+</map>
+</div>
+</div>
+<p><a href="../../d0/d5e/floydWarshall_8cpp_source.html">Ir para o código fonte deste ficheiro.</a></p>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

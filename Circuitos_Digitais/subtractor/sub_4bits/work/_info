@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/full_subtractor
+Efull_subtractor
+Z0 w1695157207
+!i122 0
+Z1 d/home/usuario/Documentos/Circuitos/sub_4bits
+Z2 8/home/usuario/Documentos/Circuitos/full_subtractor/full_subtractor.vhd
+Z3 F/home/usuario/Documentos/Circuitos/full_subtractor/full_subtractor.vhd
+l0
+L1 1
+ViCJGFX8`7^PEG1Ik]1_:m0
+!s100 KU5=h58WSZm2VPQ<E[P]83
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1695169701
+!i10b 1
+Z6 !s108 1695169701.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/full_subtractor/full_subtractor.vhd|
+Z8 !s107 /home/usuario/Documentos/Circuitos/full_subtractor/full_subtractor.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Astructural
+DEx4 work 15 full_subtractor 0 22 iCJGFX8`7^PEG1Ik]1_:m0
+!i122 0
+l9
+L8 5
+VA0Q0H7LbgV1a5dN0DJ5<22
+!s100 lMFBAggYUBPL1BOSUL4;b3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ehalf_subtractor
+Z11 w1695156207
+!i122 1
+R1
+Z12 8/home/usuario/Documentos/Circuitos/half_subtractor/half_subtractor.vhd
+Z13 F/home/usuario/Documentos/Circuitos/half_subtractor/half_subtractor.vhd
+l0
+L1 1
+VSg4[dRhLOPEUdin`EnW4>2
+!s100 W;<Q_mZ32e4g6iQ^a[e773
+R4
+32
+Z14 !s110 1695169713
+!i10b 1
+Z15 !s108 1695169713.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/half_subtractor/half_subtractor.vhd|
+Z17 !s107 /home/usuario/Documentos/Circuitos/half_subtractor/half_subtractor.vhd|
+!i113 1
+R9
+R10
+Astructural
+DEx4 work 15 half_subtractor 0 22 Sg4[dRhLOPEUdin`EnW4>2
+!i122 1
+l8
+L7 5
+Ve2N>SmTJR?k^8FW_jKd_n1
+!s100 eFk^SJ_<RkPT9?S=3nCR>2
+R4
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R9
+R10
+Esub_4bits
+Z18 w1695170238
+!i122 4
+Z19 d/home/usuario/Documentos/Circuitos/subtractor/sub_4bits
+Z20 8/home/usuario/Documentos/Circuitos/subtractor/sub_4bits/sub_4bits.vhd
+Z21 F/home/usuario/Documentos/Circuitos/subtractor/sub_4bits/sub_4bits.vhd
+l0
+L1 1
+V45:E`E>MY[J8G>V7WIKoI0
+!s100 Kb?:`iRIVb1;Lj_ILDTf?1
+R4
+32
+Z22 !s110 1696424197
+!i10b 1
+Z23 !s108 1696424197.000000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/subtractor/sub_4bits/sub_4bits.vhd|
+!s107 /home/usuario/Documentos/Circuitos/subtractor/sub_4bits/sub_4bits.vhd|
+!i113 1
+R9
+R10
+Astructural
+Z25 DEx4 work 9 sub_4bits 0 22 45:E`E>MY[J8G>V7WIKoI0
+!i122 4
+l24
+Z26 L7 24
+Z27 V]X1IfU<94RUKfSSPXC=1o2
+Z28 !s100 YHH^a50bERc535a3eYfc:2
+R4
+32
+R22
+!i10b 1
+R23
+R24
+Z29 !s107 /home/usuario/Documentos/Circuitos/subtractor/sub_4bits/sub_4bits.vhd|
+!i113 1
+R9
+R10

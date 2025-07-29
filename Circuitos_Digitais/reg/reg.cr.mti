@@ -1,0 +1,24 @@
+/home/usuario/Documentos/Circuitos/reg/arch_1.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/reg/arch_1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_1 of reg
+-- Loading entity reg
+
+} {} {}} /home/usuario/Documentos/Circuitos/reg/reg.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/reg/reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity reg
+
+} {} {}} /home/usuario/Documentos/Circuitos/reg/arch_2.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/reg/arch_2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_2 of reg
+-- Loading entity reg
+
+} {} {}} /home/usuario/Documentos/Circuitos/reg/arch_3.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/reg/arch_3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_3 of reg
+-- Loading entity reg
+
+} {} {}}

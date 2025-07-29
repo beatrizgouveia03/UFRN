@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Menu de músicas: Código-Fonte de include/Playlist.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Menu de músicas
+   </div>
+   <div id="projectbrief">Simulador de um menu de player de músicas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Playlist.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Playlist_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PLAYLIST_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PLAYLIST_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Musica_8hpp.html">Musica.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Lista_8hpp.html">Lista.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classPlaylist.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlaylist.html">Playlist</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">string</span> nome;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classLista.html">Lista&lt;Musica&gt;</a> *musicas = <span class="keyword">new</span> <a class="code" href="classLista.html">Lista&lt;Musica&gt;</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classPlaylist.html#aef38d55e42995be147977726350f3ada">   26</a></span>&#160;    <a class="code" href="classPlaylist.html#aef38d55e42995be147977726350f3ada">Playlist</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classPlaylist.html#aa4b4914ac8e101589ed5ffba330b7cf5">   29</a></span>&#160;    <a class="code" href="classPlaylist.html#aa4b4914ac8e101589ed5ffba330b7cf5">Playlist</a>(<span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classPlaylist.html#a4083df86652da125a41250204a203fc4">   33</a></span>&#160;    <a class="code" href="classPlaylist.html#a4083df86652da125a41250204a203fc4">Playlist</a>(<span class="keywordtype">string</span> nome, <a class="code" href="classLista.html">Lista&lt;Musica&gt;</a> *musicas);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classPlaylist.html#aacd9a69e347fc19a9a0787d7a7ce9df4">   37</a></span>&#160;    <a class="code" href="classPlaylist.html#aacd9a69e347fc19a9a0787d7a7ce9df4">~Playlist</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classPlaylist.html#afe9feecd2eae47dea941d3ba7cba6b4a">   41</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlaylist.html#afe9feecd2eae47dea941d3ba7cba6b4a">setNome</a>(<span class="keywordtype">string</span> nome);</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classPlaylist.html#ab702dbcf3c4174e8ca8ee302c4bc5f43">   44</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlaylist.html#ab702dbcf3c4174e8ca8ee302c4bc5f43">setMusicas</a>(<a class="code" href="classLista.html">Lista&lt;Musica&gt;</a> *musicas);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classPlaylist.html#ad5934cacafaebe5890d9100502ab3827">   48</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPlaylist.html#ad5934cacafaebe5890d9100502ab3827">getNome</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classPlaylist.html#a65691826c1e28eed4175d0e9b3f3c0af">   51</a></span>&#160;    <a class="code" href="classLista.html">Lista&lt;Musica&gt;</a> *<a class="code" href="classPlaylist.html#a65691826c1e28eed4175d0e9b3f3c0af">getMusicas</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPlaylist.html#acf9a470dc5b8733b9631c7408e91d4ff">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlaylist.html#acf9a470dc5b8733b9631c7408e91d4ff">addMusica</a>(<a class="code" href="classMusica.html">Musica</a> m);</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classPlaylist.html#af5ca335fb315a2cea8348aa8885b897f">   58</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlaylist.html#af5ca335fb315a2cea8348aa8885b897f">remMusica</a>(<a class="code" href="classMusica.html">Musica</a> m);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPlaylist.html#af5b89cd6dfaf0addff2f5f3d90e766e5">   63</a></span>&#160;    <a class="code" href="classNo.html">No&lt;Musica&gt;</a> *<a class="code" href="classPlaylist.html#af5b89cd6dfaf0addff2f5f3d90e766e5">findMusica</a>(<a class="code" href="classMusica.html">Musica</a> m);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classPlaylist.html#a174e204cf92c2a17aec05b4318e82f7d">   68</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPlaylist.html#a174e204cf92c2a17aec05b4318e82f7d">operator==</a>(<a class="code" href="classPlaylist.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">friend</span> ostream &amp;operator&lt;&lt;(ostream &amp;cout, <a class="code" href="classPlaylist.html">Playlist</a> &amp;p);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// PLAYLIST_H</span></div>
+<div class="ttc" id="aLista_8hpp_html"><div class="ttname"><a href="Lista_8hpp.html">Lista.hpp</a></div><div class="ttdoc">Definição da classe Lista.</div></div>
+<div class="ttc" id="aMusica_8hpp_html"><div class="ttname"><a href="Musica_8hpp.html">Musica.hpp</a></div><div class="ttdoc">Definição da classe Musica.</div></div>
+<div class="ttc" id="aclassLista_html"><div class="ttname"><a href="classLista.html">Lista&lt; Musica &gt;</a></div></div>
+<div class="ttc" id="aclassMusica_html"><div class="ttname"><a href="classMusica.html">Musica</a></div><div class="ttdoc">implementação de uma classe Musica</div><div class="ttdef"><b>Definition:</b> Musica.hpp:18</div></div>
+<div class="ttc" id="aclassNo_html"><div class="ttname"><a href="classNo.html">No</a></div><div class="ttdoc">Implementação de uma classe No.</div><div class="ttdef"><b>Definition:</b> No.hpp:17</div></div>
+<div class="ttc" id="aclassPlaylist_html"><div class="ttname"><a href="classPlaylist.html">Playlist</a></div><div class="ttdoc">Implementação de uma classe Playlist.</div><div class="ttdef"><b>Definition:</b> Playlist.hpp:16</div></div>
+<div class="ttc" id="aclassPlaylist_html_a174e204cf92c2a17aec05b4318e82f7d"><div class="ttname"><a href="classPlaylist.html#a174e204cf92c2a17aec05b4318e82f7d">Playlist::operator==</a></div><div class="ttdeci">bool operator==(Playlist &amp;playlist)</div><div class="ttdoc">Sobrecarga do operador de comparação.</div></div>
+<div class="ttc" id="aclassPlaylist_html_a4083df86652da125a41250204a203fc4"><div class="ttname"><a href="classPlaylist.html#a4083df86652da125a41250204a203fc4">Playlist::Playlist</a></div><div class="ttdeci">Playlist(string nome, Lista&lt; Musica &gt; *musicas)</div><div class="ttdoc">Construtor que inicializa a playlist com um nome e uma lista de músicas.</div></div>
+<div class="ttc" id="aclassPlaylist_html_a65691826c1e28eed4175d0e9b3f3c0af"><div class="ttname"><a href="classPlaylist.html#a65691826c1e28eed4175d0e9b3f3c0af">Playlist::getMusicas</a></div><div class="ttdeci">Lista&lt; Musica &gt; * getMusicas()</div><div class="ttdoc">Função que retorna a lista de músicas da playlist.</div></div>
+<div class="ttc" id="aclassPlaylist_html_aa4b4914ac8e101589ed5ffba330b7cf5"><div class="ttname"><a href="classPlaylist.html#aa4b4914ac8e101589ed5ffba330b7cf5">Playlist::Playlist</a></div><div class="ttdeci">Playlist(string nome)</div><div class="ttdoc">Construtor que inicializa a playlist com um nome.</div></div>
+<div class="ttc" id="aclassPlaylist_html_aacd9a69e347fc19a9a0787d7a7ce9df4"><div class="ttname"><a href="classPlaylist.html#aacd9a69e347fc19a9a0787d7a7ce9df4">Playlist::~Playlist</a></div><div class="ttdeci">~Playlist()</div><div class="ttdoc">Destrutor da classe.</div></div>
+<div class="ttc" id="aclassPlaylist_html_ab702dbcf3c4174e8ca8ee302c4bc5f43"><div class="ttname"><a href="classPlaylist.html#ab702dbcf3c4174e8ca8ee302c4bc5f43">Playlist::setMusicas</a></div><div class="ttdeci">void setMusicas(Lista&lt; Musica &gt; *musicas)</div><div class="ttdoc">Função para configurar a lista de músicas da playlist.</div></div>
+<div class="ttc" id="aclassPlaylist_html_acf9a470dc5b8733b9631c7408e91d4ff"><div class="ttname"><a href="classPlaylist.html#acf9a470dc5b8733b9631c7408e91d4ff">Playlist::addMusica</a></div><div class="ttdeci">void addMusica(Musica m)</div><div class="ttdoc">Função para adicionar uma música à playlist.</div></div>
+<div class="ttc" id="aclassPlaylist_html_ad5934cacafaebe5890d9100502ab3827"><div class="ttname"><a href="classPlaylist.html#ad5934cacafaebe5890d9100502ab3827">Playlist::getNome</a></div><div class="ttdeci">string getNome()</div><div class="ttdoc">Função que retorna o nome da playlist.</div></div>
+<div class="ttc" id="aclassPlaylist_html_aef38d55e42995be147977726350f3ada"><div class="ttname"><a href="classPlaylist.html#aef38d55e42995be147977726350f3ada">Playlist::Playlist</a></div><div class="ttdeci">Playlist()</div><div class="ttdoc">Construtor padrão da classe.</div></div>
+<div class="ttc" id="aclassPlaylist_html_af5b89cd6dfaf0addff2f5f3d90e766e5"><div class="ttname"><a href="classPlaylist.html#af5b89cd6dfaf0addff2f5f3d90e766e5">Playlist::findMusica</a></div><div class="ttdeci">No&lt; Musica &gt; * findMusica(Musica m)</div><div class="ttdoc">Função para encontrar uma música na playlist.</div></div>
+<div class="ttc" id="aclassPlaylist_html_af5ca335fb315a2cea8348aa8885b897f"><div class="ttname"><a href="classPlaylist.html#af5ca335fb315a2cea8348aa8885b897f">Playlist::remMusica</a></div><div class="ttdeci">void remMusica(Musica m)</div><div class="ttdoc">Função para remover uma música da playlist.</div></div>
+<div class="ttc" id="aclassPlaylist_html_afe9feecd2eae47dea941d3ba7cba6b4a"><div class="ttname"><a href="classPlaylist.html#afe9feecd2eae47dea941d3ba7cba6b4a">Playlist::setNome</a></div><div class="ttdeci">void setNome(string nome)</div><div class="ttdoc">Função para configurar o nome da playlist.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

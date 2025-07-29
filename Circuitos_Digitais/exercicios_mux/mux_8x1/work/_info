@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/demux_1x2
+Emux_2x1
+Z0 w1695212175
+!i122 30
+Z1 d/home/usuario/Documentos/Circuitos/mux_8x1
+Z2 8/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd
+Z3 F/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd
+l0
+L1 1
+VEzk?@n[^m4cV0^U@W1eJK1
+!s100 ]d`QWN`RgEg>N`L44GFEF0
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1695822642
+!i10b 1
+Z6 !s108 1695822642.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd|
+Z8 !s107 /home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Astructural
+DEx4 work 7 mux_2x1 0 22 Ezk?@n[^m4cV0^U@W1eJK1
+!i122 30
+l8
+L7 4
+Vb;lIEzU<6VE[IUM_[?X:_1
+!s100 X;=3JjZlEVa61O3?S9d[c3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Emux_4x1
+Z11 w1695213950
+!i122 31
+R1
+Z12 8/home/usuario/Documentos/Circuitos/mux_4x1/mux_4x1.vhd
+Z13 F/home/usuario/Documentos/Circuitos/mux_4x1/mux_4x1.vhd
+l0
+L1 1
+VZ7bMWTO2EViKZ4IliC=nO2
+!s100 Mg;W56ebSljeHGHA`0]lJ2
+R4
+32
+Z14 !s110 1695822643
+!i10b 1
+R6
+Z15 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/mux_4x1/mux_4x1.vhd|
+Z16 !s107 /home/usuario/Documentos/Circuitos/mux_4x1/mux_4x1.vhd|
+!i113 1
+R9
+R10
+Astructural
+DEx4 work 7 mux_4x1 0 22 Z7bMWTO2EViKZ4IliC=nO2
+!i122 31
+l8
+L7 21
+VKbn:zPzb@X<`XO43;4`fG3
+!s100 8D1_E3cU]lnel5cUGLZQA2
+R4
+32
+R14
+!i10b 1
+R6
+R15
+R16
+!i113 1
+R9
+R10
+Emux_8x1
+Z17 w1695822639
+!i122 32
+Z18 d/home/usuario/Documentos/Circuitos/exercicios_mux/mux_8x1
+Z19 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_8x1/mux_8x1.vhd
+Z20 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_8x1/mux_8x1.vhd
+l0
+L1 1
+Vk_OHOIZPhjDhXEF<h^0QK0
+!s100 Bago0f:^IK??2CjznKVKP2
+R4
+32
+Z21 !s110 1696423530
+!i10b 1
+Z22 !s108 1696423530.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_8x1/mux_8x1.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_8x1/mux_8x1.vhd|
+!i113 1
+R9
+R10
+Astructural
+Z24 DEx4 work 7 mux_8x1 0 22 k_OHOIZPhjDhXEF<h^0QK0
+!i122 32
+l24
+Z25 L7 29
+Z26 VKJ@Q?n]OTEb`TTjzQ9:z>1
+Z27 !s100 UB>3;M1207j7<DYf`7X]S0
+R4
+32
+R21
+!i10b 1
+R22
+R23
+Z28 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_8x1/mux_8x1.vhd|
+!i113 1
+R9
+R10

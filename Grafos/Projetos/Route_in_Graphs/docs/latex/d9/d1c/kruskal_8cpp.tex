@@ -1,0 +1,157 @@
+\doxysection{Referência ao ficheiro source/algorithms/kruskal.cpp}
+\hypertarget{kruskal_8cpp}{}\label{kruskal_8cpp}\index{source/algorithms/kruskal.cpp@{source/algorithms/kruskal.cpp}}
+{\ttfamily \#include "{}simulation.\+h"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Diagrama de dependências de inclusão para kruskal.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dfd/kruskal_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}~1000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d}{init}} (size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Função que inicializa as estruturas do Union-\/\+Find Cada elemento começa como seu próprio pai (conjuntos disjuntos) e com rank 1 (tamanho inicial do conjunto) \end{DoxyCompactList}\item 
+static size\+\_\+t \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}} (size\+\_\+t cur)
+\begin{DoxyCompactList}\small\item\em Função Find do Union-\/\+Find que encontra o representante (pai) de um conjunto Implementa a otimização de compressão de caminho, que faz todos os nós do caminho apontarem diretamente para a raiz, melhorando performance futura. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b}{join}} (size\+\_\+t x, size\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Função Union do Union-\/\+Find que une dois conjuntos Implementa a otimização union by rank, unindo sempre o conjunto menor ao maior para manter a árvore balanceada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}} \mbox{[}\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}\mbox{]}
+\item 
+static int \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\+\_\+set}} \mbox{[}\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das macros}
+\Hypertarget{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}\label{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6} 
+\index{kruskal.cpp@{kruskal.cpp}!MAXN@{MAXN}}
+\index{MAXN@{MAXN}!kruskal.cpp@{kruskal.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXN}{MAXN}}
+{\footnotesize\ttfamily \#define MAXN~1000}
+
+Estruturas auxiliares para implementação do Union-\/\+Find MAXN define o tamanho máximo do conjunto de vértices parent\mbox{[}\mbox{]} armazena o pai de cada vértice no conjunto rank\+\_\+set\mbox{[}\mbox{]} armazena o rank (tamanho) de cada conjunto 
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00013}{13}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}\label{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04} 
+\index{kruskal.cpp@{kruskal.cpp}!find@{find}}
+\index{find@{find}!kruskal.cpp@{kruskal.cpp}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily static size\+\_\+t find (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Função Find do Union-\/\+Find que encontra o representante (pai) de um conjunto Implementa a otimização de compressão de caminho, que faz todos os nós do caminho apontarem diretamente para a raiz, melhorando performance futura. 
+
+
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00034}{34}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ root\ =\ cur;}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[root]\ !=\ root)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ root\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[root];}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//Path\ compression}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[cur]\ !=\ root)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ temp\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[cur];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[cur]\ =\ root;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ cur\ =\ temp;}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{return}\ root;}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+\Hypertarget{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d}\label{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d} 
+\index{kruskal.cpp@{kruskal.cpp}!init@{init}}
+\index{init@{init}!kruskal.cpp@{kruskal.cpp}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static void init (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Função que inicializa as estruturas do Union-\/\+Find Cada elemento começa como seu próprio pai (conjuntos disjuntos) e com rank 1 (tamanho inicial do conjunto) 
+
+
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00022}{22}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]\ =\ i;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[i]\ =\ 1;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+\Hypertarget{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b}\label{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b} 
+\index{kruskal.cpp@{kruskal.cpp}!join@{join}}
+\index{join@{join}!kruskal.cpp@{kruskal.cpp}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily static void join (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Função Union do Union-\/\+Find que une dois conjuntos Implementa a otimização union by rank, unindo sempre o conjunto menor ao maior para manter a árvore balanceada. 
+
+
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00055}{55}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ x\ =\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(x);}
+\DoxyCodeLine{00057\ \ \ \ \ y\ =\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(y);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{if}(x\ ==\ y)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[x]\ >\ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[y])\ std::swap(x,\ y);}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[y]\ +=\ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[x];}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[x]\ =\ y;}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das variáveis}
+\Hypertarget{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}\label{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a} 
+\index{kruskal.cpp@{kruskal.cpp}!parent@{parent}}
+\index{parent@{parent}!kruskal.cpp@{kruskal.cpp}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily int parent\mbox{[}\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00014}{14}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+
+\Hypertarget{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}\label{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78} 
+\index{kruskal.cpp@{kruskal.cpp}!rank\_set@{rank\_set}}
+\index{rank\_set@{rank\_set}!kruskal.cpp@{kruskal.cpp}}
+\doxysubsubsection{\texorpdfstring{rank\_set}{rank\_set}}
+{\footnotesize\ttfamily int rank\+\_\+set\mbox{[}\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00015}{15}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+

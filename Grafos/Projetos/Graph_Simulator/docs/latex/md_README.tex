@@ -1,0 +1,137 @@
+\chapter{Graphs Simulation Project}
+\hypertarget{md_README}{}\label{md_README}\index{Graphs Simulation Project@{Graphs Simulation Project}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ Welcome to the Graphs Simulation project! This project provides a collection of graph algorithms implemented in C++. It serves as a comprehensive resource for learning and applying key operations on both graphs and directed graphs (digraphs).\hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{md_README_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item Introduction
+\item Algorithms
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Usage
+\item Compiling Methods
+\item Contributing
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{md_README_autotoc_md2}
+This project delves into the implementation of various graph algorithms, serving as a fundamental resource for learning and applying key operations on both graphs and directed graphs (digraphs). Through this project, we explore different methods of graph representation, traversal techniques, and other important graph-\/related functions.
+
+The exercises cover a wide range of topics, from basic representations like adjacency lists and matrices to more advanced concepts such as Prüffer codes, articulation points, and bipartiteness. Additionally, we implement essential algorithms for digraphs, including conversions between incidence and adjacency matrices and in-\/depth search techniques.
+
+Each function and algorithm in this project aims to build a strong foundation in graph theory, helping to understand the relationships between vertices and edges, both in theoretical contexts and practical applications.\hypertarget{md_README_autotoc_md3}{}\doxysection{\texorpdfstring{Algorithms}{Algorithms}}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item A. Para GRAFOS (as opcionais possuem a sigla OPC ao final da função)
+\item \mbox{[}x\mbox{]} (1) Representação do Grafo a partir da Lista de Adjacências.\mbox{[}Beatriz\mbox{]}
+\item \mbox{[}x\mbox{]} (2) Representação do Grafo a partir da Matriz de Adjacências.\mbox{[}Beatriz\mbox{]}
+\item \mbox{[}x\mbox{]} (3) Representação do Grafo a partir da Matriz de Incidência.\mbox{[}Beatriz\mbox{]}
+\item \mbox{[}x\mbox{]} (4) Conversão de matriz de adjacência para lista de Adjacências e vice-\/versa.\mbox{[}Beatriz\mbox{]}
+\item \mbox{[}x\mbox{]} (5) Função que calcula o grau de cada vértice.\mbox{[}Anny\mbox{]}
+\item \mbox{[}x\mbox{]} (6) Função que determina se dois vértices são adjacentes.\mbox{[}Anny\mbox{]}
+\item \mbox{[}x\mbox{]} (7) Função que determina o número total de vértices\mbox{[}Anny\mbox{]}
+\item \mbox{[}x\mbox{]} (8) Função que determina o número total de arestas\mbox{[}Anny\mbox{]}
+\item \mbox{[}x\mbox{]} (9) Inclusão de um novo vértice\mbox{[}Davi\mbox{]}
+\item \mbox{[}x\mbox{]} (10) Exclusão de um vértice existente\mbox{[}Davi\mbox{]}
+\item \mbox{[} \mbox{]} (11) Função que determina se um grafo é conexo ou não\mbox{[}Davi\mbox{]}
+\item \mbox{[} \mbox{]} (12) Determinar se um grafo é bipartido (OPC = 1,0 ponto)\mbox{[}Alisson\mbox{]}
+\item \mbox{[} \mbox{]} (13) Dada uma representação de uma árvore por matriz de adjacência, faça um algoritmo que produza o código de Prüffer e vice versa. (OPC= 1,0 ponto)\mbox{[}Alisson\mbox{]}
+\item \mbox{[}x\mbox{]} (14) Busca em Largura, a partir de um vértice específico\mbox{[}Davi\mbox{]}
+\item \mbox{[}x\mbox{]} (15) Busca em Profundidade, a partir de um vértice em específico. \mbox{[}José\mbox{]}
+\item \mbox{[} \mbox{]} (16) Determinação de articulações e blocos (biconectividade), utilizando obrigatoriamente a fu ão lowpt\mbox{[}Alisson\mbox{]}
+\item B. Para DIGRAFOS (as opcionais possuem a sigla OPC ao final da função)
+\item \mbox{[}x\mbox{]} (17) Representação do Digrafo a partir da Matriz de Adjacências \mbox{[}José\mbox{]}
+\item \mbox{[}x\mbox{]} (18) Representação do Digrafo a partir da Matriz de Incidência \mbox{[}José\mbox{]}
+\item \mbox{[} \mbox{]} (19) Determinação do Grafo subjacente (OPC= 0,5 ponto)
+\item \mbox{[} \mbox{]} (20) Conversão de matriz de incidência para estrela direta e vice versa(OPC= 0,5 ponto).
+\item \mbox{[} \mbox{]} (21) Conversão de matriz de adjacência para estrela reversa e vice-\/versa (OPC= 0,5 ponto).
+\item \mbox{[}x\mbox{]} (22) Busca em profundidade, com determinação de profundidade de entrada e de saída de cada \mbox{[}José\mbox{]}
+\item vértice.
+\item \mbox{[} \mbox{]} (23) Pesquisar e implementar uma aplicação, usando busca em profundidade (OPC= 1,0 ponto). \mbox{[}José\mbox{]}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md_README_autotoc_md4}
+To use this project, follow the steps below\+:
+
+
+\begin{DoxyEnumerate}
+\item Clone the repository to your local machine using the command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/beatrizgouveia03/Grafos.git}
+
+\end{DoxyCode}
+
+\item Navigate to the project directory\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ Grafos/Exercícios/Módulo\_1/}
+
+\end{DoxyCode}
+
+\item Compile your project according to your preferred method (see Compiling Methods for more details).
+\item Execute the compiled program to see the graphs simulation algorithms in action with the selected source file.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md5}{}\doxysection{\texorpdfstring{Compiling Methods}{Compiling Methods}}\label{md_README_autotoc_md5}
+This project uses CMake as the build system, which allows for easy and efficient compilation of the C++ code. To compile the sorting algorithms, follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Make sure CMake is installed on
+
+your system.
+\item Navigate to the project directory\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ Grafos/Exercícios/Módulo\_1/}
+
+\end{DoxyCode}
+
+\item Create a build directory and generate an Unix Makefile based on the script found on the current level\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
+
+\end{DoxyCode}
+
+\item Compile the project using the generated build files\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+
+\end{DoxyCode}
+
+\item After successful compilation, you will find the executable files for each sorting algorithm in the build directory. Execute the desired program to see the algorithms in action with the selected scenarios.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md6}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{md_README_autotoc_md6}
+Contributions to this project are welcome! If you\textquotesingle{}d like to improve an existing algorithm\textquotesingle{}s implementation, add a new sorting algorithm, introduce new scenarios, or fix any issues, please follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Fork the repository.
+\item Create a new branch for your contribution\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ checkout\ -\/b\ feature/new-\/algorithm}
+
+\end{DoxyCode}
+
+\item Make your modifications and additions.
+\item Commit your changes\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ commit\ -\/m\ "{}Add\ new\ algorithm:\ [Algorithm\ Name]"{}}
+
+\end{DoxyCode}
+
+\item Push your branch\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ push\ origin\ feature/new-\/algorithm}
+
+\end{DoxyCode}
+
+\item Open a pull request, describing your changes and the rationale behind them. 
+\end{DoxyEnumerate}

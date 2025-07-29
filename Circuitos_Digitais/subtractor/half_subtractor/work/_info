@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/adder_4bits
+Ehalf_subtractor
+Z0 w1695156207
+!i122 1
+Z1 d/home/usuario/Documentos/Circuitos/subtractor/half_subtractor
+Z2 8/home/usuario/Documentos/Circuitos/subtractor/half_subtractor/half_subtractor.vhd
+Z3 F/home/usuario/Documentos/Circuitos/subtractor/half_subtractor/half_subtractor.vhd
+l0
+L1 1
+VSg4[dRhLOPEUdin`EnW4>2
+!s100 W;<Q_mZ32e4g6iQ^a[e773
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696424092
+!i10b 1
+Z6 !s108 1696424092.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/subtractor/half_subtractor/half_subtractor.vhd|
+!s107 /home/usuario/Documentos/Circuitos/subtractor/half_subtractor/half_subtractor.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Astructural
+Z10 DEx4 work 15 half_subtractor 0 22 Sg4[dRhLOPEUdin`EnW4>2
+!i122 1
+l8
+L7 5
+Z11 Ve2N>SmTJR?k^8FW_jKd_n1
+Z12 !s100 eFk^SJ_<RkPT9?S=3nCR>2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z13 !s107 /home/usuario/Documentos/Circuitos/subtractor/half_subtractor/half_subtractor.vhd|
+!i113 1
+R8
+R9

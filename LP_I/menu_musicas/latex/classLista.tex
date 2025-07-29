@@ -1,0 +1,267 @@
+\hypertarget{classLista}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Lista$<$ T $>$}
+\label{classLista}\index{Lista$<$ T $>$@{Lista$<$ T $>$}}
+
+
+Implementação de uma classe \mbox{\hyperlink{classLista}{Lista}}.  
+
+
+
+
+{\ttfamily \#include $<$Lista.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLista_adce924e21607848663132290be1a959d}{Lista}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_a1c9caebe51a82ddf43d20f15b551910d}{Lista}} (T valor)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a lista com um nó \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLista_af297975e278b0c92cbf67d14b2f08366}{$\sim$\+Lista}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_aa09211c096accdf53703b208051611d0}{set\+Cabeca}} (\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$cabeca)
+\begin{DoxyCompactList}\small\item\em Função para configurar o head/cabeça da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a385c79cac116d9773cf7d0d5e9e00606}{set\+Cauda}} (\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$cauda)
+\begin{DoxyCompactList}\small\item\em Função para configurar o tail/cauda da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_ac711f7d0d980e4413a1c956b75b30755}{get\+Cabeca}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna um ponteiro indicando o head/cabeça da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_af77a27bde9b537695c62fbd04d5f6e5e}{get\+Cauda}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna um ponteiro indicando o tail/cauda da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a96ed3c100591f8579492fb5d2fc538cf}{inserir}} (T valor)
+\begin{DoxyCompactList}\small\item\em Função para inserir um elemento na lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_aaf1536e7323f29d1072503c612d9f420}{inserir}} (T valor, int posicao)
+\begin{DoxyCompactList}\small\item\em Função para inserir um elemento na lista no índice especificado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLista_a820a6851e127aadde092e88be73672c2}{remover}} (T valor)
+\begin{DoxyCompactList}\small\item\em Função para excluir um elemento da lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classLista_a0b3652fa0b2faf07ea7af0ba575561b8}{tamanho}} ()
+\begin{DoxyCompactList}\small\item\em Função que returna o tamanho da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_a54a16f55989b1016107a7ea6b9df679e}{buscar}} (T valor)
+\begin{DoxyCompactList}\small\item\em Função que busca um elemento na lista. Caso o encontre retorna um ponteiro para ele, caso não, retorna um nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista_a9714089c4ca9dac1c7461cee36acd7cf}{buscar\+Por\+Indice}} (int indice)
+\begin{DoxyCompactList}\small\item\em Função que busca se existe um elemento na lista no índice indicado. Caso exista, retorna um ponteiro para ele, cano nãõ$\sim$retorna um nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$class T$>$\newline
+class Lista$<$ T $>$}
+
+Implementação de uma classe \mbox{\hyperlink{classLista}{Lista}}. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classLista_adce924e21607848663132290be1a959d}\label{classLista_adce924e21607848663132290be1a959d}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lista()}{Lista()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::\mbox{\hyperlink{classLista}{Lista}}}
+
+
+
+Construtor padrão da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em NULL} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_a1c9caebe51a82ddf43d20f15b551910d}\label{classLista_a1c9caebe51a82ddf43d20f15b551910d}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lista()}{Lista()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::\mbox{\hyperlink{classLista}{Lista}} (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa a lista com um nó 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor com que o nó será iniciado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_af297975e278b0c92cbf67d14b2f08366}\label{classLista_af297975e278b0c92cbf67d14b2f08366}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!````~Lista@{$\sim$Lista}}
+\index{````~Lista@{$\sim$Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Lista()}{~Lista()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classLista}{Lista}}}
+
+
+
+Destrutor padrão da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em NULL} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classLista_a54a16f55989b1016107a7ea6b9df679e}\label{classLista_a54a16f55989b1016107a7ea6b9df679e}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!buscar@{buscar}}
+\index{buscar@{buscar}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscar()}{buscar()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::buscar (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})}
+
+
+
+Função que busca um elemento na lista. Caso o encontre retorna um ponteiro para ele, caso não, retorna um nullptr. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor do elemento a ser procurado na lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Interador para o elemento ou nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_a9714089c4ca9dac1c7461cee36acd7cf}\label{classLista_a9714089c4ca9dac1c7461cee36acd7cf}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!buscarPorIndice@{buscarPorIndice}}
+\index{buscarPorIndice@{buscarPorIndice}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscarPorIndice()}{buscarPorIndice()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::buscar\+Por\+Indice (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption})}
+
+
+
+Função que busca se existe um elemento na lista no índice indicado. Caso exista, retorna um ponteiro para ele, cano nãõ$\sim$retorna um nullptr. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em indice} & Indice do elemento a ser procurado na lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Interador para o elemento ou nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_ac711f7d0d980e4413a1c956b75b30755}\label{classLista_ac711f7d0d980e4413a1c956b75b30755}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getCabeca@{getCabeca}}
+\index{getCabeca@{getCabeca}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCabeca()}{getCabeca()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Cabeca}
+
+
+
+Função que retorna um ponteiro indicando o head/cabeça da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Iterador para a cabeça da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_af77a27bde9b537695c62fbd04d5f6e5e}\label{classLista_af77a27bde9b537695c62fbd04d5f6e5e}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getCauda@{getCauda}}
+\index{getCauda@{getCauda}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCauda()}{getCauda()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::get\+Cauda}
+
+
+
+Função que retorna um ponteiro indicando o tail/cauda da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Iterador para a cauda da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLista_a96ed3c100591f8579492fb5d2fc538cf}\label{classLista_a96ed3c100591f8579492fb5d2fc538cf}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!inserir@{inserir}}
+\index{inserir@{inserir}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::inserir (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})}
+
+
+
+Função para inserir um elemento na lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor que será inserido no novo fim da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_aaf1536e7323f29d1072503c612d9f420}\label{classLista_aaf1536e7323f29d1072503c612d9f420}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!inserir@{inserir}}
+\index{inserir@{inserir}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::inserir (\begin{DoxyParamCaption}\item[{T}]{valor,  }\item[{int}]{posicao }\end{DoxyParamCaption})}
+
+
+
+Função para inserir um elemento na lista no índice especificado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor que será inserido no novo nó da lista \\
+\hline
+{\em posicao} & Posição em que o novo elemento será inserido \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_a820a6851e127aadde092e88be73672c2}\label{classLista_a820a6851e127aadde092e88be73672c2}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!remover@{remover}}
+\index{remover@{remover}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::remover (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})}
+
+
+
+Função para excluir um elemento da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor que será removido da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_aa09211c096accdf53703b208051611d0}\label{classLista_aa09211c096accdf53703b208051611d0}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!setCabeca@{setCabeca}}
+\index{setCabeca@{setCabeca}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setCabeca()}{setCabeca()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::set\+Cabeca (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$}]{cabeca }\end{DoxyParamCaption})}
+
+
+
+Função para configurar o head/cabeça da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cabeca} & Iterador para o nó que será a cabeça da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_a385c79cac116d9773cf7d0d5e9e00606}\label{classLista_a385c79cac116d9773cf7d0d5e9e00606}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!setCauda@{setCauda}}
+\index{setCauda@{setCauda}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setCauda()}{setCauda()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::set\+Cauda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$}]{cauda }\end{DoxyParamCaption})}
+
+
+
+Função para configurar o tail/cauda da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cauda} & Iterador para o nó que será a cauda da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLista_a0b3652fa0b2faf07ea7af0ba575561b8}\label{classLista_a0b3652fa0b2faf07ea7af0ba575561b8}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!tamanho@{tamanho}}
+\index{tamanho@{tamanho}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tamanho()}{tamanho()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classLista}{Lista}}$<$ T $>$\+::tamanho}
+
+
+
+Função que returna o tamanho da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Tamanho da lista 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Lista_8hpp}{Lista.\+hpp}}\end{DoxyCompactItemize}

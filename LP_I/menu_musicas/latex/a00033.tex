@@ -1,0 +1,250 @@
+\hypertarget{a00033}{}\doxysection{Referência da Classe Playlist}
+\label{a00033}\index{Playlist@{Playlist}}
+
+
+Implementação de uma classe \mbox{\hyperlink{a00033}{Playlist}}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/\+Playlist.\+hpp\char`\"{}}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00033_aef38d55e42995be147977726350f3ada}{Playlist}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00033_aa4b4914ac8e101589ed5ffba330b7cf5}{Playlist}} (string nome)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a playlist com um nome. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00033_a4083df86652da125a41250204a203fc4}{Playlist}} (string nome, \mbox{\hyperlink{a00021}{Lista}}$<$ \mbox{\hyperlink{a00025}{Musica}} $>$ $\ast$musicas)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a playlist com um nome e uma lista de músicas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00033_aacd9a69e347fc19a9a0787d7a7ce9df4}{$\sim$\+Playlist}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00033_afe9feecd2eae47dea941d3ba7cba6b4a}{set\+Nome}} (string nome)
+\begin{DoxyCompactList}\small\item\em Função para configurar o nome da playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00033_ab702dbcf3c4174e8ca8ee302c4bc5f43}{set\+Musicas}} (\mbox{\hyperlink{a00021}{Lista}}$<$ \mbox{\hyperlink{a00025}{Musica}} $>$ $\ast$musicas)
+\begin{DoxyCompactList}\small\item\em Função para configurar a lista de músicas da playlist. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{a00033_ad5934cacafaebe5890d9100502ab3827}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna o nome da playlist. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00021}{Lista}}$<$ \mbox{\hyperlink{a00025}{Musica}} $>$ $\ast$ \mbox{\hyperlink{a00033_a65691826c1e28eed4175d0e9b3f3c0af}{get\+Musicas}} ()
+\begin{DoxyCompactList}\small\item\em Função que retorna a lista de músicas da playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00033_acf9a470dc5b8733b9631c7408e91d4ff}{add\+Musica}} (\mbox{\hyperlink{a00025}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Função para adicionar uma música à playlist. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00033_af5ca335fb315a2cea8348aa8885b897f}{rem\+Musica}} (\mbox{\hyperlink{a00025}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Função para remover uma música da playlist. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00029}{No}}$<$ \mbox{\hyperlink{a00025}{Musica}} $>$ $\ast$ \mbox{\hyperlink{a00033_af5b89cd6dfaf0addff2f5f3d90e766e5}{find\+Musica}} (\mbox{\hyperlink{a00025}{Musica}} m)
+\begin{DoxyCompactList}\small\item\em Função para encontrar uma música na playlist. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{a00033_a174e204cf92c2a17aec05b4318e82f7d}{operator==}} (\mbox{\hyperlink{a00033}{Playlist}} \&playlist)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de comparação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{a00033_a5ec7ac30eb81fb6228fc5a33db3c8111}{operator$<$$<$}} (ostream \&cout, \mbox{\hyperlink{a00033}{Playlist}} \&p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação de uma classe \mbox{\hyperlink{a00033}{Playlist}}. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{a00033_aef38d55e42995be147977726350f3ada}\label{a00033_aef38d55e42995be147977726350f3ada}} 
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{Playlist()}{Playlist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Playlist\+::\+Playlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em NULL} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00033_aa4b4914ac8e101589ed5ffba330b7cf5}\label{a00033_aa4b4914ac8e101589ed5ffba330b7cf5}} 
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{Playlist()}{Playlist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Playlist\+::\+Playlist (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa a playlist com um nome. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome da playlist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00033_a4083df86652da125a41250204a203fc4}\label{a00033_a4083df86652da125a41250204a203fc4}} 
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\index{Playlist@{Playlist}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{Playlist()}{Playlist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Playlist\+::\+Playlist (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{\mbox{\hyperlink{a00021}{Lista}}$<$ \mbox{\hyperlink{a00025}{Musica}} $>$ $\ast$}]{musicas }\end{DoxyParamCaption})}
+
+
+
+Construtor que inicializa a playlist com um nome e uma lista de músicas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome da playlist \\
+\hline
+{\em musicas} & \mbox{\hyperlink{a00021}{Lista}} de músicas da playlist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00033_aacd9a69e347fc19a9a0787d7a7ce9df4}\label{a00033_aacd9a69e347fc19a9a0787d7a7ce9df4}} 
+\index{Playlist@{Playlist}!````~Playlist@{$\sim$Playlist}}
+\index{````~Playlist@{$\sim$Playlist}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{$\sim$Playlist()}{~Playlist()}}
+{\footnotesize\ttfamily Playlist\+::$\sim$\+Playlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em NULL} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{a00033_acf9a470dc5b8733b9631c7408e91d4ff}\label{a00033_acf9a470dc5b8733b9631c7408e91d4ff}} 
+\index{Playlist@{Playlist}!addMusica@{addMusica}}
+\index{addMusica@{addMusica}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{addMusica()}{addMusica()}}
+{\footnotesize\ttfamily void Playlist\+::add\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00025}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Função para adicionar uma música à playlist. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Música que será adicionada à playlist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00033_af5b89cd6dfaf0addff2f5f3d90e766e5}\label{a00033_af5b89cd6dfaf0addff2f5f3d90e766e5}} 
+\index{Playlist@{Playlist}!findMusica@{findMusica}}
+\index{findMusica@{findMusica}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{findMusica()}{findMusica()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00029}{No}}$<$\mbox{\hyperlink{a00025}{Musica}}$>$$\ast$ Playlist\+::find\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00025}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Função para encontrar uma música na playlist. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Música que será procurada na playlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Iterador para a música encontrada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00033_a65691826c1e28eed4175d0e9b3f3c0af}\label{a00033_a65691826c1e28eed4175d0e9b3f3c0af}} 
+\index{Playlist@{Playlist}!getMusicas@{getMusicas}}
+\index{getMusicas@{getMusicas}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{getMusicas()}{getMusicas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00021}{Lista}}$<$\mbox{\hyperlink{a00025}{Musica}}$>$$\ast$ Playlist\+::get\+Musicas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna a lista de músicas da playlist. 
+
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{a00021}{Lista}} de músicas da playlist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00033_ad5934cacafaebe5890d9100502ab3827}\label{a00033_ad5934cacafaebe5890d9100502ab3827}} 
+\index{Playlist@{Playlist}!getNome@{getNome}}
+\index{getNome@{getNome}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily string Playlist\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que retorna o nome da playlist. 
+
+\begin{DoxyReturn}{Retorna}
+Nome da playlist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00033_a174e204cf92c2a17aec05b4318e82f7d}\label{a00033_a174e204cf92c2a17aec05b4318e82f7d}} 
+\index{Playlist@{Playlist}!operator==@{operator==}}
+\index{operator==@{operator==}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Playlist\+::operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00033}{Playlist}} \&}]{playlist }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga do operador de comparação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em playlist} & \mbox{\hyperlink{a00033}{Playlist}} que será comparada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+True se as playlists forem iguais e false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00033_af5ca335fb315a2cea8348aa8885b897f}\label{a00033_af5ca335fb315a2cea8348aa8885b897f}} 
+\index{Playlist@{Playlist}!remMusica@{remMusica}}
+\index{remMusica@{remMusica}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{remMusica()}{remMusica()}}
+{\footnotesize\ttfamily void Playlist\+::rem\+Musica (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00025}{Musica}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Função para remover uma música da playlist. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Música que será removida da playlist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00033_ab702dbcf3c4174e8ca8ee302c4bc5f43}\label{a00033_ab702dbcf3c4174e8ca8ee302c4bc5f43}} 
+\index{Playlist@{Playlist}!setMusicas@{setMusicas}}
+\index{setMusicas@{setMusicas}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{setMusicas()}{setMusicas()}}
+{\footnotesize\ttfamily void Playlist\+::set\+Musicas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00021}{Lista}}$<$ \mbox{\hyperlink{a00025}{Musica}} $>$ $\ast$}]{musicas }\end{DoxyParamCaption})}
+
+
+
+Função para configurar a lista de músicas da playlist. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em musicas} & \mbox{\hyperlink{a00021}{Lista}} de músicas que será atribuída à playlist \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00033_afe9feecd2eae47dea941d3ba7cba6b4a}\label{a00033_afe9feecd2eae47dea941d3ba7cba6b4a}} 
+\index{Playlist@{Playlist}!setNome@{setNome}}
+\index{setNome@{setNome}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Playlist\+::set\+Nome (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Função para configurar o nome da playlist. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & Nome que será atribuído à playlist \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{a00033_a5ec7ac30eb81fb6228fc5a33db3c8111}\label{a00033_a5ec7ac30eb81fb6228fc5a33db3c8111}} 
+\index{Playlist@{Playlist}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Playlist@{Playlist}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{cout,  }\item[{\mbox{\hyperlink{a00033}{Playlist}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a00011}{Playlist.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+# Loading project counter_Wbits
+# reading /home/usuario/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project elevador
+# Compile of dec_display.vhd failed with 1 errors.
+# Compile of dec_display.vhd failed with 26 errors.
+# Compile of dec_display.vhd was successful.
+vsim work.dec_display
+# vsim work.dec_display 
+# Start time: 09:04:48 on Oct 27,2023
+# Loading std.standard
+# Loading work.dec_display(behavior)
+wave create -driver freeze -pattern counter -startvalue 0000 -endvalue 1111 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 3 0 -starttime 0ps -endtime 1000ps sim:/dec_display/fl
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+add wave -position end  sim:/dec_display/display
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/elevator/dec_display.do
+wave editwrite -file /home/usuario/Documentos/Circuitos/elevator/dec_display.do -append
+quit -sim
+# End time: 09:07:38 on Oct 27,2023, Elapsed time: 0:02:50
+# Errors: 0, Warnings: 6

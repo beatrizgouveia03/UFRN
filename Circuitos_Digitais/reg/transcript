@@ -1,0 +1,120 @@
+# Loading project reg
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_2x1_Wbits
+# Error opening /home/usuario/Documentos/Circuitos/mux_2x1_Wbits/mux_2x1_Wbits.vhd
+# Path name '/home/usuario/Documentos/Circuitos/mux_2x1_Wbits/mux_2x1_Wbits.vhd' doesn't exist.
+# Error opening /home/usuario/Documentos/Circuitos/mux_2x1_Wbits/mux_2x1_Wbits.vhd
+# Path name '/home/usuario/Documentos/Circuitos/mux_2x1_Wbits/mux_2x1_Wbits.vhd' doesn't exist.
+# Compile of mux_2x1_Wbits.vhd failed with 1 errors.
+# Compile of mux_2x1_Wbits.vhd was successful.
+# Compile of mux_2x1_Wbits2.vhd was successful.
+# Compile of mux_2x1_Wbits.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_4x1
+# Error opening /home/usuario/Documentos/Circuitos/mux_4x1/mux_4x1.vhd
+# Path name '/home/usuario/Documentos/Circuitos/mux_4x1/mux_4x1.vhd' doesn't exist.
+# Compile of mux_4x1.vhd was successful.
+# Compile of mux_4x1.vhd was successful.
+# Compile of mux_4x1.vhd was successful.
+# Compile of arch_1.vhd was successful.
+# Compile of arch_5.vhd was successful.
+# Compile of arch_1.vhd was successful.
+# Compile of arch_2.vhd was successful.
+# Compile of arch_2.vhd was successful.
+# Compile of arch_3.vhd was successful.
+# Compile of arch_4.vhd was successful.
+# Compile of arch_6.vhd was successful.
+# Compile of arch_2.vhd was successful.
+# Compile of arch_5.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_2x1
+# Error opening /home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd
+# Path name '/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd' doesn't exist.
+# Compile of mux_2x1.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_2x1_Wbits
+# Compile of mux_2x1_Wbits2.vhd was successful.
+# Compile of mux_2x1_Wbits.vhd was successful.
+# Compile of structural.vhd was successful.
+# Compile of behavior.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_8x1
+# Compile of mux_8x1.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project demux_1x2
+# Compile of demux_1x2.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_16x1
+# Compile of mux_16x1.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project equacao
+# Compile of equacao.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project half_adder
+# Error opening /home/usuario/Documentos/Circuitos/half_adder/half_adder.vhd
+# Path name '/home/usuario/Documentos/Circuitos/half_adder/half_adder.vhd' doesn't exist.
+# Compile of half_adder.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project full_adder
+# Error opening /home/usuario/Documentos/Circuitos/full_adder/full_adder.vhd
+# Path name '/home/usuario/Documentos/Circuitos/full_adder/full_adder.vhd' doesn't exist.
+# Compile of full_adder.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project adder_4bits
+# Error opening /home/usuario/Documentos/Circuitos/adder_4bits/adder_4bits.vhd
+# Path name '/home/usuario/Documentos/Circuitos/adder_4bits/adder_4bits.vhd' doesn't exist.
+# Compile of adder_4bits.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project half_subtractor
+# Error opening /home/usuario/Documentos/Circuitos/half_subtractor/half_subtractor.vhd
+# Path name '/home/usuario/Documentos/Circuitos/half_subtractor/half_subtractor.vhd' doesn't exist.
+# Compile of half_subtractor.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project full_subtractor
+# Error opening /home/usuario/Documentos/Circuitos/full_subtractor/full_subtractor.vhd
+# Path name '/home/usuario/Documentos/Circuitos/full_subtractor/full_subtractor.vhd' doesn't exist.
+# Compile of full_subtractor.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project sub_4bits
+# Error opening /home/usuario/Documentos/Circuitos/sub_4bits/sub_4bits.vhd
+# Path name '/home/usuario/Documentos/Circuitos/sub_4bits/sub_4bits.vhd' doesn't exist.
+# Compile of sub_4bits.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project ff_d
+# Compile of ff_d.vhd was successful.
+# Compile of ff_d_clear.vhd was successful.
+# Compile of ff_d_clear_ena.vhd was successful.
+# Compile of ff_d_std_logic.vhd failed with 1 errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of ff_d_std_logic.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project ff_d_std_logic
+# Compile of ff_d_std_logic.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project ff_d
+# Compile of ff_d.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project ff_d_clear
+# Compile of ff_d_clear.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project ff_d_clear_ena
+# Compile of ff_d_clear_ena.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project ff_d_std_logic
+# Compile of ff_d_std_logic.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project latch_d
+# Compile of latch_d.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project latch_d_clear
+# Compile of latch_d_clear.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project reg
+# Compile of reg.vhd was successful.
+# Compile of reg2.vhd was successful.
+# Compile of reg3.vhd was successful.
+# Compile of reg_pp_Wbits.vhd failed with 1 errors.
+# Compile of arch_1.vhd was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of arch_2.vhd was successful.
+# Compile of arch_3.vhd was successful.

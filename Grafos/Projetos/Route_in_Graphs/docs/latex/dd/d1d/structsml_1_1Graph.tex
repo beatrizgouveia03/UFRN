@@ -1,0 +1,162 @@
+\doxysection{Referência à estrutura sml\+::Graph}
+\hypertarget{structsml_1_1Graph}{}\label{structsml_1_1Graph}\index{sml::Graph@{sml::Graph}}
+
+
+Estrutura para representar um grafo.  
+
+
+
+
+{\ttfamily \#include $<$simulation.\+h$>$}
+
+
+
+Diagrama de colaboração para sml\+::Graph\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{df/d35/structsml_1_1Graph__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}
+\begin{DoxyCompactList}\small\item\em Número de vértices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7}{graph\+\_\+type\+\_\+e}} \mbox{\hyperlink{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc}{type}}
+\begin{DoxyCompactList}\small\item\em Tipo do grafo. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}
+\begin{DoxyCompactList}\small\item\em Matriz de adjacência. \end{DoxyCompactList}\item 
+map$<$ int, string $>$ \mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}
+\begin{DoxyCompactList}\small\item\em Lista que mantém o nome de cada vértice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Amigos}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{structsml_1_1Graph_ad5b13d0d45e956fb079a556663b1ab83}{operator$<$$<$}} (ostream \&cout, const \mbox{\hyperlink{structsml_1_1Graph}{Graph}} g)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Estrutura para representar um grafo. 
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00088}{88}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+
+
+\doxysubsection{Documentação dos símbolos amigos e relacionados}
+\Hypertarget{structsml_1_1Graph_ad5b13d0d45e956fb079a556663b1ab83}\label{structsml_1_1Graph_ad5b13d0d45e956fb079a556663b1ab83} 
+\index{sml::Graph@{sml::Graph}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{cout,  }\item[{const \mbox{\hyperlink{structsml_1_1Graph}{Graph}}}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00096}{96}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numNodes\ =\ g.n;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ map<int,\ string>\ dic\ =\ g.dictionary;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ g.adj;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MATRIZ\ DE\ ADJACENCIA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}}\ <<\ endl;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \(\backslash\)\(\backslash\)\ \ "{}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dic[i].length()\ ==\ \textcolor{keywordtype}{size\_t}(1))\ cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ cout\ <<\ dic[i]\ <<\textcolor{stringliteral}{"{}\ \ "{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ "{}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\_\_\_\_"{}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dic[i].length()\ ==\ 1)\ cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ cout\ <<\ dic[i]\ <<\ \textcolor{stringliteral}{"{}|\ "{}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\{0\};\ j<numNodes;\ ++j)\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ <\ 10\ \&\&\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ >=\ 0)\ cout\ <<\ \textcolor{stringliteral}{"{}\ \ "{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ <\ 100)\ cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cout;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}\label{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5} 
+\index{sml::Graph@{sml::Graph}!adj@{adj}}
+\index{adj@{adj}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{adj}{adj}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ sml\+::\+Graph\+::adj}
+
+
+
+Matriz de adjacência. 
+
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00092}{92}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+\Hypertarget{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}\label{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96} 
+\index{sml::Graph@{sml::Graph}!dictionary@{dictionary}}
+\index{dictionary@{dictionary}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{dictionary}{dictionary}}
+{\footnotesize\ttfamily map$<$int, string$>$ sml\+::\+Graph\+::dictionary}
+
+
+
+Lista que mantém o nome de cada vértice. 
+
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00093}{93}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+\Hypertarget{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}\label{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025} 
+\index{sml::Graph@{sml::Graph}!n@{n}}
+\index{n@{n}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily int sml\+::\+Graph\+::n}
+
+
+
+Número de vértices. 
+
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00090}{90}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+\Hypertarget{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc}\label{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc} 
+\index{sml::Graph@{sml::Graph}!type@{type}}
+\index{type@{type}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7}{graph\+\_\+type\+\_\+e}} sml\+::\+Graph\+::type}
+
+
+
+Tipo do grafo. 
+
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00091}{91}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{simulation_8h}{simulation.\+h}}\end{DoxyCompactItemize}

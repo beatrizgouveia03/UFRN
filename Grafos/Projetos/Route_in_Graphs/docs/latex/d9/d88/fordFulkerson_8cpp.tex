@@ -1,0 +1,73 @@
+\doxysection{Referência ao ficheiro source/algorithms/ford\+Fulkerson.cpp}
+\hypertarget{fordFulkerson_8cpp}{}\label{fordFulkerson_8cpp}\index{source/algorithms/fordFulkerson.cpp@{source/algorithms/fordFulkerson.cpp}}
+{\ttfamily \#include "{}simulation.\+h"{}}\newline
+Diagrama de dependências de inclusão para ford\+Fulkerson.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/dac/fordFulkerson_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{fordFulkerson_8cpp_aed7344cdb0d738dd8959577b50656918}{dfs}} (int n, vector$<$ vector$<$ int $>$ $>$ \&residualG, int s, int t, vector$<$ int $>$ \&\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}} = numeric\+\_\+limits$<$int$>$\+::max()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{fordFulkerson_8cpp_aed7344cdb0d738dd8959577b50656918}\label{fordFulkerson_8cpp_aed7344cdb0d738dd8959577b50656918} 
+\index{fordFulkerson.cpp@{fordFulkerson.cpp}!dfs@{dfs}}
+\index{dfs@{dfs}!fordFulkerson.cpp@{fordFulkerson.cpp}}
+\doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
+{\footnotesize\ttfamily bool dfs (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{vector$<$ vector$<$ int $>$ $>$ \&}]{residualG,  }\item[{int}]{s,  }\item[{int}]{t,  }\item[{vector$<$ int $>$ \&}]{parent }\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{fordFulkerson_8cpp_source_l00009}{9}} do ficheiro \mbox{\hyperlink{fordFulkerson_8cpp_source}{ford\+Fulkerson.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ vector<bool>\ visited(n,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00012\ \ \ stack<int>\ st;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ visited[s]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00015\ \ \ st.push(s);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordflow}{while}\ (!st.empty())\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ top\ =\ st.top();}
+\DoxyCodeLine{00019\ \ \ \ \ st.pop();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!visited[i]\ \&\&\ residualG[top][i]\ >\ 0)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ st.push(i);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ visited[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]\ =\ top;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ t)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das variáveis}
+\Hypertarget{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}\label{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c} 
+\index{fordFulkerson.cpp@{fordFulkerson.cpp}!INF@{INF}}
+\index{INF@{INF}!fordFulkerson.cpp@{fordFulkerson.cpp}}
+\doxysubsubsection{\texorpdfstring{INF}{INF}}
+{\footnotesize\ttfamily const int INF = numeric\+\_\+limits$<$int$>$\+::max()}
+
+
+
+Definido na linha \mbox{\hyperlink{fordFulkerson_8cpp_source_l00005}{5}} do ficheiro \mbox{\hyperlink{fordFulkerson_8cpp_source}{ford\+Fulkerson.\+cpp}}.
+

@@ -1,0 +1,233 @@
+\doxysection{sml\+::Graph Class Reference}
+\hypertarget{classsml_1_1Graph}{}\label{classsml_1_1Graph}\index{sml::Graph@{sml::Graph}}
+
+
+{\ttfamily \#include $<$graph.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsml_1_1Graph_a36907af99cee68cf4b0b54a2c37ec7c8}{Graph}} (void)
+\item 
+\mbox{\hyperlink{classsml_1_1Graph_a5f081665054b7a980e8dc4931d09daed}{Graph}} (int num\+Nodes)
+\item 
+int \mbox{\hyperlink{classsml_1_1Graph_aed41791f0c682d97dbac6e141da7c5d2}{get\+Num\+Nodes}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a21d32f1955352a1d99826117319cfabe}{print\+Graph}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a1286589dfeb46ab1671a36b7e5b3b4d1}{print\+Adj\+List}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_ac320cd4fad095ed0ee3191bcfd09e56e}{print\+Adj\+Matrix}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a09cfc15a28f9eafea09b7a70b23538af}{print\+Inc\+Matrix}} (void)
+\item 
+int \mbox{\hyperlink{classsml_1_1Graph_abcb23b2a06a3740ca6dca8354c313efe}{get\+Vertex\+Idx}} (string v)
+\item 
+string \mbox{\hyperlink{classsml_1_1Graph_af57eaecd11279a3284582bcc471423ca}{get\+Vertex\+Name}} (int idxV)
+\item 
+map$<$ int, string $>$ \mbox{\hyperlink{classsml_1_1Graph_ac5da7d5853482a8f807c715e52e5232f}{get\+Dictionary}} (void)
+\item 
+map$<$ int, vector$<$ int $>$ $>$ \mbox{\hyperlink{classsml_1_1Graph_a1f368c7b9bfe74ee0d50a574f5d73d71}{get\+Adj\+List}} (void)
+\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{classsml_1_1Graph_a9adcef41eb7da8ff89597793b03978e6}{get\+Adj\+Matrix}} (void)
+\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{classsml_1_1Graph_a2174a14571d15be42f7b4505c7be79bc}{get\+Inc\+Matrix}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_ac73e37fece0e6c7d893154b91d1bc07f}{update\+Dictionary}} (map$<$ int, string $>$ dictionary)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a6769148d186fdd89708aecfe3961f3dc}{update\+Adj\+List}} (map$<$ int, vector$<$ int $>$ $>$ adj\+List)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a3633108375ee0fe8a2472532deaca4dd}{update\+Adj\+Matrix}} (vector$<$ vector$<$ int $>$ $>$ adj\+Matrix)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a1d7a311b1a8f1add78b77b979493b249}{update\+Inc\+Matrix}} (vector$<$ vector$<$ int $>$ $>$ inc\+Matrix)
+\item 
+void \mbox{\hyperlink{classsml_1_1Graph_a923c2cf9d27d09a043cbe27387b810c5}{run\+Menu}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsml_1_1Graph_a36907af99cee68cf4b0b54a2c37ec7c8}\label{classsml_1_1Graph_a36907af99cee68cf4b0b54a2c37ec7c8} 
+\index{sml::Graph@{sml::Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! Constructor default of the graph class \Hypertarget{classsml_1_1Graph_a5f081665054b7a980e8dc4931d09daed}\label{classsml_1_1Graph_a5f081665054b7a980e8dc4931d09daed} 
+\index{sml::Graph@{sml::Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{num\+Nodes }\end{DoxyParamCaption})}
+
+! Constructor of the graph class that initializes the adjacency list and matrix basead on the value passed in the parameter 
+\begin{DoxyParams}{Parameters}
+{\em num\+Nodes} & The number of nodes on the graph \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsml_1_1Graph_a1f368c7b9bfe74ee0d50a574f5d73d71}\label{classsml_1_1Graph_a1f368c7b9bfe74ee0d50a574f5d73d71} 
+\index{sml::Graph@{sml::Graph}!getAdjList@{getAdjList}}
+\index{getAdjList@{getAdjList}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getAdjList()}{getAdjList()}}
+{\footnotesize\ttfamily map$<$ int, vector$<$ int $>$ $>$ Graph\+::get\+Adj\+List (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function returns the adjacency list.
+
+\begin{DoxyReturn}{Returns}
+The adjacency list. 
+\end{DoxyReturn}
+\Hypertarget{classsml_1_1Graph_a9adcef41eb7da8ff89597793b03978e6}\label{classsml_1_1Graph_a9adcef41eb7da8ff89597793b03978e6} 
+\index{sml::Graph@{sml::Graph}!getAdjMatrix@{getAdjMatrix}}
+\index{getAdjMatrix@{getAdjMatrix}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getAdjMatrix()}{getAdjMatrix()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ Graph\+::get\+Adj\+Matrix (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function returns the adjacency list.
+
+\begin{DoxyReturn}{Returns}
+The adjacency matrix. 
+\end{DoxyReturn}
+\Hypertarget{classsml_1_1Graph_ac5da7d5853482a8f807c715e52e5232f}\label{classsml_1_1Graph_ac5da7d5853482a8f807c715e52e5232f} 
+\index{sml::Graph@{sml::Graph}!getDictionary@{getDictionary}}
+\index{getDictionary@{getDictionary}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getDictionary()}{getDictionary()}}
+{\footnotesize\ttfamily map$<$ int, string $>$ Graph\+::get\+Dictionary (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function returns the dictionary map.
+
+\begin{DoxyReturn}{Returns}
+The dictionary list. 
+\end{DoxyReturn}
+\Hypertarget{classsml_1_1Graph_a2174a14571d15be42f7b4505c7be79bc}\label{classsml_1_1Graph_a2174a14571d15be42f7b4505c7be79bc} 
+\index{sml::Graph@{sml::Graph}!getIncMatrix@{getIncMatrix}}
+\index{getIncMatrix@{getIncMatrix}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getIncMatrix()}{getIncMatrix()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ Graph\+::get\+Inc\+Matrix (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function returns the incidence matrix.
+
+\begin{DoxyReturn}{Returns}
+The incidence matrix. 
+\end{DoxyReturn}
+\Hypertarget{classsml_1_1Graph_aed41791f0c682d97dbac6e141da7c5d2}\label{classsml_1_1Graph_aed41791f0c682d97dbac6e141da7c5d2} 
+\index{sml::Graph@{sml::Graph}!getNumNodes@{getNumNodes}}
+\index{getNumNodes@{getNumNodes}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getNumNodes()}{getNumNodes()}}
+{\footnotesize\ttfamily int Graph\+::get\+Num\+Nodes (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function returns the numbers of node.
+
+\begin{DoxyReturn}{Returns}
+Number of nodes 
+\end{DoxyReturn}
+\Hypertarget{classsml_1_1Graph_abcb23b2a06a3740ca6dca8354c313efe}\label{classsml_1_1Graph_abcb23b2a06a3740ca6dca8354c313efe} 
+\index{sml::Graph@{sml::Graph}!getVertexIdx@{getVertexIdx}}
+\index{getVertexIdx@{getVertexIdx}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexIdx()}{getVertexIdx()}}
+{\footnotesize\ttfamily int Graph\+::get\+Vertex\+Idx (\begin{DoxyParamCaption}\item[{string}]{v }\end{DoxyParamCaption})}
+
+! This function locates on the dictionary of the graph the vertex with the name passed as argument and returns its index. 
+\begin{DoxyParams}{Parameters}
+{\em v} & The "{}name"{} of the vertex to be located \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsml_1_1Graph_af57eaecd11279a3284582bcc471423ca}\label{classsml_1_1Graph_af57eaecd11279a3284582bcc471423ca} 
+\index{sml::Graph@{sml::Graph}!getVertexName@{getVertexName}}
+\index{getVertexName@{getVertexName}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexName()}{getVertexName()}}
+{\footnotesize\ttfamily string Graph\+::get\+Vertex\+Name (\begin{DoxyParamCaption}\item[{int}]{idxV }\end{DoxyParamCaption})}
+
+! This function locates on the dictionary of the graph the vertex with the index passed as argument and returns its name. 
+\begin{DoxyParams}{Parameters}
+{\em idxV} & The index of the vertex to be located \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsml_1_1Graph_a1286589dfeb46ab1671a36b7e5b3b4d1}\label{classsml_1_1Graph_a1286589dfeb46ab1671a36b7e5b3b4d1} 
+\index{sml::Graph@{sml::Graph}!printAdjList@{printAdjList}}
+\index{printAdjList@{printAdjList}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{printAdjList()}{printAdjList()}}
+{\footnotesize\ttfamily void Graph\+::print\+Adj\+List (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function prints the adjacency list. \Hypertarget{classsml_1_1Graph_ac320cd4fad095ed0ee3191bcfd09e56e}\label{classsml_1_1Graph_ac320cd4fad095ed0ee3191bcfd09e56e} 
+\index{sml::Graph@{sml::Graph}!printAdjMatrix@{printAdjMatrix}}
+\index{printAdjMatrix@{printAdjMatrix}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{printAdjMatrix()}{printAdjMatrix()}}
+{\footnotesize\ttfamily void Graph\+::print\+Adj\+Matrix (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function prints the adjacency matrix. \Hypertarget{classsml_1_1Graph_a21d32f1955352a1d99826117319cfabe}\label{classsml_1_1Graph_a21d32f1955352a1d99826117319cfabe} 
+\index{sml::Graph@{sml::Graph}!printGraph@{printGraph}}
+\index{printGraph@{printGraph}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{printGraph()}{printGraph()}}
+{\footnotesize\ttfamily void Graph\+::print\+Graph (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function calls all the printing functions of the graph. \Hypertarget{classsml_1_1Graph_a09cfc15a28f9eafea09b7a70b23538af}\label{classsml_1_1Graph_a09cfc15a28f9eafea09b7a70b23538af} 
+\index{sml::Graph@{sml::Graph}!printIncMatrix@{printIncMatrix}}
+\index{printIncMatrix@{printIncMatrix}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{printIncMatrix()}{printIncMatrix()}}
+{\footnotesize\ttfamily void Graph\+::print\+Inc\+Matrix (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function prints the incidence matrix. \Hypertarget{classsml_1_1Graph_a923c2cf9d27d09a043cbe27387b810c5}\label{classsml_1_1Graph_a923c2cf9d27d09a043cbe27387b810c5} 
+\index{sml::Graph@{sml::Graph}!runMenu@{runMenu}}
+\index{runMenu@{runMenu}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{runMenu()}{runMenu()}}
+{\footnotesize\ttfamily void Graph\+::run\+Menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function loops around the graph menu calling the functions related to them, until the user chooses to return to the main menu. \Hypertarget{classsml_1_1Graph_a6769148d186fdd89708aecfe3961f3dc}\label{classsml_1_1Graph_a6769148d186fdd89708aecfe3961f3dc} 
+\index{sml::Graph@{sml::Graph}!updateAdjList@{updateAdjList}}
+\index{updateAdjList@{updateAdjList}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{updateAdjList()}{updateAdjList()}}
+{\footnotesize\ttfamily void Graph\+::update\+Adj\+List (\begin{DoxyParamCaption}\item[{map$<$ int, vector$<$ int $>$ $>$}]{adj\+List }\end{DoxyParamCaption})}
+
+! This function updates the adjacency list by replacing the actual one with the one passed as parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adj\+List} & The new version of the adjacency list to be updated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsml_1_1Graph_a3633108375ee0fe8a2472532deaca4dd}\label{classsml_1_1Graph_a3633108375ee0fe8a2472532deaca4dd} 
+\index{sml::Graph@{sml::Graph}!updateAdjMatrix@{updateAdjMatrix}}
+\index{updateAdjMatrix@{updateAdjMatrix}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{updateAdjMatrix()}{updateAdjMatrix()}}
+{\footnotesize\ttfamily void Graph\+::update\+Adj\+Matrix (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{adj\+Matrix }\end{DoxyParamCaption})}
+
+! This function updates the adjacency matrix by replacing the actual one with the one passed as parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em adj\+Matrix} & The new version of the adjacency matrix to be updated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsml_1_1Graph_ac73e37fece0e6c7d893154b91d1bc07f}\label{classsml_1_1Graph_ac73e37fece0e6c7d893154b91d1bc07f} 
+\index{sml::Graph@{sml::Graph}!updateDictionary@{updateDictionary}}
+\index{updateDictionary@{updateDictionary}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{updateDictionary()}{updateDictionary()}}
+{\footnotesize\ttfamily void Graph\+::update\+Dictionary (\begin{DoxyParamCaption}\item[{map$<$ int, string $>$}]{dictionary }\end{DoxyParamCaption})}
+
+! This function updates the dictionary map by replacing the actual one with the one passed as parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dictionary} & The new version of the dictionary map to be updated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsml_1_1Graph_a1d7a311b1a8f1add78b77b979493b249}\label{classsml_1_1Graph_a1d7a311b1a8f1add78b77b979493b249} 
+\index{sml::Graph@{sml::Graph}!updateIncMatrix@{updateIncMatrix}}
+\index{updateIncMatrix@{updateIncMatrix}!sml::Graph@{sml::Graph}}
+\doxysubsubsection{\texorpdfstring{updateIncMatrix()}{updateIncMatrix()}}
+{\footnotesize\ttfamily void Graph\+::update\+Inc\+Matrix (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$}]{inc\+Matrix }\end{DoxyParamCaption})}
+
+! This function updates the incidence matrix by replacing the actual one with the one passed as parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em inc\+Matrix} & The new version of the incidence matrix to be updated \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{graph_8hpp}{graph.\+hpp}}\item 
+source/\mbox{\hyperlink{graph_8cpp}{graph.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Menu de músicas: Menu de Músicas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Menu de músicas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador de um menu de player de músicas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Menu de Músicas </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Este é um projeto de um menu de músicas criado em C++. O objetivo deste projeto é permitir que os usuários possam visualizar listas de músicas e de <a class="el" href="a00036.html" title="Implementação de uma classe Playlist.">Playlist</a> e selecionar a que desejam ouvir.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Funcionalidades</h1>
+<ul>
+<li>Listar todas as músicas disponíveis</li>
+<li>Adicionar uma nova música à lista</li>
+<li>Remover uma música da lista</li>
+<li>Criar uma nova playlist</li>
+<li>Excluir uma playlist</li>
+<li>Adicionar músicas a uma playlist</li>
+<li>Remover músicas de uma playlist</li>
+<li>Listar todas as playlists disponíveis</li>
+<li>Selecionar uma playlist para reproduzir</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Requisitos</h1>
+<p>Para executar o projeto, é necessário ter o compilador C++ instalado na sua máquina. Recomenda-se o uso do compilador GCC.</p>
+<p>Também é possível executar o projeto com o CMake. Para isso, é necessário ter o CMake instalado na sua máquina.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Como executar com o GCC</h1>
+<p>Para executar o projeto com o GCC, siga as instruções abaixo:</p>
+<ol type="1">
+<li>Clone o repositório do projeto para a sua máquina local:</li>
+</ol>
+<div class="fragment"><div class="line">git clone git clone https://github.com/beatrizgouveia03/LP_I.git --branch main --single-branch menu_musicas</div>
+</div><!-- fragment --><ol type="1">
+<li>Abra o terminal na pasta onde o repositório foi clonado e compile o código-fonte usando o seguinte comando:</li>
+</ol>
+<div class="fragment"><div class="line">g++ -o menu_musicas main.cpp menus.cpp Musica.cpp Playlist.cpp utilities.cpp</div>
+</div><!-- fragment --><ol type="1">
+<li>Execute o programa com o seguinte comando:</li>
+</ol>
+<div class="fragment"><div class="line">./menu_musicas</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+Como executar com o CMake</h1>
+<p>Para executar o projeto com o CMake, siga as instruções abaixo:</p>
+<ol type="1">
+<li>Clone o repositório do projeto para a sua máquina local:</li>
+</ol>
+<div class="fragment"><div class="line">git clone git clone https://github.com/beatrizgouveia03/LP_I.git --branch main --single-branch menu_musicas</div>
+</div><!-- fragment --><ol type="1">
+<li>Abra o terminal na pasta onde o repositório foi clonado e crie uma nova pasta chamada "build":</li>
+</ol>
+<div class="fragment"><div class="line">mkdir build</div>
+<div class="line">cd build</div>
+</div><!-- fragment --><ol type="1">
+<li>Execute o CMake com o seguinte comando:</li>
+</ol>
+<div class="fragment"><div class="line">cmake ..</div>
+</div><!-- fragment --><ol type="1">
+<li>Execute o comando make para compilar o código:</li>
+</ol>
+<div class="fragment"><div class="line">make</div>
+</div><!-- fragment --><ol type="1">
+<li>Execute o programa com o seguinte comando:</li>
+</ol>
+<div class="fragment"><div class="line">./menu_musicas</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+Documentação</h1>
+<p>A documentação do projeto foi gerada com o Doxygen.</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Contribuindo</h1>
+<p>Se você deseja contribuir com este projeto, siga as instruções abaixo:</p>
+<ol type="1">
+<li>Faça um fork deste repositório para a sua conta no GitHub</li>
+<li>Clone o repositório do seu fork na sua máquina local</li>
+<li>Crie uma nova branch para a sua contribuição:</li>
+</ol>
+<div class="fragment"><div class="line">git checkout -b minha-contribuicao</div>
+</div><!-- fragment --><ol type="1">
+<li>Adicione suas alterações ao código e documentação</li>
+<li>Faça um commit das suas alterações:</li>
+</ol>
+<div class="fragment"><div class="line">git add .</div>
+<div class="line">git commit -m &quot;Minha contribuição&quot;</div>
+</div><!-- fragment --><ol type="1">
+<li>Envie as suas alterações para o GitHub:</li>
+</ol>
+<div class="fragment"><div class="line">git push origin minha-contribuicao</div>
+</div><!-- fragment --><ol type="1">
+<li>Abra um pull request no repositório original para que suas alterações possam ser revisadas e incorporadas.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Contribuidores</h1>
+<ol type="1">
+<li>Beatriz Gouveia Gadelha</li>
+<li>Rodrigo Eduardo Dantas Barbalho </li>
+</ol>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+/home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity latch_d_clear
+-- Compiling architecture behavior of latch_d_clear
+
+} {} {}}

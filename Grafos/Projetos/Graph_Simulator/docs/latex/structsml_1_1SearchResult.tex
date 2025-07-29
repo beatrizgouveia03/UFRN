@@ -1,0 +1,107 @@
+\doxysection{sml\+::Search\+Result Struct Reference}
+\hypertarget{structsml_1_1SearchResult}{}\label{structsml_1_1SearchResult}\index{sml::SearchResult@{sml::SearchResult}}
+
+
+{\ttfamily \#include $<$operations.\+hpp$>$}
+
+
+
+Collaboration diagram for sml\+::Search\+Result\+:
+% FIG 0
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsml_1_1SearchResult_a7232a22d3425dba45d0896a07b9b21e5}{num\+Nodes}}
+\item 
+int \mbox{\hyperlink{structsml_1_1SearchResult_a787da5540c6317900a89da06f4d1f864}{initial\+Node}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{structsml_1_1SearchResult_ad7ab84aec1673e5e69f8478562304ea8}{predecessors}}
+\item 
+vector$<$ bool $>$ \mbox{\hyperlink{structsml_1_1SearchResult_aa6f8854b596722b1b4d58ecd1d71a72b}{visited}}
+\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{structsml_1_1SearchResult_a27c6c3ea945602b66ad901c115884172}{back\+Edges}}
+\item 
+map$<$ int, string $>$ \mbox{\hyperlink{structsml_1_1SearchResult_a8f791c15b87c6d8f3ae32d6ff631a655}{dictionary}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a}{lowpt}}
+\item 
+vector$<$ bool $>$ \mbox{\hyperlink{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349}{demarcators}}
+\item 
+vector$<$ bool $>$ \mbox{\hyperlink{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604}{articulations}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{structsml_1_1SearchResult_a423587a5300b974efed36ceef9b970fe}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{structsml_1_1SearchResult}{Search\+Result}} \&result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{structsml_1_1SearchResult_a423587a5300b974efed36ceef9b970fe}\label{structsml_1_1SearchResult_a423587a5300b974efed36ceef9b970fe} 
+\index{sml::SearchResult@{sml::SearchResult}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structsml_1_1SearchResult}{Search\+Result}} \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604}\label{structsml_1_1SearchResult_ae2de277d1f9d75ec747cf0b579b56604} 
+\index{sml::SearchResult@{sml::SearchResult}!articulations@{articulations}}
+\index{articulations@{articulations}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{articulations}{articulations}}
+{\footnotesize\ttfamily vector$<$bool$>$ sml\+::\+Search\+Result\+::articulations}
+
+\Hypertarget{structsml_1_1SearchResult_a27c6c3ea945602b66ad901c115884172}\label{structsml_1_1SearchResult_a27c6c3ea945602b66ad901c115884172} 
+\index{sml::SearchResult@{sml::SearchResult}!backEdges@{backEdges}}
+\index{backEdges@{backEdges}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{backEdges}{backEdges}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ sml\+::\+Search\+Result\+::back\+Edges}
+
+\Hypertarget{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349}\label{structsml_1_1SearchResult_a3ee19197a699ba4cda2f3de76127a349} 
+\index{sml::SearchResult@{sml::SearchResult}!demarcators@{demarcators}}
+\index{demarcators@{demarcators}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{demarcators}{demarcators}}
+{\footnotesize\ttfamily vector$<$bool$>$ sml\+::\+Search\+Result\+::demarcators}
+
+\Hypertarget{structsml_1_1SearchResult_a8f791c15b87c6d8f3ae32d6ff631a655}\label{structsml_1_1SearchResult_a8f791c15b87c6d8f3ae32d6ff631a655} 
+\index{sml::SearchResult@{sml::SearchResult}!dictionary@{dictionary}}
+\index{dictionary@{dictionary}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{dictionary}{dictionary}}
+{\footnotesize\ttfamily map$<$int, string$>$ sml\+::\+Search\+Result\+::dictionary}
+
+\Hypertarget{structsml_1_1SearchResult_a787da5540c6317900a89da06f4d1f864}\label{structsml_1_1SearchResult_a787da5540c6317900a89da06f4d1f864} 
+\index{sml::SearchResult@{sml::SearchResult}!initialNode@{initialNode}}
+\index{initialNode@{initialNode}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{initialNode}{initialNode}}
+{\footnotesize\ttfamily int sml\+::\+Search\+Result\+::initial\+Node}
+
+\Hypertarget{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a}\label{structsml_1_1SearchResult_a2fe61613fccda57d2536cd6da350eb4a} 
+\index{sml::SearchResult@{sml::SearchResult}!lowpt@{lowpt}}
+\index{lowpt@{lowpt}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{lowpt}{lowpt}}
+{\footnotesize\ttfamily vector$<$int$>$ sml\+::\+Search\+Result\+::lowpt}
+
+\Hypertarget{structsml_1_1SearchResult_a7232a22d3425dba45d0896a07b9b21e5}\label{structsml_1_1SearchResult_a7232a22d3425dba45d0896a07b9b21e5} 
+\index{sml::SearchResult@{sml::SearchResult}!numNodes@{numNodes}}
+\index{numNodes@{numNodes}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{numNodes}{numNodes}}
+{\footnotesize\ttfamily int sml\+::\+Search\+Result\+::num\+Nodes}
+
+\Hypertarget{structsml_1_1SearchResult_ad7ab84aec1673e5e69f8478562304ea8}\label{structsml_1_1SearchResult_ad7ab84aec1673e5e69f8478562304ea8} 
+\index{sml::SearchResult@{sml::SearchResult}!predecessors@{predecessors}}
+\index{predecessors@{predecessors}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{predecessors}{predecessors}}
+{\footnotesize\ttfamily vector$<$int$>$ sml\+::\+Search\+Result\+::predecessors}
+
+\Hypertarget{structsml_1_1SearchResult_aa6f8854b596722b1b4d58ecd1d71a72b}\label{structsml_1_1SearchResult_aa6f8854b596722b1b4d58ecd1d71a72b} 
+\index{sml::SearchResult@{sml::SearchResult}!visited@{visited}}
+\index{visited@{visited}!sml::SearchResult@{sml::SearchResult}}
+\doxysubsubsection{\texorpdfstring{visited}{visited}}
+{\footnotesize\ttfamily vector$<$bool$>$ sml\+::\+Search\+Result\+::visited}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{operations_8hpp}{operations.\+hpp}}\end{DoxyCompactItemize}

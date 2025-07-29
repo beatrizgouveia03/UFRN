@@ -1,0 +1,39 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+
+
+ENTITY cod_destino IS
+PORT(	buttons : IN STD_LOGIC_VECTOR(8 DOWNTO 0); -- data input
+	floor_level 	: OUT STD_LOGIC_VECTOR(3 DOWNTO 0) --data output
+);
+END cod_destino;
+
+ARCHITECTURE  behavior OF cod_destino IS
+BEGIN
+	PROCESS(buttons)
+		variable selected_floor : integer := 0;
+		BEGIN
+			FOR i IN 0 TO 8 LOOP
+				IF (buttons(i) = '1') THEN
+					selected_floor := i;
+					EXIT;
+				END IF;
+			END LOOP;
+
+			CASE selected_floor IS
+				WHEN 0 => floor_level <= "0000";
+				WHEN 1 => floor_level <= "0001";
+				WHEN 2 => floor_level <= "0010";
+				WHEN 3 => floor_level <= "0011";
+				WHEN 4 => floor_level <= "0100";
+				WHEN 5 => floor_level <= "0101";
+				WHEN 6 => floor_level <= "0110";
+				WHEN 7 => floor_level <= "0111";
+				WHEN 8 => floor_level <= "1000";
+				WHEN OTHERs => floor_level <= "1111";
+			END CASE;
+	END PROCESS;
+END behavior;
+		
+	

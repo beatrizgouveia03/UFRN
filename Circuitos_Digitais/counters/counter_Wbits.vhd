@@ -1,0 +1,36 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+ENTITY counter_Wbits IS
+  GENERIC (W : NATURAL := 4);
+  PORT (
+    clk  : IN STD_LOGIC;
+    clrn : IN STD_LOGIC;
+    ena  : IN STD_LOGIC;
+    load : IN STD_LOGIC;
+    d    : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);
+    q    : OUT STD_LOGIC_VECTOR(W-1 DOWNTO 0)
+  );
+END counter_Wbits;
+
+ARCHITECTURE arch OF counter_Wbits IS
+BEGIN
+  PROCESS(clk, clrn)
+  VARIABLE temp_q : STD_LOGIC_VECTOR(W-1 DOWNTO 0) := (OTHERS => '0');
+  BEGIN
+    IF(clrn = '0') THEN
+      temp_q := (OTHERS => '0');
+    ELSIF (rising_edge(clk)) THEN
+      IF(ena = '1') THEN
+        IF(load = '1') THEN
+          temp_q := d;
+        ELSE
+          temp_q := std_logic_vector(unsigned(temp_q) + 1);
+        END IF;
+      END IF;
+    END IF;
+    q <= temp_q;
+  END PROCESS;
+END arch;
+

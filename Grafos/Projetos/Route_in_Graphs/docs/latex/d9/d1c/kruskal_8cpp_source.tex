@@ -1,0 +1,93 @@
+\doxysection{kruskal.\+cpp}
+\hypertarget{kruskal_8cpp_source}{}\label{kruskal_8cpp_source}\index{source/algorithms/kruskal.cpp@{source/algorithms/kruskal.cpp}}
+\mbox{\hyperlink{kruskal_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{simulation_8h}{simulation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00005}00005\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacesml}{sml}};}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00013}\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{00013}}\ \textcolor{preprocessor}{\#define\ MAXN\ 1000}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00014}\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{00014}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}];}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00015}\mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{00015}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[\mbox{\hyperlink{kruskal_8cpp_ad1f79d9d99776d7353c6659c307c83c6}{MAXN}}];}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00022}\mbox{\hyperlink{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d}{00022}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d}{init}}(\textcolor{keywordtype}{size\_t}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[i]\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00034}\mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{00034}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(\textcolor{keywordtype}{size\_t}\ cur)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ root\ =\ cur;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[root]\ !=\ root)}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ root\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[root];}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00039}00039\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//Path\ compression}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[cur]\ !=\ root)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ temp\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[cur];}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[cur]\ =\ root;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ cur\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ root;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00055}\mbox{\hyperlink{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b}{00055}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b}{join}}(\textcolor{keywordtype}{size\_t}\ x,\ \textcolor{keywordtype}{size\_t}\ y)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00056}00056\ \ \ \ \ x\ =\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(x);}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00057}00057\ \ \ \ \ y\ =\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(y);}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}(x\ ==\ y)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00060}00060\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[x]\ >\ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[y])\ std::swap(x,\ y);}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[y]\ +=\ \mbox{\hyperlink{kruskal_8cpp_a3fac60782863119e99f52ebcc2567f78}{rank\_set}}[x];}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[x]\ =\ y;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00072}\mbox{\hyperlink{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}{00072}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}{Simulation::kruskal}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{comment}{//Converter\ matriz\ de\ adjacência\ para\ lista\ de\ arestas}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00074}00074\ \ \ \ \ std::vector<std::pair<int,\ std::pair<size\_t,\ size\_t>>>\ edges;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ j\ =\ i\ +\ 1;\ j\ <\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges.push\_back(\{\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j],\ \{i,\ j\}\});}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00083}00083\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{comment}{//Inicializar\ estruturas\ do\ Union-\/Find\ e\ ordenar\ arestas\ por\ peso}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00085}00085\ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d}{init}}(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}});}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00086}00086\ \ \ \ \ sort(edges.begin(),\ edges.end());}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00087}00087\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//Estruturas\ para\ armazenar\ o\ resultado\ (arestas\ da\ MST\ e\ peso\ total)}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00089}00089\ \ \ \ \ std::vector<std::pair<int,\ std::pair<size\_t,\ size\_t>>>\ mst;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{keywordtype}{int}\ total\_weight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00091}00091\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//Algoritmo\ principal\ de\ Kruskal}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ edge\ :\ edges)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ u\ =\ edge.second.first;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ v\ =\ edge.second.second;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verifica\ se\ adicionar\ a\ aresta\ não\ forma\ ciclo}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(u)\ !=\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(v))\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b}{join}}(u,\ v);}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ mst.push\_back(edge);}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ total\_weight\ +=\ edge.first;}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00104}00104\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{comment}{//Imprime\ as\ arestas\ selecionadas\ e\ o\ peso\ total\ da\ MST}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00106}00106\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nArvore\ Geradora\ Minima\ encontrada\ pelo\ algoritmo\ de\ Kruskal:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00107}00107\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Arestas\ da\ AGM:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00108}00108\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ edge\ :\ mst)\ \{}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[edge.second.first]\ <<\ \textcolor{stringliteral}{"{}\ -\/-\/\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[edge.second.second]\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ edge.first\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00113}00113\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Peso\ total\ da\ AGM:\ "{}}\ <<\ total\_weight\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{kruskal_8cpp_source_l00114}00114\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,223 @@
+\doxysection{simulation.\+cpp}
+\hypertarget{simulation_8cpp_source}{}\label{simulation_8cpp_source}\index{source/simulation.cpp@{source/simulation.cpp}}
+\mbox{\hyperlink{simulation_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{simulation_8h}{simulation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacesml}{sml}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00005}\mbox{\hyperlink{simulation_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{00005}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{simulation_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00010}\mbox{\hyperlink{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}{00010}}\ \mbox{\hyperlink{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}{Simulation::Simulation}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00011}00011\ \ \ \textcolor{comment}{//\ Inicializa\ a\ simulação}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00017}\mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{Simulation::pause}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00018}00018\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Para\ retornar\ ao\ menu\ principal,\ pressione\ Enter..."{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00019}00019\ \ \ cin.get();\ \textcolor{comment}{//\ Aguarda\ uma\ entrada}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00020}00020\ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00029}\mbox{\hyperlink{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}{Simulation::showMenu}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00030}00030\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}============================================"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00031}00031\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Menu\ Principal\ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00032}00032\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}============================================"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00033}00033\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Arvores\ Geradoras\ Minimas\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00034}00034\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}1.\ Kruskal"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00035}00035\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}2.\ Prim"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00036}00036\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}3.\ Chu-\/Liu/Edmonds"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00037}00037\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Caminho\ mais\ curto\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00038}00038\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}4.\ Dijkstra"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00039}00039\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}5.\ Bellman-\/Ford"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00040}00040\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}6.\ Floyd-\/Warshall"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00041}00041\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Grafos\ Eulerianos\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00042}00042\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}7.\ Hierholzer\ (Ciclos)"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00043}00043\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}8.\ Hierholzer\ (Caminhos)"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00044}00044\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Fluxo\ em\ redes\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00045}00045\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}9.\ Ford-\/Fulkerson"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00046}00046\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}10.\ Edmonds-\/Karp"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00047}00047\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}0.\ Encerrar\ programa"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00055}\mbox{\hyperlink{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}{Simulation::run}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00056}00056\ \ \ \textcolor{keywordtype}{int}\ opt\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00057}00057\ \ \ \textcolor{keywordtype}{string}\ str;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00059}00059\ \ \ \textcolor{keywordflow}{while}(opt\ !=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}{showMenu}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00061}00061\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ your\ option:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00062}00062\ \ \ \ \ getline(cin,\ str);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00063}00063\ \ \ \ \ opt\ =\ stoi(str);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{switch}\ (opt)\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00066}00066\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00068}00068\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}{kruskal}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00072}00072\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a3d90ab0d5288dd354420adedcd91d061}{prim}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00076}00076\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a130bf31897eed82dc4ea5df332ce5a86}{chuLiuEdmonds}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00080}00080\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_aa2321eb52355e4b6dd76677762871952}{dijkstra}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00084}00084\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ initialVertex;\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ vertice\ inicial:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ getline(cin,\ str);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ initialVertex\ =\ stoi(str);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a1b43feca1f43f04ecd69c12f30176da3}{bellmanFord}}(initialVertex);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00092}00092\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}{floydWarshall}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00096}00096\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_af2076a32e351c28d7fb6b7b7083553ec}{hierholzer}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00100}00100\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a76e12b972244c9d75f93b413187986dc}{hierholzerPaths}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00104}00104\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_aad60616330b939af92e6cf08d39c8e71}{fordFulkerson}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00108}00108\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}{edmondsKarp}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00112}00112\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00115}00115\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00127}\mbox{\hyperlink{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}{00127}}\ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}\ \mbox{\hyperlink{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}{Simulation::initialize}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[])\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00128}00128\ \ \ \textcolor{comment}{//\ Inicializa\ a\ simulação}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00129}00129\ \ \ \textcolor{comment}{//\ Processa\ os\ argumentos\ da\ linha\ de\ comando}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00130}00130\ \ \ \textcolor{keywordflow}{if}\ (argc\ <=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{stringliteral}{"{}Erro:\ Nome\ do\ arquivo\ ausente"{}});}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00132}00132\ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00133}00133\ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00134}00134\ \ \ \textcolor{keywordtype}{string}\ filename\ =\ argv[1];}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00135}00135\ \ \ ifstream\ file(filename);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00137}00137\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Inicializando\ a\ simulacao..."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00139}00139\ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00140}00140\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{stringliteral}{"{}Erro:\ Nao\ foi\ possivel\ abrir\ o\ arquivo"{}});}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00141}00141\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00143}00143\ \ \ \ \textcolor{comment}{//\ Leitura\ da\ entrada}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00144}00144\ \ \ \textcolor{keywordflow}{while}\ (!file.eof())\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00146}00146\ \ \ \ \ \ \ cout\ <<\ filename\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00147}00147\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00148}00148\ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ graph\ from\ the\ file}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00149}00149\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ v1,\ v2,\ w;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00150}00150\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numNodes;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00152}00152\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00153}00153\ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ type;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00155}00155\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Reading\ number\ of\ nodes..."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00157}00157\ \ \ \ \ \ \ file\ >>\ type\ >>\ numNodes;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00159}00159\ \ \ \ \ \ \ map<int,\ string>\ dictionary;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00160}00160\ \ \ \ \ \ \ vector<vector<int>>\ adj\ =\ vector<vector<int>>(numNodes,\ vector<int>(numNodes,\ -\/1));\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00163}00163\ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ connections\ from\ the\ file}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00164}00164\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(file,\ line))\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ ==\ \textcolor{keywordtype}{string}())}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ istringstream\ ss(line);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ getline(ss,\ v1,\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ getline(ss,\ v2,\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ getline(ss,\ w);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dictionary.empty())\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(v1\ ==\ \textcolor{stringliteral}{"{}s"{}})\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[0]\ =\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{1\};\ i<numNodes-\/1;\ ++i)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[i]\ =\ string(1,\ \textcolor{charliteral}{'a'}\ +\ (i-\/1));}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[numNodes-\/1]\ =\ \textcolor{stringliteral}{"{}t"{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[i]\ =\ to\_string(i+1);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Reading\ connection\ "{}}\ <<\ v1\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ v2\ <<\ \textcolor{stringliteral}{"{}\ weighting\ "{}}\ <<\ w\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ x\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}},\ y\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Update\ the\ dictionary}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\{0\};\ i<dictionary.size();++i)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dictionary[i]\ ==\ v1)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ size\_t(i);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dictionary[i]\ ==\ v2)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ size\_t(i);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(x\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ x\ =\ dictionary.size();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ dictionary[int(x)]\ =\ v1;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(y\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ y\ =\ dictionary.size();}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ dictionary[int(y)]\ =\ v2;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionary.size()\ >\ numNodes)\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{stringliteral}{"{}Error:\ Node\ out-\/of-\/index"{}});}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00215}00215\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ adj[x][y]\ =\ stoi(w);}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ (type\ ==\ \textcolor{charliteral}{'G'})\ ?\ adj[y][x]\ =\ stoi(w)\ :\ -\/1;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00219}00219\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ adj;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ =\ numNodes;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}\ =\ dictionary;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc}{type}}\ =\ (type\ ==\ \textcolor{charliteral}{'G'})?\ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6}{DIRECTED}}\ :\ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3}{UNDIRECTED}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00224}00224\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00225}00225\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00227}00227\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Inicializacao\ concluida\ com\ sucesso"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00228}00228\ \ \ cout\ <<\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00230}00230\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}(\textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}(0));}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00231}00231\ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00239}\mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{00239}}\ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{Simulation::usage}}(\textcolor{keywordtype}{string}\ message)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00240}00240\ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}\ =\ \textcolor{stringliteral}{"{}>>>\ Uso:\ Route\_in\_Graphs\ <arquivo\_de\_entrada>\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00242}00242\ \ \ \textcolor{keywordflow}{if}(message\ !=\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00243}00243\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00244}00244\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}\ =\ \textcolor{stringliteral}{"{}>>>\ "{}}\ +\ message\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}};}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00245}00245\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00247}00247\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}(\mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}},\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}(1));}
+\DoxyCodeLine{\Hypertarget{simulation_8cpp_source_l00248}00248\ \}}
+
+\end{DoxyCode}

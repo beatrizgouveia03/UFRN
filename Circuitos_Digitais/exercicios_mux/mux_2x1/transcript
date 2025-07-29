@@ -1,0 +1,122 @@
+# Loading project mux_2x1
+# Compile of mux_2x1.vhd was successful.
+vsim work.mux_2x1
+# vsim work.mux_2x1 
+# Start time: 09:16:35 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_2x1(structural)
+add wave sim:/mux_2x1/*
+force -freeze sim:/mux_2x1/a 0 0, 1 {40 ps} -r 80
+force -freeze sim:/mux_2x1/b 0 0, 1 {20 ps} -r 40
+force -freeze sim:/mux_2x1/sel 0 0, 1 {10 ps} -r 20
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/mux_2x1/wave.do
+quit -sim
+# End time: 09:18:08 on Sep 20,2023, Elapsed time: 0:01:33
+# Errors: 0, Warnings: 3
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_4x1
+# Compile of mux_4x1.vhd failed with 4 errors.
+# Compile of mux_4x1.vhd failed with 4 errors.
+# Compile of mux_4x1.vhd failed with 4 errors.
+# Compile of mux_4x1.vhd was successful.
+# Compile of mux_4x1.vhd failed with 4 errors.
+# Compile of mux_4x1.vhd failed with 2 errors.
+# Compile of mux_4x1.vhd failed with 1 errors.
+# Compile of mux_4x1.vhd failed with 2 errors.
+# Compile of mux_4x1.vhd failed with 1 errors.
+# Compile of mux_4x1.vhd was successful.
+# Compile of mux_4x1.vhd was successful.
+vsim work.mux_4x1
+# vsim work.mux_4x1 
+# Start time: 09:46:12 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_4x1(structural)
+add wave sim:/mux_4x1/*
+force -freeze sim:/mux_4x1/a1 1 0
+force -freeze sim:/mux_4x1/a2 1 0
+force -freeze sim:/mux_4x1/sel 0 0, 1 {50 ps} -r 100
+# Value length (1) does not equal array index length (2).
+# ** UI-Msg: (vsim-4011) Invalid force value: 0 0, 1 {50 ps}.
+# 
+run
+force -freeze sim:/mux_4x1/sel(1) 1 0, 0 {50 ps} -r 100
+force -freeze sim:/mux_4x1/sel(0) 0 0, 1 {25 ps} -r 50
+force -freeze sim:/mux_4x1/sel(1) 0 0, 1 {50 ps} -r 100
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/mux_4x1/wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/mux_4x1/wave.do
+quit -sim
+# End time: 09:49:13 on Sep 20,2023, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 17
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_2x1_Wbits
+# Compile of mux_2x1.vhd was successful.
+# Compile of mux_2x1_Wbits.vhd was successful.
+vsim work.mux_2x1_wbits
+# vsim work.mux_2x1_wbits 
+# Start time: 09:58:45 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_2x1_wbits(structural)
+add wave sim:/mux_2x1_wbits/*
+force -freeze sim:/mux_2x1_wbits/sel 1 0, 0 {25 ps} -r 50
+force -freeze sim:/mux_2x1_wbits/sel 0 0, 1 {20 ps} -r 40
+force -freeze sim:/mux_2x1_wbits/a 0 0, 1 {40 ps} -r 80
+# Value length (1) does not equal array index length (16).
+# ** UI-Msg: (vsim-4011) Invalid force value: 0 0, 1 {40 ps}.
+# 
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/mux_2x1_Wbits/wave.do
+run
+# Compile of mux_2x1_Wbits.vhd was successful.
+vsim work.mux_2x1_wbits
+# End time: 10:02:54 on Sep 20,2023, Elapsed time: 0:04:09
+# Errors: 0, Warnings: 8
+# vsim work.mux_2x1_wbits 
+# Start time: 10:02:54 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_2x1_wbits(structural)
+add wave sim:/mux_2x1_wbits/*
+force -freeze sim:/mux_2x1_wbits/a(2) 0 0, 1 {40 ps} -r 80
+force -freeze sim:/mux_2x1_wbits/a(1) 0 0, 1 {20 ps} -r 40
+force -freeze sim:/mux_2x1_wbits/a(0) 0 0, 1 {10 ps} -r 20
+force -freeze sim:/mux_2x1_wbits/b(2) 0 0, 1 {40 ps} -r 80
+force -freeze sim:/mux_2x1_wbits/b(1) 0 0, 1 {20 ps} -r 40
+force -freeze sim:/mux_2x1_wbits/b(0) 0 0, 1 {10 ps} -r 20
+force -freeze sim:/mux_2x1_wbits/sel 1 0, 0 {20 ps} -r 40
+force -freeze sim:/mux_2x1_wbits/b(0) 1 0, 0 {10 ps} -r 20
+force -freeze sim:/mux_2x1_wbits/b(1) 1 0, 0 {20 ps} -r 40
+force -freeze sim:/mux_2x1_wbits/b(2) 1 0, 0 {40 ps} -r 80
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/mux_2x1_Wbits/wave.do
+quit -sim
+# End time: 10:06:18 on Sep 20,2023, Elapsed time: 0:03:24
+# Errors: 0, Warnings: 1
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project demux_1x2
+# Compile of demux_1x2.vhd was successful.
+vsim work.demux_1x2
+# vsim work.demux_1x2 
+# Start time: 10:14:40 on Sep 20,2023
+# Loading std.standard
+# Loading work.demux_1x2(structural)
+add wave sim:/demux_1x2/*
+force -freeze sim:/demux_1x2/a 0 0, 1 {20 ps} -r 40
+force -freeze sim:/demux_1x2/sel 1 0, 0 {10 ps} -r 20
+force -freeze sim:/demux_1x2/sel 0 0, 1 {10 ps} -r 20
+run
+# Compile of demux_1x2.vhd failed with 1 errors.
+# Compile of demux_1x2.vhd was successful.
+vsim work.demux_1x2
+# End time: 10:18:19 on Sep 20,2023, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 8
+# vsim work.demux_1x2 
+# Start time: 10:18:19 on Sep 20,2023
+# Loading std.standard
+# Loading work.demux_1x2(structural)
+add wave sim:/demux_1x2/*
+force -freeze sim:/demux_1x2/a 0 0, 1 {40 ps} -r 80
+force -freeze sim:/demux_1x2/sel 0 0, 1 {20 ps} -r 40
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/demux_1x2/wave.do
+# End time: 10:23:08 on Sep 20,2023, Elapsed time: 0:04:49
+# Errors: 0, Warnings: 1

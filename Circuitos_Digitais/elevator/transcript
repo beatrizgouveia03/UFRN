@@ -1,0 +1,344 @@
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:00:37 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+add wave -position end  sim:/elevador/buttons
+add wave -position end  sim:/elevador/andar_destino
+wave create -driver freeze -pattern counter -startvalue 000000000 -endvalue 111111111 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 8 0 -starttime 0ps -endtime 1000ps sim:/elevador/buttons
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+add wave -position end  sim:/elevador/buttons
+run
+restart
+add wave -position end  sim:/elevador/buttons
+force -freeze sim:/elevador/buttons 000000001 0
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+force -freeze sim:/elevador/buttons 000000001 100
+run
+restart
+force -freeze sim:/elevador/buttons 000000001 100
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+restart
+force -freeze sim:/elevador/buttons 000000010 0
+restart
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+force -freeze sim:/elevador/buttons 000000100 0
+run
+force -freeze sim:/elevador/buttons 000000101 0
+run
+quit -sim
+# End time: 16:11:48 on Oct 28,2023, Elapsed time: 0:11:11
+# Errors: 0, Warnings: 1
+# Compile of elevador.vhd failed with 2 errors.
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:12:39 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/buttons 001000000 0
+force -freeze sim:/elevador/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+run
+# Break key hit
+quit -sim
+# End time: 16:16:50 on Oct 28,2023, Elapsed time: 0:04:11
+# Errors: 0, Warnings: 3
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:16:52 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Compile of elevador.vhd was successful.
+quit -sim
+# End time: 16:17:18 on Oct 28,2023, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 2
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:17:22 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/elevador/buttons 00000100 0
+# Value length (8) does not equal array index length (9).
+# ** UI-Msg: (vsim-4011) Invalid force value: 00000100 0.
+# 
+run
+force -freeze sim:/elevador/buttons 000000100 0
+run
+force -freeze sim:/elevador/andar_atual 0100 0
+run
+force -freeze sim:/elevador/andar_atual 0010 0
+run
+quit -sim
+# End time: 16:19:19 on Oct 28,2023, Elapsed time: 0:01:57
+# Errors: 0, Warnings: 1
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:21:49 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/buttons 000010000 0
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+run
+quit -sim
+# End time: 16:25:19 on Oct 28,2023, Elapsed time: 0:03:30
+# Errors: 0, Warnings: 2
+# Compile of comp_andares.vhd was successful.
+# Compile of elevador.vhd was successful.
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:26:03 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/elevador/buttons 000010000 0
+run
+force -freeze sim:/elevador/andar_atual 1000 0
+run
+# Compile of elevador.vhd failed with 2 errors.
+# Compile of contador.vhd failed with 4 errors.
+# Compile of contador.vhd was successful.
+# Compile of elevador.vhd failed with 3 errors.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of comp_andares.vhd was successful.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# End time: 16:40:21 on Oct 28,2023, Elapsed time: 0:14:18
+# Errors: 0, Warnings: 13
+# vsim work.elevador 
+# Start time: 16:40:21 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+# Loading work.contador(behavior)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/elevador/buttons 000001000 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+force -freeze sim:/elevador/andar_atual 0010 0
+restart
+run
+quit -sim
+# End time: 16:43:13 on Oct 28,2023, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 3
+# Compile of elevador.vhd was successful.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:47:53 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+# Loading work.contador(behavior)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/elevador/buttons 100000000 0
+force -freeze sim:/elevador/andar_atual 0100 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+run
+run
+quit -sim
+# End time: 16:54:56 on Oct 28,2023, Elapsed time: 0:07:03
+# Errors: 0, Warnings: 7
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 16:55:00 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+# Loading work.contador(behavior)
+quit -sim
+# End time: 16:55:07 on Oct 28,2023, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 1
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of cod_destino.vhd was successful.
+# Compile of comp_andares.vhd was successful.
+# Compile of dec_display.vhd was successful.
+# Compile of elevador.vhd failed with 2 errors.
+# Compile of contador.vhd was successful.
+# Compile of reg_andar.vhd was successful.
+# Compile of maq_estados.vhd was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of elevador.vhd failed with 2 errors.
+# Compile of comp_andares.vhd was successful.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of comp_andares.vhd was successful.
+# Compile of elevador.vhd failed with 1 errors.
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 17:07:54 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+# Loading work.contador(behavior)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/elevador/buttons 000010000 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+run
+run
+quit -sim
+# End time: 17:13:13 on Oct 28,2023, Elapsed time: 0:05:19
+# Errors: 0, Warnings: 21
+# Compile of elevador.vhd was successful.
+vsim work.elevador
+# vsim work.elevador 
+# Start time: 17:13:24 on Oct 28,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.elevador(arch)
+# Loading work.cod_destino(behavior)
+# Loading work.reg_andar(arch)
+# Loading work.comp_andares(behavior)
+# Loading work.maq_estados(arch)
+# Loading work.contador(behavior)
+# Loading work.dec_display(behavior)
+add wave sim:/elevador/*
+force -freeze sim:/elevador/clk 1 0, 0 {25 ps} -r 50
+noforce sim:/elevador/buttons
+force -freeze sim:/elevador/buttons 000001000 0
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/a0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /elevador/c0
+# End time: 17:15:34 on Oct 28,2023, Elapsed time: 0:02:10
+# Errors: 0, Warnings: 12

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Referência ao ficheiro source/algorithms/prim.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="../../dir_1f1e02da0ed68619c8cd86756bb8077c.html">algorithms</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Referência ao ficheiro prim.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d6a/simulation_8h_source.html">simulation.h</a>&quot;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para prim.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d0/dff/prim_8cpp__incl.png" border="0" usemap="#asource_2algorithms_2prim_8cpp" alt=""/></div>
+<map name="asource_2algorithms_2prim_8cpp" id="asource_2algorithms_2prim_8cpp">
+<area shape="rect" title=" " alt="" coords="1061,5,1261,31"/>
+<area shape="rect" href="../../dd/d6a/simulation_8h.html" title=" " alt="" coords="714,79,817,104"/>
+<area shape="poly" title=" " alt="" coords="1098,33,831,81,830,76,1097,28"/>
+<area shape="rect" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" title=" " alt="" coords="1061,31,646,77,376,112,99,155,99,149,375,107,645,72,1061,26"/>
+<area shape="rect" title=" " alt="" coords="1130,152,1193,177"/>
+<area shape="poly" title=" " alt="" coords="1164,31,1164,138,1159,138,1159,31"/>
+<area shape="rect" title=" " alt="" coords="1217,152,1276,177"/>
+<area shape="poly" title=" " alt="" coords="1171,30,1235,139,1231,141,1166,32"/>
+<area shape="rect" title=" " alt="" coords="1300,152,1343,177"/>
+<area shape="poly" title=" " alt="" coords="1176,29,1300,141,1297,145,1173,33"/>
+<area shape="rect" title=" " alt="" coords="1047,152,1105,177"/>
+<area shape="poly" title=" " alt="" coords="817,101,1034,149,1034,150,1033,155,1033,155,816,106"/>
+<area shape="rect" title=" " alt="" coords="110,152,183,177"/>
+<area shape="poly" title=" " alt="" coords="714,99,493,117,348,133,198,155,197,149,348,128,493,112,713,93"/>
+<area shape="rect" title=" " alt="" coords="208,152,283,177"/>
+<area shape="poly" title=" " alt="" coords="714,100,534,120,297,155,296,149,533,115,714,95"/>
+<area shape="poly" title=" " alt="" coords="714,98,454,115,280,132,99,155,99,149,279,126,454,110,714,92"/>
+<area shape="rect" title=" " alt="" coords="307,152,392,177"/>
+<area shape="poly" title=" " alt="" coords="714,103,406,154,405,149,713,98"/>
+<area shape="rect" title=" " alt="" coords="416,152,467,177"/>
+<area shape="poly" title=" " alt="" coords="714,105,610,125,481,154,479,149,609,120,713,99"/>
+<area shape="rect" title=" " alt="" coords="491,152,554,177"/>
+<area shape="poly" title=" " alt="" coords="727,107,568,153,567,148,726,101"/>
+<area shape="poly" title=" " alt="" coords="817,97,949,118,1117,149,1116,155,948,123,816,103"/>
+<area shape="rect" title=" " alt="" coords="579,152,645,177"/>
+<area shape="poly" title=" " alt="" coords="742,106,650,149,648,144,740,102"/>
+<area shape="rect" title=" " alt="" coords="670,152,757,177"/>
+<area shape="poly" title=" " alt="" coords="759,106,732,142,728,139,755,103"/>
+<area shape="rect" title=" " alt="" coords="781,152,857,177"/>
+<area shape="poly" title=" " alt="" coords="776,103,804,140,800,143,772,106"/>
+<area shape="poly" title=" " alt="" coords="817,95,985,114,1204,150,1203,155,984,120,817,100"/>
+<area shape="rect" title=" " alt="" coords="881,152,938,177"/>
+<area shape="poly" title=" " alt="" coords="790,102,875,143,872,148,787,106"/>
+<area shape="poly" title=" " alt="" coords="817,92,1019,108,1151,125,1287,150,1286,155,1150,130,1019,113,817,98"/>
+<area shape="rect" title=" " alt="" coords="962,152,1022,177"/>
+<area shape="poly" title=" " alt="" coords="803,101,950,147,948,152,801,107"/>
+</map>
+</div>
+</div>
+<p><a href="../../da/d27/prim_8cpp_source.html">Ir para o código fonte deste ficheiro.</a></p>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

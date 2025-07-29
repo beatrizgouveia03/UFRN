@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem
+Ehalf_adder
+Z0 w1695147975
+!i122 1
+Z1 d/home/usuario/Documentos/Circuitos/adder/half_adder
+Z2 8/home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd
+Z3 F/home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd
+l0
+L1 1
+VLJEH@OH@fW:QML3T:z^Bj1
+!s100 ^>B;nkB5AcCZD0G@GDNOo1
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696423935
+!i10b 1
+Z6 !s108 1696423935.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd|
+!s107 /home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Astructural
+Z10 DEx4 work 10 half_adder 0 22 LJEH@OH@fW:QML3T:z^Bj1
+!i122 1
+l8
+L7 5
+Z11 Vo@>F@zOVKKQ_LABgI_<hN2
+Z12 !s100 IU1AhjnVLd>[_JT^YjW=J2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z13 !s107 /home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd|
+!i113 1
+R8
+R9

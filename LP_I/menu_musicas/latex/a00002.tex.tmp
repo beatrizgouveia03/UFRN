@@ -1,0 +1,29 @@
+\hypertarget{a00002}{}\doxysection{Referência do Arquivo include/\+Lista.hpp}
+\label{a00002}\index{include/Lista.hpp@{include/Lista.hpp}}
+
+
+Definição da classe \mbox{\hyperlink{a00021}{Lista}}.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}No.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para Lista.\+hpp\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+% FIG 1
+\doxysubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{a00021}{Lista$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Implementação de uma classe \mbox{\hyperlink{a00021}{Lista}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Definição da classe \mbox{\hyperlink{a00021}{Lista}}. 
+
+\begin{DoxyDate}{Data}
+01 de maio de 2023 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Autor}
+Beatriz G. Gadelha 
+\end{DoxyAuthor}

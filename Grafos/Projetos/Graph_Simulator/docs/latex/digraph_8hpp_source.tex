@@ -1,0 +1,76 @@
+\doxysection{digraph.\+hpp}
+\hypertarget{digraph_8hpp_source}{}\label{digraph_8hpp_source}\index{include/digraph.hpp@{include/digraph.hpp}}
+\mbox{\hyperlink{digraph_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DIGRAPH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DIGRAPH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }std::map;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }std::vector;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }std::cin;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }std::cout;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }std::endl;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }std::istringstream;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }std::stoi;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }std::pair;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{using\ }std::make\_pair;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{using\ }std::remove;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesml}{sml}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==\ Private\ Members}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numNodes;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ map<int,\ string>\ dictionary;\ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ map<int,\ vector<int>>\ adjList;\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ vector<vector<int>>\ adjMatrix;\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==\ Public\ Members}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Digraph_a68ad595876fc04d8cfab0ab1789c115e}{Digraph}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Digraph_a68ad595876fc04d8cfab0ab1789c115e}{Digraph}}(\textcolor{keywordtype}{int}\ numNodes);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsml_1_1Digraph_a7d3505587f8f0f70154b70e1ac68cb3d}{getNumNodes}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_a04bf875be2d3eaae85769779b0de4592}{printDigraph}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_acba8f628f0b31ae32b747cc053697cac}{printAdjList}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_af642da315b183cf9ad4b6569e22c302a}{printAdjMatrix}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsml_1_1Digraph_a2c8e9e17cd886774e69144c9a22897d6}{getVertexIdx}}(\textcolor{keywordtype}{string}\ v);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classsml_1_1Digraph_a66e06fbc4464ea692e1b9ad14ccb5dea}{getVertexName}}(\textcolor{keywordtype}{int}\ idxV);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ map<int,\ string>\ \mbox{\hyperlink{classsml_1_1Digraph_a66f72d2a3e57aaeece53aadbd031ffd7}{getDictionary}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ map<int,vector<int>>\ \mbox{\hyperlink{classsml_1_1Digraph_a85aa8257a106126a5cad95d3bc4e325e}{getAdjList}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{classsml_1_1Digraph_a6cc8b2cb67aa07b2bdea3ab3388c59f2}{getAdjMatrix}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_a9b36bffc25d9c2d8c6dc371668379da3}{updateDictionary}}(map<int,\ string>\ dictionary);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_ad06f20c5b90b43e4c7b0774ce5262096}{updateAdjList}}(map<\textcolor{keywordtype}{int},\ vector<int>>\ adjList);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_a0a77ba1314be142869cf1509d62e3d9a}{updateAdjMatrix}}(vector<vector<int>>\ adjMatrix);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Digraph_a65273e89644862f16fafd3a2d29a43fe}{runMenu}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//==\ Aux\ Members}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ pause(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayMenu(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addVertex(\textcolor{keywordtype}{string}\ x);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addEdge(pair<string,string>\ x);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ removeVertex(\textcolor{keywordtype}{string}\ x);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ removeEdge(pair<string,string>\ x);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ manageVertex(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ pair<string,string>\ manageEdge(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00073\ \ \ \ \ \};\ \ \ \ }
+\DoxyCodeLine{00074\ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DIGRAPH\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/sub_4bits
+Emux_2x1
+Z0 w1695212175
+!i122 1
+Z1 d/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1
+Z2 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1/mux_2x1.vhd
+Z3 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1/mux_2x1.vhd
+l0
+L1 1
+VEzk?@n[^m4cV0^U@W1eJK1
+!s100 ]d`QWN`RgEg>N`L44GFEF0
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696423276
+!i10b 1
+Z6 !s108 1696423276.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1/mux_2x1.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1/mux_2x1.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Astructural
+Z10 DEx4 work 7 mux_2x1 0 22 Ezk?@n[^m4cV0^U@W1eJK1
+!i122 1
+l8
+L7 4
+Z11 Vb;lIEzU<6VE[IUM_[?X:_1
+Z12 !s100 X;=3JjZlEVa61O3?S9d[c3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z13 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1/mux_2x1.vhd|
+!i113 1
+R8
+R9

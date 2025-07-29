@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Código-Fonte de source/main.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">main.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../df/d0a/main_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d6a/simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   13</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="../../d0/d8b/classsml_1_1Simulation.html">sml::Simulation</a> simulation;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">auto</span> result = simulation.<a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#aee234a5b25a513894cb1cfcefbf8913b">initialize</a>(argc, argv);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordflow">if</span>(result.type == <a class="code hl_enumvalue" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219">sml::simulation_result_e::ERROR</a>){</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        cerr &lt;&lt; result.<a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">msg</a> &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    simulation.<a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a27ac754f033f7838d95e981d96181bb4">run</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+</div>
+<div class="ttc" id="aclasssml_1_1Simulation_html"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html">sml::Simulation</a></div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00137">simulation.h:137</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a27ac754f033f7838d95e981d96181bb4"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a27ac754f033f7838d95e981d96181bb4">sml::Simulation::run</a></div><div class="ttdeci">void run(void)</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00055">simulation.cpp:55</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_aee234a5b25a513894cb1cfcefbf8913b"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#aee234a5b25a513894cb1cfcefbf8913b">sml::Simulation::initialize</a></div><div class="ttdeci">SimulationResult initialize(int argc, char *argv[])</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00127">simulation.cpp:127</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definição</b> <a href="../../df/d0a/main_8cpp_source.html#l00013">main.cpp:13</a></div></div>
+<div class="ttc" id="anamespacesml_html_a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219">sml::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdoc">Alguma entrada está faltando ou possui erro.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00069">simulation.h:68</a></div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="../../dd/d6a/simulation_8h.html">simulation.h</a></div></div>
+<div class="ttc" id="astructsml_1_1SimulationResult_html_a9c6f84abe2f0cbe0d56f9a62d9a81cbb"><div class="ttname"><a href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">sml::SimulationResult::msg</a></div><div class="ttdeci">string msg</div><div class="ttdoc">Mensagem a ser exibida.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00074">simulation.h:74</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

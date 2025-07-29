@@ -1,0 +1,41 @@
+ENTITY state_machine IS
+PORT (	clk 	: IN BIT; -- clock
+	clrn	: IN BIT; -- clear
+	go 	: IN BIT; -- input 1
+	back	: IN BIT; -- input 2
+	q 	: OUT BIT); -- output
+END state_machine;
+
+ARCHITECTURE arch OF state_machine IS
+TYPE state_type IS (s0, s1);
+
+SIGNAL state_reg : state_type;
+SIGNAL next_state: state_type;
+
+BEGIN
+p_state_reg: PROCESS(clk,clrn)
+	BEGIN
+		IF (clrn='0') THEN
+			state_reg <= s0;
+		ELSIF (clk'EVENT AND clk='1') THEN
+			state_reg <= next_state;
+		END IF;
+	END PROCESS;
+
+p_next_state: PROCESS(state_reg, go, back)
+	BEGIN
+		CASE (state_reg) IS
+			WHEN s0 => 	IF (go='1') THEN
+						next_state <= s1;
+					ELSE
+						next_state <= s0;
+					END IF;
+			WHEN s1 => 	IF (back='1') THEN
+						next_state <= s0;
+					ELSE
+						next_state <= s1;
+					END IF;
+			WHEN OTHERS => 	next_state <= s0;
+			END CASE;
+	END PROCESS;
+END arch;

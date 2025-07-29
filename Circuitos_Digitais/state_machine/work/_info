@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/elevator
+Estate_machine
+Z0 w1697632548
+!i122 1
+Z1 d/home/usuario/Documentos/Circuitos/state_machine
+Z2 8/home/usuario/Documentos/Circuitos/state_machine/state_machine.vhd
+Z3 F/home/usuario/Documentos/Circuitos/state_machine/state_machine.vhd
+l0
+L1 1
+V;hQbHYTeD34VI_Uh]mLh>1
+!s100 FH8f]0<NSb?QKkH:;ck@l1
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1697632557
+!i10b 1
+Z6 !s108 1697632557.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/state_machine/state_machine.vhd|
+Z8 !s107 /home/usuario/Documentos/Circuitos/state_machine/state_machine.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Aarch
+Z11 DEx4 work 13 state_machine 0 22 ;hQbHYTeD34VI_Uh]mLh>1
+!i122 1
+l15
+L9 35
+VdKTGfTl>jSH;Nk>D3o=TD1
+!s100 1geJ<8iDJikXnicOHd@YW1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
