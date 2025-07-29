@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Menu de músicas: Código-Fonte de include/No.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Menu de músicas
+   </div>
+   <div id="projectbrief">Simulador de um menu de player de músicas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">No.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="No_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NO_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NO_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classNo.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classNo.html">No</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    T valor;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classNo.html">No&lt;T&gt;</a> *proximo;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classNo.html">No</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classNo.html">No</a>(T valor);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> setValor(T valor);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> setProximo(<a class="code" href="classNo.html">No&lt;T&gt;</a> *proximo);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    T getValor();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classNo.html">No&lt;T&gt;</a> *getProximo();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// Construtor padrão</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">   49</a></span>&#160;<a class="code" href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">No&lt;T&gt;::No</a>()</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    this-&gt;value = T();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    this-&gt;proximo = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// Construtor que inicializa o valor do nó</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classNo.html#aacd3e12c16c871701dc9c3e1762ded1f">   57</a></span>&#160;<a class="code" href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">No&lt;T&gt;::No</a>(T valor <span class="comment">/*Valor a ser inicializado o valor do nó*/</span>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    this-&gt;valor = valor;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    this-&gt;proximo = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// Métodos setters e getters para o atributo valor</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classNo.html#a3bb2f1c77fa3837cb2d9d930ae8508b7">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNo.html#a3bb2f1c77fa3837cb2d9d930ae8508b7">No&lt;T&gt;::setValor</a>(T valor)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    this-&gt;valor = valor;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classNo.html#ae912470bd6dde548ca89444dd52e9dc6">   71</a></span>&#160;T <a class="code" href="classNo.html#ae912470bd6dde548ca89444dd52e9dc6">No&lt;T&gt;::getValor</a>()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> this-&gt;valor;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// Métodos setters e getters para o atributo proximo</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classNo.html#a1a1896dd72a9d6e40f8cf6fc64256a81">   78</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classNo.html#a1a1896dd72a9d6e40f8cf6fc64256a81">No&lt;T&gt;::setProximo</a>(<a class="code" href="classNo.html">No&lt;T&gt;</a> *proximo)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    this-&gt;proximo = proximo;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classNo.html#a9889880f1de3f95d87e638f1fd4c5297">   84</a></span>&#160;<a class="code" href="classNo.html">No&lt;T&gt;</a> *<a class="code" href="classNo.html#a9889880f1de3f95d87e638f1fd4c5297">No&lt;T&gt;::getProximo</a>()</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span> this-&gt;proximo;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// NO_HPP</span></div>
+<div class="ttc" id="aclassNo_html"><div class="ttname"><a href="classNo.html">No</a></div><div class="ttdoc">Implementação de uma classe No.</div><div class="ttdef"><b>Definition:</b> No.hpp:17</div></div>
+<div class="ttc" id="aclassNo_html_a1a1896dd72a9d6e40f8cf6fc64256a81"><div class="ttname"><a href="classNo.html#a1a1896dd72a9d6e40f8cf6fc64256a81">No::setProximo</a></div><div class="ttdeci">void setProximo(No&lt; T &gt; *proximo)</div><div class="ttdoc">Função para configurar o próximo nó</div><div class="ttdef"><b>Definition:</b> No.hpp:78</div></div>
+<div class="ttc" id="aclassNo_html_a3bb2f1c77fa3837cb2d9d930ae8508b7"><div class="ttname"><a href="classNo.html#a3bb2f1c77fa3837cb2d9d930ae8508b7">No::setValor</a></div><div class="ttdeci">void setValor(T valor)</div><div class="ttdoc">Função para configurar o valor do nó</div><div class="ttdef"><b>Definition:</b> No.hpp:65</div></div>
+<div class="ttc" id="aclassNo_html_a9889880f1de3f95d87e638f1fd4c5297"><div class="ttname"><a href="classNo.html#a9889880f1de3f95d87e638f1fd4c5297">No::getProximo</a></div><div class="ttdeci">No&lt; T &gt; * getProximo()</div><div class="ttdoc">Função que retorna o próximo nó</div><div class="ttdef"><b>Definition:</b> No.hpp:84</div></div>
+<div class="ttc" id="aclassNo_html_aa81f94748cb567f43cb5ecf65cafe833"><div class="ttname"><a href="classNo.html#aa81f94748cb567f43cb5ecf65cafe833">No::No</a></div><div class="ttdeci">No()</div><div class="ttdoc">Construtor padrão da classe.</div><div class="ttdef"><b>Definition:</b> No.hpp:49</div></div>
+<div class="ttc" id="aclassNo_html_ae912470bd6dde548ca89444dd52e9dc6"><div class="ttname"><a href="classNo.html#ae912470bd6dde548ca89444dd52e9dc6">No::getValor</a></div><div class="ttdeci">T getValor()</div><div class="ttdoc">Função que retorna o valor do nó</div><div class="ttdef"><b>Definition:</b> No.hpp:71</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

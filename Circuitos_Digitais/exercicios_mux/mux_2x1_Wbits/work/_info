@@ -1,0 +1,163 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/mux_4x1
+Emux_2x1
+Z0 w1695212175
+!i122 0
+Z1 d/home/usuario/Documentos/Circuitos/mux_2x1_Wbits
+Z2 8/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd
+Z3 F/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd
+l0
+L1 1
+VEzk?@n[^m4cV0^U@W1eJK1
+!s100 ]d`QWN`RgEg>N`L44GFEF0
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1695214255
+!i10b 1
+Z6 !s108 1695214255.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd|
+Z8 !s107 /home/usuario/Documentos/Circuitos/mux_2x1/mux_2x1.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Astructural
+DEx4 work 7 mux_2x1 0 22 Ezk?@n[^m4cV0^U@W1eJK1
+!i122 0
+l8
+L7 4
+Vb;lIEzU<6VE[IUM_[?X:_1
+!s100 X;=3JjZlEVa61O3?S9d[c3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Emux_2x1_wbits
+w1696423354
+!i122 8
+Z11 d/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits
+Z12 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits.vhd
+Z13 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits.vhd
+l0
+L1 1
+V3]^JY__;07X__2i[C3WBZ0
+!s100 fKSdAD`gkH7n>dcE]74hV3
+R4
+32
+!s110 1696423368
+!i10b 1
+!s108 1696423367.000000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits.vhd|
+Z15 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits.vhd|
+!i113 1
+R9
+R10
+Abehavior
+w1696423419
+Z16 DEx4 work 13 mux_2x1_wbits 0 22 3]^JY__;07X__2i[C3WBZ0
+!i122 9
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/behavior.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/behavior.vhd
+l2
+L1 11
+VAQh:Cd9SBXJek=]bBF<Xe2
+!s100 l6][Tck;?`IRQgPSFi;FK0
+R4
+32
+!s110 1696423447
+!i10b 1
+!s108 1696423447.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/behavior.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/behavior.vhd|
+!i113 1
+R9
+R10
+Astructural
+w1696423384
+R16
+!i122 9
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/structural.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/structural.vhd
+l2
+L1 6
+VN]<`kfEkN:3O_N2k^iMCl0
+!s100 ^m4C;SNUV4iji?9=hD67V1
+R4
+32
+!s110 1696423387
+!i10b 1
+!s108 1696423387.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/structural.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/structural.vhd|
+!i113 1
+R9
+R10
+Aarch_1
+R16
+!i122 4
+l10
+L9 6
+V8nU:FkOXEiPA0^7TaZ<Dk0
+!s100 2<QZPV705ClheRFfk>h]K3
+R4
+32
+!s110 1696422172
+!i10b 1
+!s108 1696422172.000000
+R14
+R15
+!i113 1
+R9
+R10
+w1696422168
+Emux_2x1_wbits2
+Z17 w1696422328
+!i122 7
+R11
+Z18 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits2.vhd
+Z19 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits2.vhd
+l0
+L1 1
+V<@RdD@4_JL82JJB<@?HTz1
+!s100 e@_[C:GkMVFeVRIYU8@3?0
+R4
+32
+Z20 !s110 1696423362
+!i10b 1
+Z21 !s108 1696423362.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits2.vhd|
+Z23 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_2x1_Wbits/mux_2x1_Wbits2.vhd|
+!i113 1
+R9
+R10
+Abehavior
+DEx4 work 14 mux_2x1_wbits2 0 22 <@RdD@4_JL82JJB<@?HTz1
+!i122 7
+l10
+L9 11
+VdU9a7WbJ_F<U4zBi3eTmT1
+!s100 XPi1C6OBM`=DUA`Ml:?^T0
+R4
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R9
+R10

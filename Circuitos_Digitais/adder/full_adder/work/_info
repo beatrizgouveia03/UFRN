@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/half_adder
+Efull_adder
+Z0 w1695149025
+!i122 1
+Z1 d/home/usuario/Documentos/Circuitos/adder/full_adder
+Z2 8/home/usuario/Documentos/Circuitos/adder/full_adder/full_adder.vhd
+Z3 F/home/usuario/Documentos/Circuitos/adder/full_adder/full_adder.vhd
+l0
+L1 1
+VPS9mnY]LW7kl0kXX7R6g@3
+!s100 HFQ5kC<Qb]SSS;7z5Ro?`1
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696423986
+!i10b 1
+Z6 !s108 1696423985.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/adder/full_adder/full_adder.vhd|
+!s107 /home/usuario/Documentos/Circuitos/adder/full_adder/full_adder.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Astructural
+Z10 DEx4 work 10 full_adder 0 22 PS9mnY]LW7kl0kXX7R6g@3
+!i122 1
+l9
+L8 5
+Z11 V:`ZhY@@WO25aGHll0Wc2;3
+Z12 !s100 R2oe_d`L4@2[]gi1e<hYz1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z13 !s107 /home/usuario/Documentos/Circuitos/adder/full_adder/full_adder.vhd|
+!i113 1
+R8
+R9

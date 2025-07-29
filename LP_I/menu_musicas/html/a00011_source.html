@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Menu de músicas: Código-Fonte de include/Playlist.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Menu de músicas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador de um menu de player de músicas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Playlist.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00011.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PLAYLIST_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PLAYLIST_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00005.html">Musica.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00002.html">Lista.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="a00036.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="a00036.html">Playlist</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordtype">string</span> nome;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *musicas;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a00036.html#aef38d55e42995be147977726350f3ada">   27</a></span>&#160;  <a class="code" href="a00036.html#aef38d55e42995be147977726350f3ada">Playlist</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="a00036.html#ae0fab6b028d4f7ff3e520a0ca8200a0d">   31</a></span>&#160;  <a class="code" href="a00036.html#ae0fab6b028d4f7ff3e520a0ca8200a0d">Playlist</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00036.html#abddd31a980c8e2494af3081bdbdc4cd7">   36</a></span>&#160;  <a class="code" href="a00036.html#abddd31a980c8e2494af3081bdbdc4cd7">Playlist</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome, <span class="keyword">const</span> <a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> &amp;musicas);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a00036.html#a4ec33dd0bee19bda3371b94dd0cb2f47">   40</a></span>&#160;  <a class="code" href="a00036.html#a4ec33dd0bee19bda3371b94dd0cb2f47">Playlist</a>(<span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="a00036.html#aacd9a69e347fc19a9a0787d7a7ce9df4">   44</a></span>&#160;  <a class="code" href="a00036.html#aacd9a69e347fc19a9a0787d7a7ce9df4">~Playlist</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a00036.html#a5bbe44510f50d7eaeb2ce7d557f4b79b">   48</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00036.html#a5bbe44510f50d7eaeb2ce7d557f4b79b">setNome</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nome);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="a00036.html#ab2d1ce4fd645fbc1040ba0f634554617">   52</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00036.html#ab2d1ce4fd645fbc1040ba0f634554617">setMusicas</a>(<span class="keyword">const</span> <a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> &amp;musicas);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="a00036.html#aca3a69d3fb7bb8de19718c655814e8c7">   56</a></span>&#160;  <span class="keywordtype">string</span> <a class="code" href="a00036.html#aca3a69d3fb7bb8de19718c655814e8c7">getNome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="a00036.html#ae578afd0a026dae54f1ae1f881071dc1">   60</a></span>&#160;  <a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *<a class="code" href="a00036.html#ae578afd0a026dae54f1ae1f881071dc1">getMusicas</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="a00036.html#a1c2cf004e51f29ffcc0fc79fb650fab3">   64</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00036.html#a1c2cf004e51f29ffcc0fc79fb650fab3">addMusica</a>(<span class="keyword">const</span> <a class="code" href="a00028.html">Musica</a> &amp;musica);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="a00036.html#aa3c854d7b161faaa406b8c0a00676cfb">   68</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00036.html#aa3c854d7b161faaa406b8c0a00676cfb">addMusica</a>(<span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="a00036.html#a3880c88a9705ed92daa90c35e56b6fe4">   72</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00036.html#a3880c88a9705ed92daa90c35e56b6fe4">remMusica</a>(<span class="keyword">const</span> <a class="code" href="a00028.html">Musica</a> &amp;musica);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="a00036.html#a40a75b77288c717213fc8e5b3d952781">   76</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="a00036.html#a40a75b77288c717213fc8e5b3d952781">remMusica</a>(<span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="a00036.html#ab6c1ca44e7211280b8fe4fb93d850aa6">   81</a></span>&#160;  <a class="code" href="a00032.html">No&lt;Musica&gt;</a> *<a class="code" href="a00036.html#ab6c1ca44e7211280b8fe4fb93d850aa6">findMusica</a>(<span class="keyword">const</span> <a class="code" href="a00028.html">Musica</a> &amp;musica) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="a00036.html#ab7873a446bec2231e7b63d5e4dcb71dc">   86</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="a00036.html#ab7873a446bec2231e7b63d5e4dcb71dc">operator==</a>(<span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="a00036.html#a63b1b4aba7f202b93d95ecd38706eba1">   91</a></span>&#160;  <span class="keyword">friend</span> ostream &amp;<a class="code" href="a00036.html#a63b1b4aba7f202b93d95ecd38706eba1">operator&lt;&lt;</a>(ostream &amp;cout, <span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="a00036.html#a36debb8e24affc5f728e3f769551efdc">   96</a></span>&#160;  <a class="code" href="a00036.html">Playlist</a> *<a class="code" href="a00036.html#a36debb8e24affc5f728e3f769551efdc">operator+</a>(<span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="a00036.html#aa3c1a3813a738f4f0ce64eb1b9358d34">  101</a></span>&#160;  <a class="code" href="a00036.html">Playlist</a> *<a class="code" href="a00036.html#aa3c1a3813a738f4f0ce64eb1b9358d34">operator+</a>(<span class="keyword">const</span> <a class="code" href="a00028.html">Musica</a> &amp;musica);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="a00036.html#a124e83f9bd9fc040e19fe4d092584467">  106</a></span>&#160;  <a class="code" href="a00036.html">Playlist</a> *<a class="code" href="a00036.html#a124e83f9bd9fc040e19fe4d092584467">operator-</a>(<span class="keyword">const</span> <a class="code" href="a00036.html">Playlist</a> &amp;playlist);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="a00036.html#a4858c56cace2dd32bbba172b8494b775">  111</a></span>&#160;  <a class="code" href="a00036.html">Playlist</a> *<a class="code" href="a00036.html#a4858c56cace2dd32bbba172b8494b775">operator-</a>(<span class="keyword">const</span> <a class="code" href="a00028.html">Musica</a> &amp;musica);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="a00036.html#a2caa4589ba6ba8e65aad0e733d2bb8b9">  116</a></span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="a00036.html#a2caa4589ba6ba8e65aad0e733d2bb8b9">operator&gt;&gt;</a>(<a class="code" href="a00036.html">Playlist</a> &amp;playlist, <a class="code" href="a00028.html">Musica</a> &amp;musica);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="a00036.html#a40ddbe801a28b1b9197076bd82616204">  121</a></span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="a00036.html#a40ddbe801a28b1b9197076bd82616204">operator&lt;&lt;</a>(<a class="code" href="a00036.html">Playlist</a> &amp;playlist, <a class="code" href="a00028.html">Musica</a> &amp;musica);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// PLAYLIST_H</span></div>
+<div class="ttc" id="aa00002_html"><div class="ttname"><a href="a00002.html">Lista.hpp</a></div><div class="ttdoc">Definição da classe Lista.</div></div>
+<div class="ttc" id="aa00005_html"><div class="ttname"><a href="a00005.html">Musica.hpp</a></div><div class="ttdoc">Definição da classe Musica.</div></div>
+<div class="ttc" id="aa00024_html"><div class="ttname"><a href="a00024.html">Lista&lt; Musica &gt;</a></div></div>
+<div class="ttc" id="aa00028_html"><div class="ttname"><a href="a00028.html">Musica</a></div><div class="ttdoc">implementação de uma classe Musica</div><div class="ttdef"><b>Definition:</b> Musica.hpp:18</div></div>
+<div class="ttc" id="aa00032_html"><div class="ttname"><a href="a00032.html">No</a></div><div class="ttdoc">Implementação de uma classe No.</div><div class="ttdef"><b>Definition:</b> No.hpp:18</div></div>
+<div class="ttc" id="aa00036_html"><div class="ttname"><a href="a00036.html">Playlist</a></div><div class="ttdoc">Implementação de uma classe Playlist.</div><div class="ttdef"><b>Definition:</b> Playlist.hpp:17</div></div>
+<div class="ttc" id="aa00036_html_a124e83f9bd9fc040e19fe4d092584467"><div class="ttname"><a href="a00036.html#a124e83f9bd9fc040e19fe4d092584467">Playlist::operator-</a></div><div class="ttdeci">Playlist * operator-(const Playlist &amp;playlist)</div><div class="ttdoc">Sobrecarga do operador para subtração entre playlists.</div></div>
+<div class="ttc" id="aa00036_html_a1c2cf004e51f29ffcc0fc79fb650fab3"><div class="ttname"><a href="a00036.html#a1c2cf004e51f29ffcc0fc79fb650fab3">Playlist::addMusica</a></div><div class="ttdeci">void addMusica(const Musica &amp;musica)</div><div class="ttdoc">Função para adicionar uma música à playlist.</div></div>
+<div class="ttc" id="aa00036_html_a2caa4589ba6ba8e65aad0e733d2bb8b9"><div class="ttname"><a href="a00036.html#a2caa4589ba6ba8e65aad0e733d2bb8b9">Playlist::operator&gt;&gt;</a></div><div class="ttdeci">friend void operator&gt;&gt;(Playlist &amp;playlist, Musica &amp;musica)</div><div class="ttdoc">Sobrecarga do operador para extração da última musica de uma playlist.</div></div>
+<div class="ttc" id="aa00036_html_a36debb8e24affc5f728e3f769551efdc"><div class="ttname"><a href="a00036.html#a36debb8e24affc5f728e3f769551efdc">Playlist::operator+</a></div><div class="ttdeci">Playlist * operator+(const Playlist &amp;playlist)</div><div class="ttdoc">Sobrecarga do operador para adição de playlists.</div></div>
+<div class="ttc" id="aa00036_html_a3880c88a9705ed92daa90c35e56b6fe4"><div class="ttname"><a href="a00036.html#a3880c88a9705ed92daa90c35e56b6fe4">Playlist::remMusica</a></div><div class="ttdeci">void remMusica(const Musica &amp;musica)</div><div class="ttdoc">Função para remover uma música da playlist.</div></div>
+<div class="ttc" id="aa00036_html_a40a75b77288c717213fc8e5b3d952781"><div class="ttname"><a href="a00036.html#a40a75b77288c717213fc8e5b3d952781">Playlist::remMusica</a></div><div class="ttdeci">void remMusica(const Playlist &amp;playlist)</div><div class="ttdoc">Função para remover todas as músicas de outra playlist da playlist.</div></div>
+<div class="ttc" id="aa00036_html_a40ddbe801a28b1b9197076bd82616204"><div class="ttname"><a href="a00036.html#a40ddbe801a28b1b9197076bd82616204">Playlist::operator&lt;&lt;</a></div><div class="ttdeci">friend void operator&lt;&lt;(Playlist &amp;playlist, Musica &amp;musica)</div><div class="ttdoc">Sobrecarga do operador para inserção de uma musica em uma playlist.</div></div>
+<div class="ttc" id="aa00036_html_a4858c56cace2dd32bbba172b8494b775"><div class="ttname"><a href="a00036.html#a4858c56cace2dd32bbba172b8494b775">Playlist::operator-</a></div><div class="ttdeci">Playlist * operator-(const Musica &amp;musica)</div><div class="ttdoc">Sobrecarga do operador para subtração de uma musica em uma playlist.</div></div>
+<div class="ttc" id="aa00036_html_a4ec33dd0bee19bda3371b94dd0cb2f47"><div class="ttname"><a href="a00036.html#a4ec33dd0bee19bda3371b94dd0cb2f47">Playlist::Playlist</a></div><div class="ttdeci">Playlist(const Playlist &amp;playlist)</div><div class="ttdoc">Construtor cópia da classe.</div></div>
+<div class="ttc" id="aa00036_html_a5bbe44510f50d7eaeb2ce7d557f4b79b"><div class="ttname"><a href="a00036.html#a5bbe44510f50d7eaeb2ce7d557f4b79b">Playlist::setNome</a></div><div class="ttdeci">void setNome(const string &amp;nome)</div><div class="ttdoc">Função para configurar o nome da playlist.</div></div>
+<div class="ttc" id="aa00036_html_a63b1b4aba7f202b93d95ecd38706eba1"><div class="ttname"><a href="a00036.html#a63b1b4aba7f202b93d95ecd38706eba1">Playlist::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;cout, const Playlist &amp;playlist)</div><div class="ttdoc">Sobrecarga do operador de saída para printar uma playlist.</div></div>
+<div class="ttc" id="aa00036_html_aa3c1a3813a738f4f0ce64eb1b9358d34"><div class="ttname"><a href="a00036.html#aa3c1a3813a738f4f0ce64eb1b9358d34">Playlist::operator+</a></div><div class="ttdeci">Playlist * operator+(const Musica &amp;musica)</div><div class="ttdoc">Sobrecarga do operador para adição de uma musica em uma playlist.</div></div>
+<div class="ttc" id="aa00036_html_aa3c854d7b161faaa406b8c0a00676cfb"><div class="ttname"><a href="a00036.html#aa3c854d7b161faaa406b8c0a00676cfb">Playlist::addMusica</a></div><div class="ttdeci">void addMusica(const Playlist &amp;playlist)</div><div class="ttdoc">Função para adicionar todas as músicas de outra playlist à playlist.</div></div>
+<div class="ttc" id="aa00036_html_aacd9a69e347fc19a9a0787d7a7ce9df4"><div class="ttname"><a href="a00036.html#aacd9a69e347fc19a9a0787d7a7ce9df4">Playlist::~Playlist</a></div><div class="ttdeci">~Playlist()</div><div class="ttdoc">Destrutor da classe.</div></div>
+<div class="ttc" id="aa00036_html_ab2d1ce4fd645fbc1040ba0f634554617"><div class="ttname"><a href="a00036.html#ab2d1ce4fd645fbc1040ba0f634554617">Playlist::setMusicas</a></div><div class="ttdeci">void setMusicas(const Lista&lt; Musica &gt; &amp;musicas)</div><div class="ttdoc">Função para configurar a lista de músicas da playlist.</div></div>
+<div class="ttc" id="aa00036_html_ab6c1ca44e7211280b8fe4fb93d850aa6"><div class="ttname"><a href="a00036.html#ab6c1ca44e7211280b8fe4fb93d850aa6">Playlist::findMusica</a></div><div class="ttdeci">No&lt; Musica &gt; * findMusica(const Musica &amp;musica) const</div><div class="ttdoc">Função para encontrar uma música na playlist.</div></div>
+<div class="ttc" id="aa00036_html_ab7873a446bec2231e7b63d5e4dcb71dc"><div class="ttname"><a href="a00036.html#ab7873a446bec2231e7b63d5e4dcb71dc">Playlist::operator==</a></div><div class="ttdeci">bool operator==(const Playlist &amp;playlist)</div><div class="ttdoc">Sobrecarga do operador de comparação.</div></div>
+<div class="ttc" id="aa00036_html_abddd31a980c8e2494af3081bdbdc4cd7"><div class="ttname"><a href="a00036.html#abddd31a980c8e2494af3081bdbdc4cd7">Playlist::Playlist</a></div><div class="ttdeci">Playlist(const string &amp;nome, const Lista&lt; Musica &gt; &amp;musicas)</div><div class="ttdoc">Construtor que inicializa a playlist com um nome e uma lista de músicas.</div></div>
+<div class="ttc" id="aa00036_html_aca3a69d3fb7bb8de19718c655814e8c7"><div class="ttname"><a href="a00036.html#aca3a69d3fb7bb8de19718c655814e8c7">Playlist::getNome</a></div><div class="ttdeci">string getNome() const</div><div class="ttdoc">Função que retorna o nome da playlist.</div></div>
+<div class="ttc" id="aa00036_html_ae0fab6b028d4f7ff3e520a0ca8200a0d"><div class="ttname"><a href="a00036.html#ae0fab6b028d4f7ff3e520a0ca8200a0d">Playlist::Playlist</a></div><div class="ttdeci">Playlist(const string &amp;nome)</div><div class="ttdoc">Construtor que inicializa a playlist com um nome.</div></div>
+<div class="ttc" id="aa00036_html_ae578afd0a026dae54f1ae1f881071dc1"><div class="ttname"><a href="a00036.html#ae578afd0a026dae54f1ae1f881071dc1">Playlist::getMusicas</a></div><div class="ttdeci">Lista&lt; Musica &gt; * getMusicas() const</div><div class="ttdoc">Função que retorna a lista de músicas da playlist.</div></div>
+<div class="ttc" id="aa00036_html_aef38d55e42995be147977726350f3ada"><div class="ttname"><a href="a00036.html#aef38d55e42995be147977726350f3ada">Playlist::Playlist</a></div><div class="ttdeci">Playlist()</div><div class="ttdoc">Construtor padrão da classe.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

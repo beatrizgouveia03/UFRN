@@ -1,0 +1,138 @@
+\chapter{Simulador de Rotas em Grafos}
+\hypertarget{md_README}{}\label{md_README}\index{Simulador de Rotas em Grafos@{Simulador de Rotas em Grafos}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ \hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Índice}{Índice}}\label{md_README_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item Introdução
+\item Algoritmos
+\item Utilização
+\item Métodos de Compilação
+\item Contribuindo
+\item Documentação
+\item Licença
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{Introdução}{Introdução}}\label{md_README_autotoc_md2}
+O Simulador de Rotas em Grafos é um projeto desenvolvido para demonstrar o funcionamento de diversos algoritmos clássicos em grafos e digrafos ponderados. O objetivo principal é fornecer uma ferramenta prática para visualizar, entender e aplicar conceitos fundamentais de teoria dos grafos, sendo eles a construção de árvores geradoras mínimas, o cálculo de caminhos mínimos, a análise de grafos Eulerianos e a resolução de problemas de fluxo em redes.\hypertarget{md_README_autotoc_md3}{}\doxysection{\texorpdfstring{Algoritmos}{Algoritmos}}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Árvores Geradoras Mínimas\+:}}
+\begin{DoxyItemize}
+\item \mbox{[}x\mbox{]} (1) Kruskal \mbox{[}Anny\mbox{]}
+\item \mbox{[}x\mbox{]} (2) Prim \mbox{[}Davi\mbox{]}
+\item \mbox{[} \mbox{]} (3) Chu-\/\+Liu/\+Edmonds \mbox{[}José\mbox{]}
+\end{DoxyItemize}
+\item {\bfseries{Caminho mais curto\+:}}
+\begin{DoxyItemize}
+\item \mbox{[}x\mbox{]} (4) Dijkstra \mbox{[}Anny\mbox{]}
+\item \mbox{[}x\mbox{]} (5) Bellman-\/\+Ford \mbox{[}Alisson\mbox{]}
+\item \mbox{[}x\mbox{]} (6) Floyd-\/\+Warshall \mbox{[}Davi\mbox{]}
+\end{DoxyItemize}
+\item {\bfseries{Grafos Eulerianos\+:}}
+\begin{DoxyItemize}
+\item \mbox{[}x\mbox{]} (7) Hierholzer (ciclos) \mbox{[}Alisson\mbox{]}
+\item \mbox{[}x\mbox{]} (8) Hierholzer (caminhos) \mbox{[}Beatriz\mbox{]}
+\end{DoxyItemize}
+\item {\bfseries{Fluxo em Redes\+:}}
+\begin{DoxyItemize}
+\item \mbox{[} \mbox{]} (9) Ford-\/\+Fulkerson \mbox{[}José\mbox{]} (Em revisão)
+\item \mbox{[}x\mbox{]} (10) Edmonds-\/\+Karp \mbox{[}Beatriz\mbox{]}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{Utilização}{Utilização}}\label{md_README_autotoc_md4}
+Para utilizar este projeto, siga os passos abaixo\+:
+
+
+\begin{DoxyEnumerate}
+\item Clone o repositório em sua máquina local utilizando o seguinte comando\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/beatrizgouveia03/Grafos.git}
+
+\end{DoxyCode}
+
+\item Navegue até o diretório deste projeto\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ Grafos/Projetos/Route\_in\_Graphs/}
+
+\end{DoxyCode}
+
+\item Compile o projeto de acordo com o método de sua escolha (veja Métodos de Compilação para mais detalhes).
+\item Execute o programa compilado para visualizar os algoritmos de rotas em grafos em execução com seus arquivos de entrada.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md5}{}\doxysection{\texorpdfstring{Métodos de Compilação}{Métodos de Compilação}}\label{md_README_autotoc_md5}
+Este projeto utiliza o CMake como sistema de build, permitindo uma compilação fácil e eficiente do código em C++. Para compilar os algoritmos, siga os passos abaixo\+:
+
+
+\begin{DoxyEnumerate}
+\item Certifique-\/se de que o CMake está instalado no seu sistema.
+\item Navegue até o diretório do projeto\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ Grafos/Projetos/Route\_in\_Graphs/}
+
+\end{DoxyCode}
+
+\item Crie um diretório de build e gere um Makefile Unix baseado no script encontrado no nível atual\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
+
+\end{DoxyCode}
+
+\item Compile o projeto utilizando os arquivos de build gerados\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+
+\end{DoxyCode}
+
+\item Após a compilação bem-\/sucedida, você encontrará o arquivo executável no diretório {\ttfamily build}, com o nome {\ttfamily Route\+\_\+in\+\_\+\+Graphs}. Execute o programa para visualizar os algoritmos em ação com os arquivos de entrada selecionados.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md6}{}\doxysection{\texorpdfstring{Contribuindo}{Contribuindo}}\label{md_README_autotoc_md6}
+Contribuições para este projeto são bem-\/vindas! Se você deseja melhorar a implementação de um algoritmo existente, adicionar um novo algoritmo, introduzir novos cenários ou corrigir quaisquer problemas, siga os passos abaixo\+:
+
+
+\begin{DoxyEnumerate}
+\item Faça um fork do repositório.
+\item Crie uma nova branch para sua contribuição\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ checkout\ -\/b\ feature/novo-\/algoritmo}
+
+\end{DoxyCode}
+
+\item Realize suas modificações e adições.
+\item Faça o commit das suas alterações\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ commit\ -\/m\ "{}Adicionar\ novo\ algoritmo:\ [Nome\ do\ Algoritmo]"{}}
+
+\end{DoxyCode}
+
+\item Envie sua branch\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ push\ origin\ feature/novo-\/algoritmo}
+
+\end{DoxyCode}
+
+\item Abra um pull request, descrevendo suas alterações e a motivação por trás delas.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md7}{}\doxysection{\texorpdfstring{Documentação}{Documentação}}\label{md_README_autotoc_md7}
+O projeto utiliza o Doxygen para gerar a documentação. Para gerar a documentação, navegue até o diretório do projeto e execute o seguinte comando\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doxygen\ Doxyfile}
+
+\end{DoxyCode}
+
+
+Isso criará uma pasta {\ttfamily docs} (ou outro diretório especificado no campo {\ttfamily OUTPUT\+\_\+\+DIRECTORY} do arquivo Doxyfile) com os arquivos da documentação gerada. Você pode visualizar a documentação abrindo o arquivo \href{/docs/html/index.html}{\texttt{ index.\+html}}, localizado dentro da subpasta {\ttfamily html}, em seu navegador web.\hypertarget{md_README_autotoc_md8}{}\doxysection{\texorpdfstring{Licença}{Licença}}\label{md_README_autotoc_md8}
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes. 

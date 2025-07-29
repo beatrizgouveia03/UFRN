@@ -1,0 +1,7 @@
+ARCHITECTURE arch_1 OF mux_4x1 IS
+BEGIN
+	s  <= 	((NOT sel(1)) AND (NOT sel(0)) AND a0) OR
+		((NOT sel(1)) AND ( sel(0)) AND a1) OR
+		(( sel(1)) AND (NOT sel(0)) AND a2) OR
+		(( sel(1)) AND ( sel(0)) AND a3);
+END arch_1;

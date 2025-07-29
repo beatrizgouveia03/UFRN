@@ -1,0 +1,7 @@
+/home/usuario/Documentos/Circuitos/subtractor/full_subtractor/full_subtractor.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/subtractor/full_subtractor/full_subtractor.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity full_subtractor
+-- Compiling architecture structural of full_subtractor
+
+} {} {}}

@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/flip-flop
+Eff_d
+Z0 w1695820162
+!i122 0
+Z1 d/home/usuario/Documentos/Circuitos/flip_flop/ff_d
+Z2 8/home/usuario/Documentos/Circuitos/flip_flop/ff_d/ff_d.vhd
+Z3 F/home/usuario/Documentos/Circuitos/flip_flop/ff_d/ff_d.vhd
+l0
+L1 1
+VM:jNY2h]HIOf06`g^28WT1
+!s100 JHIMkI2lB6JC;g:4X19ie2
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696424617
+!i10b 1
+Z6 !s108 1696424617.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/flip_flop/ff_d/ff_d.vhd|
+!s107 /home/usuario/Documentos/Circuitos/flip_flop/ff_d/ff_d.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Aarch
+DEx4 work 4 ff_d 0 22 M:jNY2h]HIOf06`g^28WT1
+!i122 0
+l10
+L9 9
+V]HL3am64@NQJHYA?Bb6291
+!s100 l?Xb@CE047^f]=zC3ElBM0
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 /home/usuario/Documentos/Circuitos/flip_flop/ff_d/ff_d.vhd|
+!i113 1
+R8
+R9

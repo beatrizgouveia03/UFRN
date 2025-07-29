@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Código-Fonte de source/algorithms/kruskal.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="../../dir_1f1e02da0ed68619c8cd86756bb8077c.html">algorithms</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">kruskal.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d1c/kruskal_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d6a/simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d7/ddc/namespacesml.html">sml</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../d9/d1c/kruskal_8cpp.html#ad1f79d9d99776d7353c6659c307c83c6">   13</a></span><span class="preprocessor">#define MAXN 1000</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">   14</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[<a class="code hl_define" href="../../d9/d1c/kruskal_8cpp.html#ad1f79d9d99776d7353c6659c307c83c6">MAXN</a>];</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">   15</a></span><span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a>[<a class="code hl_define" href="../../d9/d1c/kruskal_8cpp.html#ad1f79d9d99776d7353c6659c307c83c6">MAXN</a>];</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../d9/d1c/kruskal_8cpp.html#a8042d2d97432684c1138a39c7f2e086d">   22</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#a8042d2d97432684c1138a39c7f2e086d">init</a>(<span class="keywordtype">size_t</span> n) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[i] = i;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a>[i] = 1;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">   34</a></span><span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">find</a>(<span class="keywordtype">size_t</span> cur) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">size_t</span> root = cur;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[root] != root)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        root = <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[root];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//Path compression</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">while</span>(<a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[cur] != root) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">size_t</span> temp = <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[cur];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[cur] = root;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        cur = temp;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> root;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../d9/d1c/kruskal_8cpp.html#a5e5f1014cb4d2d4da254dbcfa081560b">   55</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#a5e5f1014cb4d2d4da254dbcfa081560b">join</a>(<span class="keywordtype">size_t</span> x, <span class="keywordtype">size_t</span> y) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    x = <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">find</a>(x);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    y = <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">find</a>(y);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span>(x == y) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a>[x] &gt; <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a>[y]) std::swap(x, y);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a>[y] += <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a>[x];</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>[x] = y;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d0/d8b/classsml_1_1Simulation.html#a395f000bcaf25c415b5203436d883e53">   72</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a395f000bcaf25c415b5203436d883e53">Simulation::kruskal</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">//Converter matriz de adjacência para lista de arestas</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::vector&lt;std::pair&lt;int, std::pair&lt;size_t, size_t&gt;&gt;&gt; edges;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>; i++) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> j = i + 1; j &lt; <a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>; j++) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j] != -1) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                edges.push_back({<a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j], {i, j}});</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">//Inicializar estruturas do Union-Find e ordenar arestas por peso</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#a8042d2d97432684c1138a39c7f2e086d">init</a>(<a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    sort(edges.begin(), edges.end());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//Estruturas para armazenar o resultado (arestas da MST e peso total)</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    std::vector&lt;std::pair&lt;int, std::pair&lt;size_t, size_t&gt;&gt;&gt; mst;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">int</span> total_weight = 0;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">//Algoritmo principal de Kruskal</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; edge : edges) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordtype">size_t</span> u = edge.second.first;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordtype">size_t</span> v = edge.second.second;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">//Verifica se adicionar a aresta não forma ciclo</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">find</a>(u) != <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">find</a>(v)) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <a class="code hl_function" href="../../d9/d1c/kruskal_8cpp.html#a5e5f1014cb4d2d4da254dbcfa081560b">join</a>(u, v);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            mst.push_back(edge);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            total_weight += edge.first;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">//Imprime as arestas selecionadas e o peso total da MST</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;\nArvore Geradora Minima encontrada pelo algoritmo de Kruskal:\n&quot;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Arestas da AGM:\n&quot;</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span>&amp; edge : mst) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        std::cout &lt;&lt; <a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">dictionary</a>[edge.second.first] &lt;&lt; <span class="stringliteral">&quot; -- &quot;</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                 &lt;&lt; <a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">dictionary</a>[edge.second.second] &lt;&lt; <span class="stringliteral">&quot; : &quot;</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                 &lt;&lt; edge.first &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Peso total da AGM: &quot;</span> &lt;&lt; total_weight &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a022c43521a00113a37aa067d9f6b3916"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">sml::Simulation::graph</a></div><div class="ttdeci">Graph graph</div><div class="ttdoc">O grafo da simulação.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00140">simulation.h:140</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a395f000bcaf25c415b5203436d883e53"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a395f000bcaf25c415b5203436d883e53">sml::Simulation::kruskal</a></div><div class="ttdeci">void kruskal(void)</div><div class="ttdoc">Implementação do algoritmo de Kruskal para encontrar a Árvore Geradora Mínima (MST) O algoritmo orden...</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00072">kruskal.cpp:72</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_a3fac60782863119e99f52ebcc2567f78"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#a3fac60782863119e99f52ebcc2567f78">rank_set</a></div><div class="ttdeci">static int rank_set[MAXN]</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00015">kruskal.cpp:15</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_a5e5f1014cb4d2d4da254dbcfa081560b"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#a5e5f1014cb4d2d4da254dbcfa081560b">join</a></div><div class="ttdeci">static void join(size_t x, size_t y)</div><div class="ttdoc">Função Union do Union-Find que une dois conjuntos Implementa a otimização union by rank,...</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00055">kruskal.cpp:55</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_a8042d2d97432684c1138a39c7f2e086d"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#a8042d2d97432684c1138a39c7f2e086d">init</a></div><div class="ttdeci">static void init(size_t n)</div><div class="ttdoc">Função que inicializa as estruturas do Union-Find Cada elemento começa como seu próprio pai (conjunto...</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00022">kruskal.cpp:22</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_a95ce245e8f2adfb78d9c96904ff7052a"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a></div><div class="ttdeci">static int parent[MAXN]</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00014">kruskal.cpp:14</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_ad1f79d9d99776d7353c6659c307c83c6"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#ad1f79d9d99776d7353c6659c307c83c6">MAXN</a></div><div class="ttdeci">#define MAXN</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00013">kruskal.cpp:13</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_ae5fb952ebf13a267114d621806d30b04"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#ae5fb952ebf13a267114d621806d30b04">find</a></div><div class="ttdeci">static size_t find(size_t cur)</div><div class="ttdoc">Função Find do Union-Find que encontra o representante (pai) de um conjunto Implementa a otimização d...</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00034">kruskal.cpp:34</a></div></div>
+<div class="ttc" id="anamespacesml_html"><div class="ttname"><a href="../../d7/ddc/namespacesml.html">sml</a></div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00063">simulation.h:63</a></div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="../../dd/d6a/simulation_8h.html">simulation.h</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a36516689d3cbafb224c573d993851f96"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">sml::Graph::dictionary</a></div><div class="ttdeci">map&lt; int, string &gt; dictionary</div><div class="ttdoc">Lista que mantém o nome de cada vértice.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00093">simulation.h:93</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a6f9143cade62cc51cccaad07a3c1f025"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">sml::Graph::n</a></div><div class="ttdeci">int n</div><div class="ttdoc">Número de vértices.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00090">simulation.h:90</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a820c5f9fefba210c80b32f6de4a5e2b5"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">sml::Graph::adj</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; adj</div><div class="ttdoc">Matriz de adjacência.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00092">simulation.h:92</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

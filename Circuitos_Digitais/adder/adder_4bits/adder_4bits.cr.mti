@@ -1,0 +1,7 @@
+/home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity adder_4bits
+-- Compiling architecture structural of adder_4bits
+
+} {} {}}

@@ -1,0 +1,165 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/.local/share/Trash/files/register
+Ereg
+w1696425147
+!i122 3
+Z0 d/home/usuario/Documentos/Circuitos/reg
+8/home/usuario/Documentos/Circuitos/reg/reg.vhd
+F/home/usuario/Documentos/Circuitos/reg/reg.vhd
+l0
+L1 1
+ViSA4L@foF^[66gT^VhWfG1
+!s100 P0R38=``X^U_[3SE?ELhI3
+Z1 OV;C;2021.1;73
+32
+Z2 !s110 1696425169
+!i10b 1
+Z3 !s108 1696425169.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/reg/reg.vhd|
+!s107 /home/usuario/Documentos/Circuitos/reg/reg.vhd|
+!i113 1
+Z4 o-work work -2002 -explicit
+Z5 tExplicit 1 CvgOpt 0
+Aarch_3
+w1696425238
+Z6 DEx4 work 3 reg 0 22 iSA4L@foF^[66gT^VhWfG1
+!i122 6
+8/home/usuario/Documentos/Circuitos/reg/arch_3.vhd
+F/home/usuario/Documentos/Circuitos/reg/arch_3.vhd
+l2
+Z7 L1 12
+VaSnnVZD3^`nE<1_ozO0eR1
+!s100 CoC;S>J^Od1FjaKM:g0i72
+R1
+32
+!s110 1696425243
+!i10b 1
+!s108 1696425243.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/reg/arch_3.vhd|
+!s107 /home/usuario/Documentos/Circuitos/reg/arch_3.vhd|
+!i113 1
+R4
+R5
+Aarch_2
+w1696425200
+R6
+!i122 6
+8/home/usuario/Documentos/Circuitos/reg/arch_2.vhd
+F/home/usuario/Documentos/Circuitos/reg/arch_2.vhd
+l3
+R7
+Vd>gB?6OeWV;Q^k642;oC=0
+!s100 bAe<Y:aMR[:GAOFdlm5Wo2
+R1
+32
+!s110 1696425203
+!i10b 1
+!s108 1696425203.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/reg/arch_2.vhd|
+!s107 /home/usuario/Documentos/Circuitos/reg/arch_2.vhd|
+!i113 1
+R4
+R5
+Aarch_1
+w1696425161
+R6
+!i122 6
+8/home/usuario/Documentos/Circuitos/reg/arch_1.vhd
+F/home/usuario/Documentos/Circuitos/reg/arch_1.vhd
+l3
+R7
+VNo<XVjL@2m8OWfHUH]om13
+!s100 e:2RoKbV^5A[_>MbfLfVR2
+R1
+32
+R2
+!i10b 1
+R3
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/reg/arch_1.vhd|
+!s107 /home/usuario/Documentos/Circuitos/reg/arch_1.vhd|
+!i113 1
+R4
+R5
+Ereg2
+Z8 w1696252664
+!i122 4
+R0
+Z9 8/home/usuario/Documentos/Circuitos/reg/reg2.vhd
+Z10 F/home/usuario/Documentos/Circuitos/reg/reg2.vhd
+l0
+L1 1
+VNn6DY4j2KCLGUJndZ?afn2
+!s100 YXQ<G0f>XaI>7`D2T@@X63
+R1
+32
+R2
+!i10b 1
+R3
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/reg/reg2.vhd|
+Z12 !s107 /home/usuario/Documentos/Circuitos/reg/reg2.vhd|
+!i113 1
+R4
+R5
+Aarch_1
+DEx4 work 4 reg2 0 22 Nn6DY4j2KCLGUJndZ?afn2
+!i122 4
+l9
+Z13 L7 12
+V9<HFAN>19fb?2Ae=Bz1OC3
+!s100 a1lS<U]9?Q]6]<@SfccOo1
+R1
+32
+R2
+!i10b 1
+R3
+R11
+R12
+!i113 1
+R4
+R5
+Ereg3
+Z14 w1696253067
+!i122 5
+R0
+Z15 8/home/usuario/Documentos/Circuitos/reg/reg3.vhd
+Z16 F/home/usuario/Documentos/Circuitos/reg/reg3.vhd
+l0
+L1 1
+Vaj@hSlIoKfSF<DhcU7jLW1
+!s100 i[Ym_<g7l8j1W=DSeH8@Z1
+R1
+32
+R2
+!i10b 1
+R3
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/reg/reg3.vhd|
+Z18 !s107 /home/usuario/Documentos/Circuitos/reg/reg3.vhd|
+!i113 1
+R4
+R5
+Aarch_1
+DEx4 work 4 reg3 0 22 aj@hSlIoKfSF<DhcU7jLW1
+!i122 5
+l8
+R13
+V49IQdL0NeblOX3EW8<L:G3
+!s100 U_7m7hm[d395UM1Ie4kVZ2
+R1
+32
+R2
+!i10b 1
+R3
+R17
+R18
+!i113 1
+R4
+R5

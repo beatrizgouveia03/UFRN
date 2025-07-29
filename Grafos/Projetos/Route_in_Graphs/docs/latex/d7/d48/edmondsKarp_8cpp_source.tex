@@ -1,0 +1,89 @@
+\doxysection{edmonds\+Karp.\+cpp}
+\hypertarget{edmondsKarp_8cpp_source}{}\label{edmondsKarp_8cpp_source}\index{source/algorithms/edmondsKarp.cpp@{source/algorithms/edmondsKarp.cpp}}
+\mbox{\hyperlink{edmondsKarp_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{simulation_8h}{simulation.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacesml}{sml}};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00013}\mbox{\hyperlink{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}{Simulation::edmondsKarp}}\ (\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00014}00014\ \ \ \ \ vector<int>\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}(this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}});\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{int}\ source\ =\ 0,\ sink\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ -\/\ 1;\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00016}00016\ \ \ \ \ vector<vector<int>>\ residual\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ aux;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00019}00019\ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00020}00020\ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{int}\ maxFlow\ =\ 0,\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{comment}{//Enquanto\ houver\ caminho\ entre\ a\ origem\ e\ o\ destino}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}{bfs}}(\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}},\ residual,\ source,\ sink))\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();\ \ \textcolor{comment}{//\ Define\ o\ valor\ de\ infinito}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pathFlow\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ s\ =\ sink;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Determina\ o\ gargalo\ desse\ caminho}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(s\ !=\ source)\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[s];}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ pathFlow\ =\ min(pathFlow,\ residual[p][s]);\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ s\ =\ p;\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Atualiza\ a\ matriz\ residual\ de\ acordo\ com\ o\ gargalo}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{sink\};\ i!=source;\ i\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i])\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ residual[\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]][i]\ -\/=\ pathFlow;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ residual[i][\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]]\ +=\ pathFlow;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Soma\ ao\ fluxo\ total\ o\ fluxo\ máximo\ do\ caminho\ achado}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ maxFlow\ +=\ pathFlow;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ residual;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ "{}}\ <<\ ++count\ <<\ \textcolor{stringliteral}{"{}a\ PASSAGEM:\ (FLUXO\ RESTANTE)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ cout\ <<\ aux\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FLUXO\ MAXIMO\ DO\ CAMINHO:\ "{}}\ <<\ pathFlow\ <<\ endl<<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00052}00052\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00053}00053\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00054}00054\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FLUXO\ MAXIMO\ DO\ GRAFO:\ "{}}\ <<\ maxFlow\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00055}00055\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00056}00056\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00059}00059\ \};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00075}\mbox{\hyperlink{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}{00075}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}{Simulation::bfs}}(vector<int>\ \&\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}},\ vector<vector<int>>\ residual,\ \textcolor{keywordtype}{int}\ src,\ \textcolor{keywordtype}{int}\ snk)\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ n\ =\ residual.size();}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00077}00077\ \ \ \ \ vector<bool>\ visited(n,\ \textcolor{keyword}{false});\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00078}00078\ \ \ \ \ queue<int>\ q;\ \ \ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00079}00079\ \ \ \ \ q.push(src);}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00080}00080\ \ \ \ \ visited[src]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//Enquanto\ houver\ nó\ a\ ser\ visitado}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{while}(!q.empty())\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Recuperar\ o\ nó\ na\ frente\ da\ fila}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ f\ =\ q.front();}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Visitar\ todos\ os\ nós-\/filhos\ desse\ nó\ e\ adicioná-\/los\ na\ fila}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{0\};\ i<n;\ ++i)\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!visited[i]\ \&\&\ residual[f][i]\ >\ 0)\{}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.push(i);}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visited[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]\ =\ f;}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Caso\ o\ nó\ visitado\ seja\ o\ destino,\ retornar\ true}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ ==\ snk)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{edmondsKarp_8cpp_source_l00104}00104\ \}}
+
+\end{DoxyCode}

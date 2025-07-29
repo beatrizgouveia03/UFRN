@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/flip_flop/ff_d
+Eff_d_clear
+Z0 w1696424291
+!i122 0
+Z1 d/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear
+Z2 8/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd
+Z3 F/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd
+l0
+L1 1
+VG5Rl5hmgf^RDcC8ZD@d<K2
+!s100 R?hGWZS91JBWdeD;^GKai0
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696424781
+!i10b 1
+Z6 !s108 1696424781.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd|
+!s107 /home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Aarch
+DEx4 work 10 ff_d_clear 0 22 G5Rl5hmgf^RDcC8ZD@d<K2
+!i122 0
+l11
+L10 11
+VWlmh7S3[:^ad><N5f^TJ<1
+!s100 L[HFJ1XE`CRMCMYi_;>Dl0
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 /home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd|
+!i113 1
+R8
+R9

@@ -1,0 +1,387 @@
+\hypertarget{a00024}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Lista$<$ T $>$}
+\label{a00024}\index{Lista$<$ T $>$@{Lista$<$ T $>$}}
+
+
+Implementação de uma classe \mbox{\hyperlink{a00024}{Lista}}.  
+
+
+
+
+{\ttfamily \#include \char`\"{}include/\+Lista.\+hpp\char`\"{}}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00024_adce924e21607848663132290be1a959d}{Lista}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00024_a1c9caebe51a82ddf43d20f15b551910d}{Lista}} (T valor)
+\begin{DoxyCompactList}\small\item\em Construtor que inicializa a lista com um nó \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00024_a334b6c6ff204608509bcedb29ad97ce5}{Lista}} (const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista)
+\begin{DoxyCompactList}\small\item\em Construtor cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00024_af297975e278b0c92cbf67d14b2f08366}{$\sim$\+Lista}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão da classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_aa09211c096accdf53703b208051611d0}{set\+Cabeca}} (\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$cabeca)
+\begin{DoxyCompactList}\small\item\em Função para configurar o head/cabeça da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_a385c79cac116d9773cf7d0d5e9e00606}{set\+Cauda}} (\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$cauda)
+\begin{DoxyCompactList}\small\item\em Função para configurar o tail/cauda da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{a00024_ab1d687706cd838d94ef05648b4526359}{get\+Cabeca}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna um ponteiro indicando o head/cabeça da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{a00024_abbb4d1b6b8fdd9411805d16bb869f315}{get\+Cauda}} () const
+\begin{DoxyCompactList}\small\item\em Função que retorna um ponteiro indicando o tail/cauda da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_a96ed3c100591f8579492fb5d2fc538cf}{inserir}} (T valor)
+\begin{DoxyCompactList}\small\item\em Função para inserir um elemento na lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_a146e31311259bbf781b8fce9c5cc6408}{adicionar\+Elementos}} (const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista)
+\begin{DoxyCompactList}\small\item\em Função para inserir todos os elemeneos de outra lista na lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_a820a6851e127aadde092e88be73672c2}{remover}} (T valor)
+\begin{DoxyCompactList}\small\item\em Função para excluir um elemento da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_aef99627ddaf3154d76700ee41774a21b}{remover\+Elementos}} (const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista)
+\item 
+int \mbox{\hyperlink{a00024_ac31bb14de15503e1ab89b4bca1f60df0}{tamanho}} () const
+\begin{DoxyCompactList}\small\item\em Função que returna o tamanho da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{a00024_a497c9d055f303c4292c9e26aa5cf015b}{buscar}} (T valor) const
+\begin{DoxyCompactList}\small\item\em Função que busca um elemento na lista. Caso o encontre retorna um ponteiro para ele, caso não, retorna um nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{a00024_a721cf84cd22fe2af057bd895cfd35616}{buscar\+Por\+Indice}} (int indice) const
+\begin{DoxyCompactList}\small\item\em Função que busca se existe um elemento na lista no índice indicado. Caso exista, retorna um ponteiro para ele, cano nãõ$\sim$retorna um nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \mbox{\hyperlink{a00024_a69e6bbe8f73a08f4b596cba38ecbca15}{operator+}} (const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador para adição de listas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \mbox{\hyperlink{a00024_acbdcf456a0daa68c10a7754801b90a61}{operator-\/}} (const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador para subtração de listas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00024_a1cbbc87a7c477b098463a398c277bb25}{operator$>$$>$}} (\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista, \mbox{\hyperlink{a00032}{No}}$<$ T $>$ \&no)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador para extração do último nó de uma lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{a00024_a0623e3a44d2d89ef1dfc900a6a24ac47}{operator$<$$<$}} (\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&lista, T \&valor)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador para inserção de um nó em uma lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$class T$>$\newline
+class Lista$<$ T $>$}
+
+Implementação de uma classe \mbox{\hyperlink{a00024}{Lista}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em T} & Variável template \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{a00024_adce924e21607848663132290be1a959d}\label{a00024_adce924e21607848663132290be1a959d}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lista()}{Lista()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::\mbox{\hyperlink{a00024}{Lista}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor padrão da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em NULL} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_a1c9caebe51a82ddf43d20f15b551910d}\label{a00024_a1c9caebe51a82ddf43d20f15b551910d}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lista()}{Lista()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::\mbox{\hyperlink{a00024}{Lista}} (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor que inicializa a lista com um nó 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor com que o nó será iniciado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_a334b6c6ff204608509bcedb29ad97ce5}\label{a00024_a334b6c6ff204608509bcedb29ad97ce5}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Lista()}{Lista()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::\mbox{\hyperlink{a00024}{Lista}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor cópia. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & \mbox{\hyperlink{a00024}{Lista}} com os elementos que serão inicializados na lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_af297975e278b0c92cbf67d14b2f08366}\label{a00024_af297975e278b0c92cbf67d14b2f08366}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!````~Lista@{$\sim$Lista}}
+\index{````~Lista@{$\sim$Lista}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Lista()}{~Lista()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{a00024}{Lista}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor padrão da classe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em NULL} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{a00024_a146e31311259bbf781b8fce9c5cc6408}\label{a00024_a146e31311259bbf781b8fce9c5cc6408}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!adicionarElementos@{adicionarElementos}}
+\index{adicionarElementos@{adicionarElementos}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{adicionarElementos()}{adicionarElementos()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::adicionar\+Elementos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para inserir todos os elemeneos de outra lista na lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & \mbox{\hyperlink{a00024}{Lista}} com os elementos a serem adicionados \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_a497c9d055f303c4292c9e26aa5cf015b}\label{a00024_a497c9d055f303c4292c9e26aa5cf015b}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!buscar@{buscar}}
+\index{buscar@{buscar}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscar()}{buscar()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00032}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::buscar (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que busca um elemento na lista. Caso o encontre retorna um ponteiro para ele, caso não, retorna um nullptr. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor do elemento a ser procurado na lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Interador para o elemento ou nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00024_a721cf84cd22fe2af057bd895cfd35616}\label{a00024_a721cf84cd22fe2af057bd895cfd35616}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!buscarPorIndice@{buscarPorIndice}}
+\index{buscarPorIndice@{buscarPorIndice}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{buscarPorIndice()}{buscarPorIndice()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00032}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::buscar\+Por\+Indice (\begin{DoxyParamCaption}\item[{int}]{indice }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que busca se existe um elemento na lista no índice indicado. Caso exista, retorna um ponteiro para ele, cano nãõ$\sim$retorna um nullptr. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em indice} & Indice do elemento a ser procurado na lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Interador para o elemento ou nullptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00024_ab1d687706cd838d94ef05648b4526359}\label{a00024_ab1d687706cd838d94ef05648b4526359}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getCabeca@{getCabeca}}
+\index{getCabeca@{getCabeca}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCabeca()}{getCabeca()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00032}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::get\+Cabeca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna um ponteiro indicando o head/cabeça da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Iterador para a cabeça da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00024_abbb4d1b6b8fdd9411805d16bb869f315}\label{a00024_abbb4d1b6b8fdd9411805d16bb869f315}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!getCauda@{getCauda}}
+\index{getCauda@{getCauda}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getCauda()}{getCauda()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00032}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::get\+Cauda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que retorna um ponteiro indicando o tail/cauda da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Iterador para a cauda da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00024_a96ed3c100591f8579492fb5d2fc538cf}\label{a00024_a96ed3c100591f8579492fb5d2fc538cf}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!inserir@{inserir}}
+\index{inserir@{inserir}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inserir()}{inserir()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::inserir (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para inserir um elemento na lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor que será inserido no novo fim da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_a69e6bbe8f73a08f4b596cba38ecbca15}\label{a00024_a69e6bbe8f73a08f4b596cba38ecbca15}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00024}{Lista}}$<$T$>$ \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobrecarga do operador para adição de listas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & Outra lista que será somada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma nova lista resultante da soma 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00024_acbdcf456a0daa68c10a7754801b90a61}\label{a00024_acbdcf456a0daa68c10a7754801b90a61}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{a00024}{Lista}}$<$T$>$ \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sobrecarga do operador para subtração de listas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & Outra lista que será subtraída \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma nova lista resultante da substração 
+\end{DoxyReturn}
+\mbox{\Hypertarget{a00024_a820a6851e127aadde092e88be73672c2}\label{a00024_a820a6851e127aadde092e88be73672c2}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!remover@{remover}}
+\index{remover@{remover}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remover()}{remover()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::remover (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para excluir um elemento da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor que será removido da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_aef99627ddaf3154d76700ee41774a21b}\label{a00024_aef99627ddaf3154d76700ee41774a21b}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!removerElementos@{removerElementos}}
+\index{removerElementos@{removerElementos}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removerElementos()}{removerElementos()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::remover\+Elementos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{a00024_aa09211c096accdf53703b208051611d0}\label{a00024_aa09211c096accdf53703b208051611d0}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!setCabeca@{setCabeca}}
+\index{setCabeca@{setCabeca}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setCabeca()}{setCabeca()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::set\+Cabeca (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$}]{cabeca }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para configurar o head/cabeça da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cabeca} & Iterador para o nó que será a cabeça da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_a385c79cac116d9773cf7d0d5e9e00606}\label{a00024_a385c79cac116d9773cf7d0d5e9e00606}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!setCauda@{setCauda}}
+\index{setCauda@{setCauda}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setCauda()}{setCauda()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::set\+Cauda (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00032}{No}}$<$ T $>$ $\ast$}]{cauda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função para configurar o tail/cauda da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cauda} & Iterador para o nó que será a cauda da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_ac31bb14de15503e1ab89b4bca1f60df0}\label{a00024_ac31bb14de15503e1ab89b4bca1f60df0}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!tamanho@{tamanho}}
+\index{tamanho@{tamanho}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tamanho()}{tamanho()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{a00024}{Lista}}$<$ T $>$\+::tamanho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Função que returna o tamanho da lista. 
+
+\begin{DoxyReturn}{Retorna}
+Tamanho da lista 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{a00024_a0623e3a44d2d89ef1dfc900a6a24ac47}\label{a00024_a0623e3a44d2d89ef1dfc900a6a24ac47}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista,  }\item[{T \&}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador para inserção de um nó em uma lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & \mbox{\hyperlink{a00024}{Lista}} em que será inserido o nó \\
+\hline
+{\em no} & Nó que será inserido na lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{a00024_a1cbbc87a7c477b098463a398c277bb25}\label{a00024_a1cbbc87a7c477b098463a398c277bb25}} 
+\index{Lista$<$ T $>$@{Lista$<$ T $>$}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Lista$<$ T $>$@{Lista$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void operator$>$$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00024}{Lista}}$<$ T $>$ \&}]{lista,  }\item[{\mbox{\hyperlink{a00032}{No}}$<$ T $>$ \&}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador para extração do último nó de uma lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista} & \mbox{\hyperlink{a00024}{Lista}} da qual será extraído o nó \\
+\hline
+{\em no} & Nó que será preenchido com o nó extraído da lista \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{a00002}{Lista.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,15 @@
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\bin\Debug\net9.0\Bilheteria.exe
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\bin\Debug\net9.0\Bilheteria.deps.json
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\bin\Debug\net9.0\Bilheteria.runtimeconfig.json
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\bin\Debug\net9.0\Bilheteria.dll
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\bin\Debug\net9.0\Bilheteria.pdb
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.AssemblyInfoInputs.cache
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.AssemblyInfo.cs
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.csproj.CoreCompileInputs.cache
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.sourcelink.json
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.dll
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\refint\Bilheteria.dll
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.pdb
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\Bilheteria.genruntimeconfig.cache
+C:\Users\beatr\Desktop\ProgramacaoConcorrente\c#\Bilheteria\obj\Debug\net9.0\ref\Bilheteria.dll

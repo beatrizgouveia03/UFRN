@@ -1,0 +1,61 @@
+create-user beatrizgouveia.gadelha0@gmail.com senha123 Beatriz Gouveia Gadelha 
+create-user beatrizgouveia.gadelha0@gmail.com senha123 Beatriz Gouveia Gadelha 
+create-user beatrizgouveia.gadelha0@hotmail.com senha123 Beatriz Gouveia Gadelha 
+login beatrizgouveia.gadelha0@gmail.com senha123
+remove-server minha-casa
+create-server minha-casa
+set-server-desc minha-casa “Este servidor serve como minha casa,
+sempre estarei nele”
+set-server-desc minha-casa2 “Este servidor serve como minha casa,
+sempre estarei nele”
+remove-server minha-casa
+list-servers
+create-server minha-casa
+set-server-invite-code minha-casa 
+enter-server minha-casa
+list-participants
+set-server-invite-code minha-casa 1456
+list-servers
+login beatrizgouveia.gadelha0@gmail.com 12senha3
+login beatrizgouveia.gadelha0@hotmail.com senha123
+create-server minha-casa
+enter-server minha-casa 
+leave-server
+enter-server minha-casa 1456
+list-participants
+list-channels
+create-channel teste texto
+create-channel teste texto
+create-channel teste voz
+create-channel teste-2
+enter-channel teste
+texto
+leave-channel
+enter-channel teste
+texto
+enter-channel teste
+list-messages
+send-message Testando mensagens!
+send-message Testando mensagens2!
+list-messages
+leave-channel
+leave-channel
+list-channels
+leave-server
+list-participants
+leave-server
+create-server minha-casa-2
+set-server-desc minha-casa “Este servidor serve como minha casa, sempre estarei nele”
+set-server-invite-code minha-casa 4567
+list-servers
+disconnect
+create-server minha-casa
+set-server-desc minha-casa “Este servidor serve como minha casa, sempre estarei nele”
+set-server-invite-code minha-casa 4567
+list-servers
+remove-server minha-casa
+enter-server minha-casa
+leave-server
+list-participants
+disconnect
+quit

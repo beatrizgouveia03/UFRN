@@ -1,0 +1,47 @@
+# Loading project full_subtractor
+# Load canceled
+# Compile of full_subtractor.vhd was successful.
+vsim work.full_subtractor
+# vsim work.full_subtractor 
+# Start time: 21:23:52 on Sep 19,2023
+# Loading std.standard
+# Loading work.full_subtractor(structural)
+wave 0 sim:/full_subtractor/*
+# unknown or ambiguous subcommand "0": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+add wave sim:/full_subtractor/*
+force -freeze sim:/full_subtractor/a 0 0, 1 {50 ps} -r 100
+force -freeze sim:/full_subtractor/a 0 0, 1 {40 ps} -r 80
+force -freeze sim:/full_subtractor/b 0 0, 1 {20 ps} -r 40
+force -freeze sim:/full_subtractor/cin 0 0, 1 {10 ps} -r 20
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/full_subtractor/wave.do
+quit -sim
+# End time: 21:26:30 on Sep 19,2023, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 2
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project sub_4bits
+# Compile of full_subtractor.vhd was successful.
+# Compile of half_subtractor.vhd was successful.
+# Compile of sub_4bits.vhd failed with 6 errors.
+# Compile of sub_4bits.vhd was successful.
+vsim work.sub_4bits
+# vsim work.sub_4bits 
+# Start time: 21:37:42 on Sep 19,2023
+# Loading std.standard
+# Loading work.sub_4bits(structural)
+# Loading work.half_subtractor(structural)
+# Loading work.full_subtractor(structural)
+add wave sim:/sub_4bits/*
+force -freeze sim:/sub_4bits/a2 1 0
+force -freeze sim:/sub_4bits/a3 1 0
+force -freeze sim:/sub_4bits/b1 1 0
+force -freeze sim:/sub_4bits/b3 1 0
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/sub_4bits/wave.do
+quit -sim
+# End time: 21:41:25 on Sep 19,2023, Elapsed time: 0:03:43
+# Errors: 0, Warnings: 10
+close project
+# can not find channel named "project"
+exit project
+# unknown switch: project

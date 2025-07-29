@@ -1,0 +1,166 @@
+\doxysection{simulation.\+h}
+\hypertarget{simulation_8h_source}{}\label{simulation_8h_source}\index{include/simulation.h@{include/simulation.h}}
+\mbox{\hyperlink{simulation_8h}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ SIMULATION\_H}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ SIMULATION\_H}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00011}00011\ \textcolor{keyword}{using\ }std::stoi;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00012}00012\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00013}00013\ \textcolor{keyword}{using\ }std::to\_string;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00016}00016\ \textcolor{keyword}{using\ }std::ifstream;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00019}00019\ \textcolor{keyword}{using\ }std::istringstream;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00022}00022\ \textcolor{keyword}{using\ }std::cerr;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00023}00023\ \textcolor{keyword}{using\ }std::cin;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00024}00024\ \textcolor{keyword}{using\ }std::cout;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00025}00025\ \textcolor{keyword}{using\ }std::endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00028}00028\ \textcolor{keyword}{using\ }std::min;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00031}00031\ \textcolor{keyword}{using\ }std::map;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00033}00033\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00034}00034\ \textcolor{keyword}{using\ }std::queue;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00036}00036\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00037}00037\ \textcolor{keyword}{using\ }std::vector;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00039}00039\ \textcolor{preprocessor}{\#include\ <climits>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00041}00041\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00042}00042\ \textcolor{keyword}{using\ }std::exception;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00044}00044\ \textcolor{preprocessor}{\#include\ <ostream>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00045}00045\ \textcolor{keyword}{using\ }std::ostream;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00046}00046\ \textcolor{keyword}{using\ }std::operator<<;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00048}00048\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00049}00049\ \textcolor{keyword}{using\ }std::queue;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00052}00052\ \textcolor{keyword}{using\ }std::numeric\_limits;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00054}00054\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00055}00055\ \textcolor{keyword}{using\ }std::stack;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00057}00057\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00058}00058\ \textcolor{keyword}{using\ }std::set;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00060}00060\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00061}00061\ \textcolor{keyword}{using\ }std::pair;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00063}\mbox{\hyperlink{namespacesml}{00063}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesml}{sml}}\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00065}\mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{00065}}\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00066}00066\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00067}\mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb}{00067}}\ \ \ \ \ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb}{OK}}\ =\ 0,\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219}{ERROR}}\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00069}\mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219}{00069}}\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00072}\mbox{\hyperlink{structsml_1_1SimulationResult}{00072}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00073}00073\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00074}\mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{00074}}\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00075}\mbox{\hyperlink{structsml_1_1SimulationResult_a323b1137f56eb0d42d13d15156576124}{00075}}\ \ \ \ \ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}\ \mbox{\hyperlink{structsml_1_1SimulationResult_a323b1137f56eb0d42d13d15156576124}{type}};\ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00077}\mbox{\hyperlink{structsml_1_1SimulationResult_aca0e29bf490f32023fe6ed3152954653}{00077}}\ \ \ \ \ \mbox{\hyperlink{structsml_1_1SimulationResult_aca0e29bf490f32023fe6ed3152954653}{SimulationResult}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}},\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}\ state):\ \mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}}(\mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}}),\ \mbox{\hyperlink{structsml_1_1SimulationResult_a323b1137f56eb0d42d13d15156576124}{type}}(state)\{\};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00078}00078\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00081}\mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7}{00081}}\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7}{graph\_type\_e}}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00082}00082\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00083}\mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6}{00083}}\ \ \ \ \ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6}{DIRECTED}}\ =\ 0,\ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3}{UNDIRECTED}}\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00085}\mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3}{00085}}\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00088}\mbox{\hyperlink{structsml_1_1Graph}{00088}}\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsml_1_1Graph}{Graph}}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00089}00089\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00090}\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{00090}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00091}\mbox{\hyperlink{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc}{00091}}\ \ \ \ \ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7}{graph\_type\_e}}\ \mbox{\hyperlink{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc}{type}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00092}\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{00092}}\ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00093}\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{00093}}\ \ \ \ \ map<int,\ string>\ \mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00096}\mbox{\hyperlink{structsml_1_1Graph_ad5b13d0d45e956fb079a556663b1ab83}{00096}}\ \ \ \ \ \textcolor{keyword}{friend}\ ostream\ \&\mbox{\hyperlink{structsml_1_1Graph_ad5b13d0d45e956fb079a556663b1ab83}{operator<<}}(ostream\ \&cout,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ g)}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00098}00098\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numNodes\ =\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00099}00099\ \ \ \ \ \ \ map<int,\ string>\ dic\ =\ g.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00100}00100\ \ \ \ \ \ \ vector<vector<int>>\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00102}00102\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00103}00103\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00104}00104\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MATRIZ\ DE\ ADJACENCIA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00105}00105\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00106}00106\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \(\backslash\)\(\backslash\)\ \ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00107}00107\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00108}00108\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dic[i].length()\ ==\ \textcolor{keywordtype}{size\_t}(1))\ cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ cout\ <<\ dic[i]\ <<\textcolor{stringliteral}{"{}\ \ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00111}00111\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00112}00112\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00114}00114\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00115}00115\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00116}00116\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\_\_\_\_"{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00117}00117\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00118}00118\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00120}00120\ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dic[i].length()\ ==\ 1)\ cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00122}00122\ \ \ \ \ \ \ \ \ cout\ <<\ dic[i]\ <<\ \textcolor{stringliteral}{"{}|\ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\{0\};\ j<numNodes;\ ++j)\{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ <\ 10\ \&\&\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ >=\ 0)\ cout\ <<\ \textcolor{stringliteral}{"{}\ \ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ <\ 100)\ cout\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00127}00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00128}00128\ \ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00129}00129\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00130}00130\ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00131}00131\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00133}00133\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cout;}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00134}00134\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00135}00135\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00137}\mbox{\hyperlink{classsml_1_1Simulation}{00137}}\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsml_1_1Simulation}{Simulation}}\ \{}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00138}00138\ \ \ \ \ \textcolor{comment}{//==\ Membros\ privados}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00139}00139\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00140}\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{00140}}\ \ \ \ \ \ \ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00142}00142\ \ \ \ \ \textcolor{comment}{//===\ Membros\ públicos}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00143}00143\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00144}00144\ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}{Simulation}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00145}00145\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}{run}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00146}00146\ \ \ \ \ \ \ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}\ \mbox{\hyperlink{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}{initialize}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[]);}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00148}00148\ \ \ \ \ \textcolor{comment}{//===\ Métodos\ auxiliares}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00149}00149\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00150}00150\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00151}00151\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}{showMenu}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00152}00152\ \ \ \ \ \ \ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{keywordtype}{string}\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00153}00153\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00155}00155\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a3d90ab0d5288dd354420adedcd91d061}{prim}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00156}00156\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}{kruskal}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00157}00157\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_aa2321eb52355e4b6dd76677762871952}{dijkstra}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00158}00158\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_af2076a32e351c28d7fb6b7b7083553ec}{hierholzer}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00159}00159\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}{edmondsKarp}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00160}00160\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}{floydWarshall}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00161}00161\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_aad60616330b939af92e6cf08d39c8e71}{fordFulkerson}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00162}00162\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a130bf31897eed82dc4ea5df332ce5a86}{chuLiuEdmonds}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00163}00163\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a76e12b972244c9d75f93b413187986dc}{hierholzerPaths}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00164}00164\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a1b43feca1f43f04ecd69c12f30176da3}{bellmanFord}}(\textcolor{keywordtype}{int}\ inicio);}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00167}00167\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}{bfs}}(vector<int>\ \&\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}},\ vector<vector<int>>\ residual,\ \textcolor{keywordtype}{int}\ src,\ \textcolor{keywordtype}{int}\ snk);}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00169}00169\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00170}00170\ \}\ \textcolor{comment}{//\ namespace\ sml}}
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{simulation_8h_source_l00172}00172\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SIMULATION\_H}}
+
+\end{DoxyCode}

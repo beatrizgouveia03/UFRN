@@ -1,0 +1,57 @@
+\doxysection{sml\+::Simulation Class Reference}
+\hypertarget{classsml_1_1Simulation}{}\label{classsml_1_1Simulation}\index{sml::Simulation@{sml::Simulation}}
+
+
+{\ttfamily \#include $<$simulation.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}{Simulation}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}{run}} (void)
+\item 
+\mbox{\hyperlink{structsml_1_1SimulationResult}{Simulation\+Result}} \mbox{\hyperlink{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}{initialize}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}\label{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a} 
+\index{sml::Simulation@{sml::Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}}
+{\footnotesize\ttfamily Simulation\+::\+Simulation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! Constructor default of the simulation class 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}\label{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b} 
+\index{sml::Simulation@{sml::Simulation}!initialize@{initialize}}
+\index{initialize@{initialize}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsml_1_1SimulationResult}{Simulation\+Result}} Simulation\+::initialize (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+! This function initializes the simulation by reading the input file and creating representations of the graph as an adjancency list, as an adjacency matrix and as an incidence matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & An integer indicating the amount of arguments passed on the terminal \\
+\hline
+{\em argv} & The list of the arguments passed on the terminal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A struct indicating if was successful the initialization 
+\end{DoxyReturn}
+\Hypertarget{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}\label{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4} 
+\index{sml::Simulation@{sml::Simulation}!run@{run}}
+\index{run@{run}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Simulation\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! This function loops around the main menu calling the functions related to them, until the user chooses to end the program. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{simulation_8hpp}{simulation.\+hpp}}\item 
+source/\mbox{\hyperlink{simulation_8cpp}{simulation.\+cpp}}\end{DoxyCompactItemize}

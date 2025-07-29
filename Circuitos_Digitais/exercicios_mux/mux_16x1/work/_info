@@ -1,0 +1,85 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/1_lista_exercicios/jurados
+Emux_16x1
+Z0 w1695843110
+!i122 15
+Z1 d/home/usuario/Documentos/Circuitos/exercicios_mux/mux_16x1
+Z2 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_16x1/mux_16x1.vhd
+Z3 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_16x1/mux_16x1.vhd
+l0
+L1 1
+VQ_oCh@M]C=5VT4>n@U5Rj0
+!s100 KaZ<CZajeG[]_>bfiB?=g3
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696423719
+!i10b 1
+Z6 !s108 1696423719.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_16x1/mux_16x1.vhd|
+Z8 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_16x1/mux_16x1.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Aarch
+Z11 DEx4 work 8 mux_16x1 0 22 Q_oCh@M]C=5VT4>n@U5Rj0
+!i122 15
+l18
+Z12 L7 27
+Z13 VnzPKhJ`mi<XN>?QnAc@260
+Z14 !s100 CTSINLUD=^7ZIgiK@d8Al0
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Emux_4x1
+Z15 w1695213950
+!i122 8
+R1
+Z16 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd
+Z17 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd
+l0
+L1 1
+VZ7bMWTO2EViKZ4IliC=nO2
+!s100 Mg;W56ebSljeHGHA`0]lJ2
+R4
+32
+Z18 !s110 1695842392
+!i10b 1
+Z19 !s108 1695842392.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd|
+Z21 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd|
+!i113 1
+R9
+R10
+Astructural
+DEx4 work 7 mux_4x1 0 22 Z7bMWTO2EViKZ4IliC=nO2
+!i122 8
+l8
+L7 21
+VKbn:zPzb@X<`XO43;4`fG3
+!s100 8D1_E3cU]lnel5cUGLZQA2
+R4
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R9
+R10

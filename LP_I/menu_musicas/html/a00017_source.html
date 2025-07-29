@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Menu de músicas: Código-Fonte de include/utilities.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Menu de músicas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Simulador de um menu de player de músicas</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">utilities.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00017.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00002.html">Lista.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a00011.html">Playlist.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="a00017.html#a1d35292e4ae48b85d72c00b836449cc2">   16</a></span>&#160;<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> <a class="code" href="a00017.html#a1d35292e4ae48b85d72c00b836449cc2">configuracaoInicialMusicas</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="a00017.html#a66905fee13769e6492b65e27affd661c">   25</a></span>&#160;<a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> <a class="code" href="a00017.html#a66905fee13769e6492b65e27affd661c">configuracaoInicialPlaylists</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Menus</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00017.html#a62b69aadfe7d5f496d2bab0370395666">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#a62b69aadfe7d5f496d2bab0370395666">menuPrincipal</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas, <a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> *basePlaylists);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="a00017.html#a8169d4bcc0e4bebb4b54a1f0f07f9d87">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#a8169d4bcc0e4bebb4b54a1f0f07f9d87">menuMusicas</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas, <a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> *basePlaylists);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="a00017.html#ab7b84b514d4c9c6749d5fadb8651e811">   32</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#ab7b84b514d4c9c6749d5fadb8651e811">menuPlaylists</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas, <a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> *basePlaylists);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="a00017.html#aa880bffbfd870276ef0086ceb87b5693">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#aa880bffbfd870276ef0086ceb87b5693">menuMusicasEmPlaylists</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas, <a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> *basePlaylists);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="a00017.html#a4ee4fa3cb667ce10579ee63555e5a5b5">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#a4ee4fa3cb667ce10579ee63555e5a5b5">menuTocarMusicas</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas, <a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> *basePlaylists);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00017.html#ab4244b043bbf75fc020668af42ae4eeb">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#ab4244b043bbf75fc020668af42ae4eeb">menuListagemMusicas</a>(<a class="code" href="a00024.html">Lista&lt;Musica&gt;</a> *baseMusicas);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="a00017.html#a011f621a2845d786e59065a69d9b1079">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#a011f621a2845d786e59065a69d9b1079">menuListagemPlaylists</a>(<a class="code" href="a00024.html">Lista&lt;Playlist&gt;</a> *basePlaylists);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// Tratamento da entrada</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00017.html#a6d7db27eaff6800de14a789716de0cdb">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a00017.html#a6d7db27eaff6800de14a789716de0cdb">tratarAcao</a>(<span class="keywordtype">int</span> *acao);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="a00017.html#ae1cbd7c579d7b1203aea825fc5b73101">   45</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="a00017.html#ae1cbd7c579d7b1203aea825fc5b73101">isNumber</a>(<span class="keywordtype">string</span> entry);</div>
+<div class="ttc" id="aa00002_html"><div class="ttname"><a href="a00002.html">Lista.hpp</a></div><div class="ttdoc">Definição da classe Lista.</div></div>
+<div class="ttc" id="aa00011_html"><div class="ttname"><a href="a00011.html">Playlist.hpp</a></div><div class="ttdoc">Definição da classe Playlist.</div></div>
+<div class="ttc" id="aa00017_html_a011f621a2845d786e59065a69d9b1079"><div class="ttname"><a href="a00017.html#a011f621a2845d786e59065a69d9b1079">menuListagemPlaylists</a></div><div class="ttdeci">void menuListagemPlaylists(Lista&lt; Playlist &gt; *basePlaylists)</div></div>
+<div class="ttc" id="aa00017_html_a1d35292e4ae48b85d72c00b836449cc2"><div class="ttname"><a href="a00017.html#a1d35292e4ae48b85d72c00b836449cc2">configuracaoInicialMusicas</a></div><div class="ttdeci">Lista&lt; Musica &gt; configuracaoInicialMusicas()</div></div>
+<div class="ttc" id="aa00017_html_a4ee4fa3cb667ce10579ee63555e5a5b5"><div class="ttname"><a href="a00017.html#a4ee4fa3cb667ce10579ee63555e5a5b5">menuTocarMusicas</a></div><div class="ttdeci">void menuTocarMusicas(Lista&lt; Musica &gt; *baseMusicas, Lista&lt; Playlist &gt; *basePlaylists)</div></div>
+<div class="ttc" id="aa00017_html_a62b69aadfe7d5f496d2bab0370395666"><div class="ttname"><a href="a00017.html#a62b69aadfe7d5f496d2bab0370395666">menuPrincipal</a></div><div class="ttdeci">void menuPrincipal(Lista&lt; Musica &gt; *baseMusicas, Lista&lt; Playlist &gt; *basePlaylists)</div></div>
+<div class="ttc" id="aa00017_html_a66905fee13769e6492b65e27affd661c"><div class="ttname"><a href="a00017.html#a66905fee13769e6492b65e27affd661c">configuracaoInicialPlaylists</a></div><div class="ttdeci">Lista&lt; Playlist &gt; configuracaoInicialPlaylists(Lista&lt; Musica &gt; *baseMusicas)</div></div>
+<div class="ttc" id="aa00017_html_a6d7db27eaff6800de14a789716de0cdb"><div class="ttname"><a href="a00017.html#a6d7db27eaff6800de14a789716de0cdb">tratarAcao</a></div><div class="ttdeci">void tratarAcao(int *acao)</div></div>
+<div class="ttc" id="aa00017_html_a8169d4bcc0e4bebb4b54a1f0f07f9d87"><div class="ttname"><a href="a00017.html#a8169d4bcc0e4bebb4b54a1f0f07f9d87">menuMusicas</a></div><div class="ttdeci">void menuMusicas(Lista&lt; Musica &gt; *baseMusicas, Lista&lt; Playlist &gt; *basePlaylists)</div></div>
+<div class="ttc" id="aa00017_html_aa880bffbfd870276ef0086ceb87b5693"><div class="ttname"><a href="a00017.html#aa880bffbfd870276ef0086ceb87b5693">menuMusicasEmPlaylists</a></div><div class="ttdeci">void menuMusicasEmPlaylists(Lista&lt; Musica &gt; *baseMusicas, Lista&lt; Playlist &gt; *basePlaylists)</div></div>
+<div class="ttc" id="aa00017_html_ab4244b043bbf75fc020668af42ae4eeb"><div class="ttname"><a href="a00017.html#ab4244b043bbf75fc020668af42ae4eeb">menuListagemMusicas</a></div><div class="ttdeci">void menuListagemMusicas(Lista&lt; Musica &gt; *baseMusicas)</div></div>
+<div class="ttc" id="aa00017_html_ab7b84b514d4c9c6749d5fadb8651e811"><div class="ttname"><a href="a00017.html#ab7b84b514d4c9c6749d5fadb8651e811">menuPlaylists</a></div><div class="ttdeci">void menuPlaylists(Lista&lt; Musica &gt; *baseMusicas, Lista&lt; Playlist &gt; *basePlaylists)</div></div>
+<div class="ttc" id="aa00017_html_ae1cbd7c579d7b1203aea825fc5b73101"><div class="ttname"><a href="a00017.html#ae1cbd7c579d7b1203aea825fc5b73101">isNumber</a></div><div class="ttdeci">bool isNumber(string entry)</div></div>
+<div class="ttc" id="aa00024_html"><div class="ttname"><a href="a00024.html">Lista&lt; Musica &gt;</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

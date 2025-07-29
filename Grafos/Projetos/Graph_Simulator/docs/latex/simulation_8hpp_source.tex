@@ -1,0 +1,72 @@
+\doxysection{simulation.\+hpp}
+\hypertarget{simulation_8hpp_source}{}\label{simulation_8hpp_source}\index{include/simulation.hpp@{include/simulation.hpp}}
+\mbox{\hyperlink{simulation_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SIMULATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SIMULATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }std::stoi;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }std::string;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }std::ifstream;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }std::istringstream;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }std::cerr;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ }std::cin;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }std::cout;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }std::endl;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }std::map;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{using\ }std::vector;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph_8hpp}{graph.hpp}}"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{digraph_8hpp}{digraph.hpp}}"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{operations_8hpp}{operations.hpp}}"{}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesml}{sml}}\ \{}
+\DoxyCodeLine{00039\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}}
+\DoxyCodeLine{00040\ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb}{OK}}\ =\ 0,\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219}{ERROR}}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}}
+\DoxyCodeLine{00047\ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}\ \mbox{\hyperlink{structsml_1_1SimulationResult_a323b1137f56eb0d42d13d15156576124}{type}};\ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structsml_1_1SimulationResult_aca0e29bf490f32023fe6ed3152954653}{SimulationResult}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}},\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}\ state):\ \mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}}(\mbox{\hyperlink{structsml_1_1SimulationResult_a9c6f84abe2f0cbe0d56f9a62d9a81cbb}{msg}}),\ \mbox{\hyperlink{structsml_1_1SimulationResult_a323b1137f56eb0d42d13d15156576124}{type}}(state)\{\};}
+\DoxyCodeLine{00052\ \ \ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsml_1_1Simulation}{Simulation}}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//==\ Private\ Members}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Graph}{Graph}}\ graph;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Digraph}{Digraph}}\ digraph;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Operations}{Operations}}\ operations;\ \ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//===\ Public\ Members}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}{Simulation}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}{run}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}\ \mbox{\hyperlink{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}{initialize}}(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ *argv[]);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//===\ Aux\ methods}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ pause(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}\ usage(\textcolor{keywordtype}{string}\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayMainMenu(\textcolor{keywordtype}{void});\ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \};}
+\DoxyCodeLine{00073\ \}\ \textcolor{comment}{//\ namespace\ sml}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SIMULATION\_H}}
+
+\end{DoxyCode}

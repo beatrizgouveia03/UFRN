@@ -1,0 +1,12 @@
+ARCHITECTURE arch_6 OF mux_4x1 IS
+BEGIN
+	PROCESS( a0, a1, a2, a3, sel)
+	BEGIN
+		CASE sel IS
+		WHEN "00" => s <= a;
+		WHEN "01" => s <= b;
+		WHEN "10" => s <= c;
+		WHEN OTHERS => s <= d;
+		END CASE;
+	END PROCESS;
+END arch_6;

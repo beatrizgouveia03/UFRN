@@ -1,0 +1,139 @@
+# Loading project demux_1x2
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project mux_8x1
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_2x1.vhd was successful.
+# Compile of mux_4x1.vhd was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd failed with 5 errors.
+# Compile of mux_8x1.vhd failed with 3 errors.
+# Compile of mux_8x1.vhd failed with 2 errors.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 2 errors.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd was successful.
+vsim work.mux_8x1
+# vsim work.mux_8x1 
+# Start time: 11:44:59 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_8x1(structural)
+# Loading work.mux_4x1(structural)
+# Loading work.mux_2x1(structural)
+add wave sim:/mux_8x1/*
+force -freeze sim:/mux_8x1/a 1 0, 0 {5 ps} -r 10
+# Value length (1) does not equal array index length (8).
+# ** UI-Msg: (vsim-4011) Invalid force value: 1 0, 0 {5 ps}.
+# 
+run
+force -freeze sim:/mux_8x1/sel 1 0, 0 {5 ps} -r 10
+# Value length (1) does not equal array index length (3).
+# ** UI-Msg: (vsim-4011) Invalid force value: 1 0, 0 {5 ps}.
+# 
+run
+force -freeze sim:/mux_8x1/entry 1 0, 0 {50 ps} -r 100
+# Value length (1) does not equal array index length (8).
+# ** UI-Msg: (vish-4011) Invalid force value: 1 0, 0 {50 ps}.
+run
+wave create -driver freeze -pattern constant -value 01101100 -range 7 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+add wave -position 0 -autoscale 1 -format Literal -height 19 -editable 2 Edit:/mux_8x1/a
+wave create -driver freeze -pattern counter -startvalue 000 -endvalue 111 -type Range -direction Up -period 10ps -step 1 -repeat forever -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/sel
+add wave -position 1 -autoscale 1 -format Literal -height 19 -editable 2 Edit:/mux_8x1/sel
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 1 errors.
+# Compile of mux_8x1.vhd failed with 3 errors.
+# Compile of mux_8x1.vhd was successful.
+# Compile of mux_8x1.vhd was successful.
+vsim work.mux_8x1
+# End time: 11:57:08 on Sep 20,2023, Elapsed time: 0:12:09
+# Errors: 0, Warnings: 6
+# vsim work.mux_8x1 
+# Start time: 11:57:08 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_8x1(structural)
+# Loading work.mux_4x1(structural)
+# Loading work.mux_2x1(structural)
+wave create -driver freeze -pattern constant -value 01101100 -range 7 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern counter -startvalue 000 -endvalue 111 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/sel
+run
+restart
+add wave -position end  sim:/mux_8x1/s
+run
+quit -sim
+# End time: 12:26:36 on Sep 20,2023, Elapsed time: 0:29:28
+# Errors: 0, Warnings: 1
+# Compile of mux_8x1.vhd was successful.
+vsim work.mux_8x1
+# vsim work.mux_8x1 
+# Start time: 12:27:24 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_8x1(structural)
+# Loading work.mux_4x1(structural)
+# Loading work.mux_2x1(structural)
+wave create -driver freeze -pattern constant -value 01101100 -range 7 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern counter -startvalue 000 -endvalue 111 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/sel
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position end  sim:/mux_8x1/s
+run
+add wave -position end  sim:/mux_8x1/s0
+add wave -position end  sim:/mux_8x1/s1
+restart
+restart
+run
+# Compile of mux_8x1.vhd was successful.
+vsim work.mux_8x1
+# End time: 12:31:00 on Sep 20,2023, Elapsed time: 0:03:36
+# Errors: 0, Warnings: 2
+# vsim work.mux_8x1 
+# Start time: 12:31:00 on Sep 20,2023
+# Loading std.standard
+# Loading work.mux_8x1(structural)
+# Loading work.mux_4x1(structural)
+# Loading work.mux_2x1(structural)
+wave create -driver freeze -pattern constant -value 01101100 -range 7 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/a
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+wave create -driver freeze -pattern counter -startvalue 000 -endvalue 111 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/sel
+add wave -position end  sim:/mux_8x1/s
+run
+# Compile of mux_8x1.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mux_8x1(structural)
+run
+add wave -position end  sim:/mux_8x1/s0
+add wave -position end  sim:/mux_8x1/s1
+restart
+run
+# Compile of mux_8x1.vhd was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.mux_8x1(structural)
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/mux_8x1/wave.do
+wave editwrite -file /home/usuario/Documentos/Circuitos/mux_8x1/wave.do -append
+wave create -driver freeze -pattern constant -value 01010011 -range 7 0 -starttime 0ps -endtime 1000ps sim:/mux_8x1/a
+add wave -position 0 -autoscale 1 -format Literal -height 19 -editable 2 Edit:/mux_8x1/a
+restart
+run
+# End time: 12:37:25 on Sep 20,2023, Elapsed time: 0:06:25
+# Errors: 0, Warnings: 1
+wave editwrite -file /home/usuario/Documentos/Circuitos/mux_8x1/wave.do

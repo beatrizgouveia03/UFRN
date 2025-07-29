@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/flip_flop/latch_d
+Elatch_d_clear
+Z0 w1695817678
+!i122 0
+Z1 d/home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear
+Z2 8/home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd
+Z3 F/home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd
+l0
+L1 1
+VGZ1SL133X[z?]S^:0_5[e3
+!s100 aBcME;DZ9[MS;9UTN^l@_2
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696425090
+!i10b 1
+Z6 !s108 1696425090.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd|
+!s107 /home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Abehavior
+DEx4 work 13 latch_d_clear 0 22 GZ1SL133X[z?]S^:0_5[e3
+!i122 0
+l9
+L8 11
+VKGQV`ib=UaYT0>b0N1cT`1
+!s100 Mn9o0jLDKnKdo^facEhS>1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 /home/usuario/Documentos/Circuitos/flip_flop/latch_d_clear/latch_d_clear.vhd|
+!i113 1
+R8
+R9

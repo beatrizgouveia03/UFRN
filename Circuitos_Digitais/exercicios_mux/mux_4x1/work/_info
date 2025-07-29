@@ -1,0 +1,169 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/mux_2x1
+Emux_4x1
+w1696422529
+!i122 13
+Z0 d/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1
+Z1 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd
+Z2 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd
+l0
+L1 1
+VZ7bMWTO2EViKZ4IliC=nO2
+!s100 Mg;W56ebSljeHGHA`0]lJ2
+Z3 OV;C;2021.1;73
+32
+!s110 1696422534
+!i10b 1
+!s108 1696422534.000000
+Z4 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd|
+Z5 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd|
+!i113 1
+Z6 o-work work -2002 -explicit
+Z7 tExplicit 1 CvgOpt 0
+Aarch_5
+w1696423190
+Z8 DEx4 work 7 mux_4x1 0 22 Z7bMWTO2EViKZ4IliC=nO2
+!i122 14
+Z9 8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_5.vhd
+Z10 F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_5.vhd
+l2
+L1 19
+VIL2gJmI@KkR>H`Gz`0HAb2
+!s100 h3:8nAcQzGfDZR?fi[7Wn0
+R3
+32
+!s110 1696423198
+!i10b 1
+!s108 1696423197.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_5.vhd|
+Z12 !s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_5.vhd|
+!i113 1
+R6
+R7
+Aarch_2
+w1696423166
+R8
+!i122 14
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_2.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_2.vhd
+l11
+L1 15
+VdQA=4z@QLGZfeIWilY@Bz3
+!s100 fojhO=TP>06CTDE31eE:k1
+R3
+32
+!s110 1696423169
+!i10b 1
+!s108 1696423169.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_2.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_2.vhd|
+!i113 1
+R6
+R7
+Aarch_6
+w1696423143
+R8
+!i122 14
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_6.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_6.vhd
+l2
+L1 12
+VoDT]H4KCbSIQESbOPShAn2
+!s100 CB2^5DW^0d=R3KYIha8So1
+R3
+32
+!s110 1696423148
+!i10b 1
+!s108 1696423148.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_6.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_6.vhd|
+!i113 1
+R6
+R7
+Aarch_4
+w1696423046
+R8
+!i122 14
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_4.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_4.vhd
+l2
+L1 8
+V:EkiAOW3Ad2K<d58_<doj1
+!s100 8ckCn4lJzBj0YYZBEH[Tg3
+R3
+32
+!s110 1696423049
+!i10b 1
+!s108 1696423049.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_4.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_4.vhd|
+!i113 1
+R6
+R7
+Aarch_3
+w1696422951
+R8
+!i122 14
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_3.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_3.vhd
+l2
+L1 7
+V[Ek_;lPZ^gd[WoNCBZY8V1
+!s100 i1iRE[=AzZ:44jYCa__Rk2
+R3
+32
+!s110 1696422990
+!i10b 1
+!s108 1696422990.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_3.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_3.vhd|
+!i113 1
+R6
+R7
+Aarch_1
+w1696422776
+R8
+!i122 14
+8/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_1.vhd
+F/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_1.vhd
+l2
+L1 7
+V=2SEi5jGG95Qjl[gSELC82
+!s100 C_ZaFVHM06BQFzfL1I54K1
+R3
+32
+!s110 1696422779
+!i10b 1
+!s108 1696422779.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_1.vhd|
+!s107 /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_1.vhd|
+!i113 1
+R6
+R7
+Astructural
+R8
+!i122 11
+l8
+L7 21
+VKbn:zPzb@X<`XO43;4`fG3
+!s100 8D1_E3cU]lnel5cUGLZQA2
+R3
+32
+!s110 1696422438
+!i10b 1
+!s108 1696422438.000000
+R4
+R5
+!i113 1
+R6
+R7
+w1695213950

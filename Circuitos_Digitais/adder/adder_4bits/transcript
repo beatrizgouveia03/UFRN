@@ -1,0 +1,51 @@
+# Loading project adder_4bits
+# Compile of half_adder.vhd was successful.
+# Compile of adder_4bits.vhd failed with 2 errors.
+# Compile of adder_4bits.vhd failed with 2 errors.
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd was successful.
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd was successful.
+# Compile of adder_4bits.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of adder_4bits.vhd was successful.
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd was successful.
+vsim work.adder_4bits
+# vsim work.adder_4bits 
+# Start time: 17:24:14 on Sep 19,2023
+# Loading std.standard
+# Loading work.adder_4bits(structural)
+# Loading work.half_adder(structural)
+# Loading work.full_adder(structural)
+add wave  \
+sim:/adder_4bits/a1
+add wave sim:/adder_4bits/*
+force -freeze sim:/adder_4bits/a1 1 0
+force -freeze sim:/adder_4bits/a2 1 0
+force -freeze sim:/adder_4bits/b2 1 0
+force -freeze sim:/adder_4bits/b3 1 0
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/usuario/Documentos/Circuitos/adder_4bits/wave.do
+quit -sim
+# End time: 17:30:34 on Sep 19,2023, Elapsed time: 0:06:20
+# Errors: 0, Warnings: 16
+# Compile of half_adder.vhd was successful.
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project half_subtractor
+# Compile of half_subtractor.vhd was successful.
+vsim work.half_subtractor
+# vsim work.half_subtractor 
+# Start time: 17:45:00 on Sep 19,2023
+# Loading std.standard
+# Loading work.half_subtractor(structural)
+add wave sim:/half_subtractor/*
+force -freeze sim:/half_subtractor/a 1 0, 0 {40 ps} -r 80
+force -freeze sim:/half_subtractor/b 1 0, 0 {20 ps} -r 40
+run
+quit -sim
+# End time: 17:46:16 on Sep 19,2023, Elapsed time: 0:01:16
+# Errors: 0, Warnings: 10
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project full_subtractor

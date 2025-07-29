@@ -1,0 +1,13 @@
+Algoritmos:
+- Aŕvore Geradora:
+	* Kruskal (1ª aula) Tem pseudoalgoritmo
+	* Prim (2ª aula) Tem pseudoalgoritmo
+	* Borůvka (2ª aula) Tem pseudoalgoritmo
+	* Chu-Liu-Edmonds(4ª aula) Não tem pseudoalgoritmo
+- Caminho mais curto:
+	* Dijkstra (5ª aula) Tem pseudoalgoritmo
+	* Floyd-Warshall (6ª aula) Tem pseudoalgoritmo
+- Fluxo em redes:
+	* Ford-Fulkerson (7ª e 8ª aula) Não tem pseudoalgoritmo
+	* Edmonds-Karp (9ª aula) Não tem pseudoalgoritmo
+

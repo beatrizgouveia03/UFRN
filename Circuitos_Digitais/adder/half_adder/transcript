@@ -1,0 +1,51 @@
+# Loading project half_adder
+project adder_4bits
+# unknown or ambiguous subcommand "adder_4bits": must be addfile, addfolder, calculateorder, close, compileall, compileorder, compileoutofdate, currentsim, delete, env, filenames, history, new, open, removefile, simargs, or startsim
+close
+# wrong # args: should be "close channelId ?direction?"
+project close
+# reading /home/usuario/intelFPGA_pro/21.1/modelsim_ase/linuxaloem/../modelsim.ini
+cd ..
+l
+# ambiguous command name "l": label labelframe langOf lappend lassign lattice_edition layout lconcat lecho left library_image light_green_class_image lindex linsert linux_edition list listbox live_item_image llength lmap load loadTreeClassBindings local log log_diagnostic_msg lost_file_image lower lrange lremove lrepeat lreplace lreverse lrmdups ls lsearch lset lshift lsort lsublist ltTime lteTime luniq
+ls
+# adder_4bits
+# full_adder
+# half_adder
+cd adder_4bits
+ls
+# adder_4bits.mpf
+# adder_4bits.vhd
+# adder_4bits.vhd.bak
+# work
+open adder_4bits.vhd
+# file13
+# Load canceled
+# Loading project adder_4bits
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd failed with 1 errors.
+# Compile of adder_4bits.vhd failed with 3 errors.
+clear
+# [H[2J[3J
+# Compile of adder_4bits.vhd failed with 3 errors.
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 

@@ -1,0 +1,7 @@
+/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear/ff_d_clear.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity ff_d_clear
+-- Compiling architecture arch of ff_d_clear
+
+} {} {}}

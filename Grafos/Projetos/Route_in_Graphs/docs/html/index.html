@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Simulador de Rotas em Grafos</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Simulador de Rotas em Grafos </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Índice</h1>
+<ol type="1">
+<li>Introdução</li>
+<li>Algoritmos</li>
+<li>Utilização</li>
+<li>Métodos de Compilação</li>
+<li>Contribuindo</li>
+<li>Documentação</li>
+<li>Licença</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Introdução</h1>
+<p>O Simulador de Rotas em Grafos é um projeto desenvolvido para demonstrar o funcionamento de diversos algoritmos clássicos em grafos e digrafos ponderados. O objetivo principal é fornecer uma ferramenta prática para visualizar, entender e aplicar conceitos fundamentais de teoria dos grafos, sendo eles a construção de árvores geradoras mínimas, o cálculo de caminhos mínimos, a análise de grafos Eulerianos e a resolução de problemas de fluxo em redes.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Algoritmos</h1>
+<ul>
+<li><b>Árvores Geradoras Mínimas:</b><ul>
+<li>[x] (1) Kruskal [Anny]</li>
+<li>[x] (2) Prim [Davi]</li>
+<li>[x] (3) Chu-Liu/Edmonds [José]</li>
+</ul>
+</li>
+<li><b>Caminho mais curto:</b><ul>
+<li>[x] (4) Dijkstra [Anny]</li>
+<li>[x] (5) Bellman-Ford [Alisson]</li>
+<li>[x] (6) Floyd-Warshall [Davi]</li>
+</ul>
+</li>
+<li><b>Grafos Eulerianos:</b><ul>
+<li>[x] (7) Hierholzer (ciclos) [Alisson]</li>
+<li>[x] (8) Hierholzer (caminhos) [Beatriz]</li>
+</ul>
+</li>
+<li><b>Fluxo em Redes:</b><ul>
+<li>[x] (9) Ford-Fulkerson [José]</li>
+<li>[x] (10) Edmonds-Karp [Beatriz]</li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Utilização</h1>
+<p>Para utilizar este projeto, siga os passos abaixo:</p>
+<ol type="1">
+<li><p class="startli">Clone o repositório em sua máquina local utilizando o seguinte comando:</p>
+<div class="fragment"><div class="line">git clone https://github.com/beatrizgouveia03/Grafos.git</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Navegue até o diretório deste projeto:</p>
+<div class="fragment"><div class="line">cd Grafos/Projetos/Route_in_Graphs/</div>
+</div><!-- fragment --></li>
+<li>Compile o projeto de acordo com o método de sua escolha (veja Métodos de Compilação para mais detalhes).</li>
+<li>Execute o programa compilado para visualizar os algoritmos de rotas em grafos em execução com seus arquivos de entrada.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Métodos de Compilação</h1>
+<p>Este projeto utiliza o CMake como sistema de build, permitindo uma compilação fácil e eficiente do código em C++. Para compilar os algoritmos, siga os passos abaixo:</p>
+<ol type="1">
+<li>Certifique-se de que o CMake está instalado no seu sistema.</li>
+<li><p class="startli">Navegue até o diretório do projeto:</p>
+<div class="fragment"><div class="line">cd Grafos/Projetos/Route_in_Graphs/</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Crie um diretório de build e gere um Makefile Unix baseado no script encontrado no nível atual:</p>
+<div class="fragment"><div class="line">cmake -S . -B build</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Compile o projeto utilizando os arquivos de build gerados:</p>
+<div class="fragment"><div class="line">cmake --build build</div>
+</div><!-- fragment --></li>
+<li>Após a compilação bem-sucedida, você encontrará o arquivo executável no diretório <code>build</code>, com o nome <code>Route_in_Graphs</code>. Execute o programa para visualizar os algoritmos em ação com os arquivos de entrada selecionados.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Contribuindo</h1>
+<p>Contribuições para este projeto são bem-vindas! Se você deseja melhorar a implementação de um algoritmo existente, adicionar um novo algoritmo, introduzir novos cenários ou corrigir quaisquer problemas, siga os passos abaixo:</p>
+<ol type="1">
+<li>Faça um fork do repositório.</li>
+<li><p class="startli">Crie uma nova branch para sua contribuição:</p>
+<div class="fragment"><div class="line">git checkout -b feature/novo-algoritmo</div>
+</div><!-- fragment --></li>
+<li>Realize suas modificações e adições.</li>
+<li><p class="startli">Faça o commit das suas alterações:</p>
+<div class="fragment"><div class="line">git commit -m &quot;Adicionar novo algoritmo: [Nome do Algoritmo]&quot;</div>
+</div><!-- fragment --></li>
+<li><p class="startli">Envie sua branch:</p>
+<div class="fragment"><div class="line">git push origin feature/novo-algoritmo</div>
+</div><!-- fragment --></li>
+<li>Abra um pull request, descrevendo suas alterações e a motivação por trás delas.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Documentação</h1>
+<p>O projeto utiliza o Doxygen para gerar a documentação. Para gerar a documentação, navegue até o diretório do projeto e execute o seguinte comando:</p>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --><p>Isso criará uma pasta <code>docs</code> (ou outro diretório especificado no campo <code>OUTPUT_DIRECTORY</code> do arquivo Doxyfile) com os arquivos da documentação gerada. Você pode visualizar a documentação abrindo o arquivo <a href="/docs/html/index.html">index.html</a>, localizado dentro da subpasta <code>html</code>, em seu navegador web.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Licença</h1>
+<p>Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

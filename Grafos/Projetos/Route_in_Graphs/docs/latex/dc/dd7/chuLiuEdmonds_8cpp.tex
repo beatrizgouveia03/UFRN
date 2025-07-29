@@ -1,0 +1,84 @@
+\doxysection{Referência ao ficheiro source/algorithms/chu\+Liu\+Edmonds.cpp}
+\hypertarget{chuLiuEdmonds_8cpp}{}\label{chuLiuEdmonds_8cpp}\index{source/algorithms/chuLiuEdmonds.cpp@{source/algorithms/chuLiuEdmonds.cpp}}
+{\ttfamily \#include "{}simulation.\+h"{}}\newline
+Diagrama de dependências de inclusão para chu\+Liu\+Edmonds.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d9/db7/chuLiuEdmonds_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structEdge}{Edge}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+pair$<$ bool, vector$<$ int $>$ $>$ \mbox{\hyperlink{chuLiuEdmonds_8cpp_a7148a15f8d54af52f833565d91e7a18a}{find\+Cycle}} (vector$<$ vector$<$ int $>$ $>$ \&graph, int n)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{chuLiuEdmonds_8cpp_a7148a15f8d54af52f833565d91e7a18a}\label{chuLiuEdmonds_8cpp_a7148a15f8d54af52f833565d91e7a18a} 
+\index{chuLiuEdmonds.cpp@{chuLiuEdmonds.cpp}!findCycle@{findCycle}}
+\index{findCycle@{findCycle}!chuLiuEdmonds.cpp@{chuLiuEdmonds.cpp}}
+\doxysubsubsection{\texorpdfstring{findCycle()}{findCycle()}}
+{\footnotesize\ttfamily pair$<$ bool, vector$<$ int $>$ $>$ find\+Cycle (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$ $>$ \&}]{graph,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definido na linha \mbox{\hyperlink{chuLiuEdmonds_8cpp_source_l00015}{15}} do ficheiro \mbox{\hyperlink{chuLiuEdmonds_8cpp_source}{chu\+Liu\+Edmonds.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ vector<bool>\ visited(n,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00017\ \ \ vector<bool>\ inStack(n,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00018\ \ \ vector<int>\ cycle;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ start\ =\ 0;\ start\ <\ n;\ start++)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (visited[start])}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ stack<pair<int,\ int>>\ st;}
+\DoxyCodeLine{00025\ \ \ \ \ vector<int>\ path;}
+\DoxyCodeLine{00026\ \ \ \ \ st.push(\{start,\ 0\});}
+\DoxyCodeLine{00027\ \ \ \ \ inStack[start]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00028\ \ \ \ \ path.push\_back(start);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{while}\ (!st.empty())\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ current\ =\ st.top().first;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \&neighborIndex\ =\ st.top().second;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ visited[current]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ foundNext\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (;\ neighborIndex\ <\ n;\ neighborIndex++)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (graph[current][neighborIndex]\ >\ 0)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!visited[neighborIndex])\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ st.push(\{neighborIndex,\ 0\});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ inStack[neighborIndex]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ path.push\_back(neighborIndex);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ foundNext\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (inStack[neighborIndex])\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(path.begin(),\ path.end(),\ neighborIndex);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ cycle\ =\ vector<int>(it,\ path.end());}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{\textcolor{keyword}{true},\ cycle\};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!foundNext)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ inStack[current]\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ path.pop\_back();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ st.pop();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordflow}{return}\ \{\textcolor{keyword}{false},\ cycle\};}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}

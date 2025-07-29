@@ -1,0 +1,75 @@
+\doxysection{floyd\+Warshall.\+cpp}
+\hypertarget{floydWarshall_8cpp_source}{}\label{floydWarshall_8cpp_source}\index{source/algorithms/floydWarshall.cpp@{source/algorithms/floydWarshall.cpp}}
+\mbox{\hyperlink{floydWarshall_8cpp}{Ir para a documentação deste ficheiro.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{simulation_8h}{simulation.h}}"{}}\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00008}00008\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespacesml}{sml}};}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00014}\mbox{\hyperlink{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}{00014}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}{Simulation::floydWarshall}}()\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();\ \ \textcolor{comment}{//\ Define\ o\ valor\ de\ infinito}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ \ \textcolor{comment}{//\ Número\ de\ vértices\ no\ grafo}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00018}00018\ \ \ \ \ vector<vector<int>>\ adj\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ \ \textcolor{comment}{//\ Matriz\ de\ adjacência}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00019}00019\ \ \ \ \ vector<vector<int>>\ dist(n,\ vector<int>(n,\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}));\ \ \textcolor{comment}{//\ Matriz\ de\ distâncias}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00020}00020\ \ \ \ \ vector<vector<int>>\ pred(n,\ vector<int>(n,\ -\/1));\ \ \ \textcolor{comment}{//\ Matriz\ de\ predecessores}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00021}00021\ \ \ \ \ map<int,\ string>\ dic\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};\ \ \ \ \textcolor{comment}{//\ Lista\ que\ mantém\ o\ nome\ de\ cada\ vértice}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Inicializa\ as\ distâncias\ e\ os\ predecessores}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adj[i][j]\ !=\ -\/1)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[i][j]\ =\ adj[i][j];}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pred[i][j]\ =\ i;\ \textcolor{comment}{//\ Inicializa\ o\ predecessor}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ j)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[i][j]\ =\ 0;\ \ \textcolor{comment}{//\ A\ distância\ para\ si\ mesmo\ é\ 0}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pred[i][j]\ =\ i;\ \ \textcolor{comment}{//\ Predecessor\ de\ si\ mesmo\ é\ o\ próprio\ vértice}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{comment}{//\ Algoritmo\ de\ Floyd-\/Warshall}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ n;\ ++k)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist[i][k]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ dist[k][j]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ dist[i][j]\ >\ dist[i][k]\ +\ dist[k][j])\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[i][j]\ =\ dist[i][k]\ +\ dist[k][j];}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pred[i][j]\ =\ pred[k][j];\ \ \textcolor{comment}{//\ Atualiza\ o\ predecessor}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ Solicita\ ao\ usuário\ o\ vértice\ inicial\ para\ exibir\ as\ distâncias}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{int}\ start;}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00051}00051\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ vertice\ inicial:\ "{}};}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00052}00052\ \ \ \ \ cin\ >>\ start;}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00054}00054\ \ \ \ \ start\ -\/=\ 1;\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (start\ <\ 0\ ||\ start\ >=\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Erro:\ vértice\ inválido!"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ Exibe\ as\ distâncias\ a\ partir\ do\ vértice\ inicial}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00062}00062\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Floyd-\/Warshall"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00063}00063\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Distancias\ a\ partir\ do\ vertice\ "{}}\ <<\ dic[start]\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ cout\ <<\ (i\ +\ 1)\ <<\ \textcolor{stringliteral}{"{}:\ "{}};}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist[start][i]\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}INF"{}}\ <<\ endl;\ \ \textcolor{comment}{//\ Infinito\ quando\ não\ alcançavel}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Distancia:\ "{}}\ <<\ dist[start][i]\ <<\ \textcolor{stringliteral}{"{}/\ Predecessor:\ "{}}\ <<\ dic[pred[start][i]]\ <<\ endl;\ \ }
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{floydWarshall_8cpp_source_l00073}00073\ \}}
+
+\end{DoxyCode}

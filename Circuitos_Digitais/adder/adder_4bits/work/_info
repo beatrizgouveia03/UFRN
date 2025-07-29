@@ -1,0 +1,122 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/.local/share/Trash/files/adder_4bits
+Eadder_4bits
+Z0 w1695155038
+!i122 19
+Z1 d/home/usuario/Documentos/Circuitos/adder/adder_4bits
+Z2 8/home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd
+Z3 F/home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd
+l0
+L1 1
+VE8Lk<51QND?iT<_2heJ0P2
+!s100 kKLnN60^U[LZ4XJFTh[jL0
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696424033
+!i10b 1
+Z6 !s108 1696424033.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd|
+!s107 /home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Astructural
+Z10 DEx4 work 11 adder_4bits 0 22 E8Lk<51QND?iT<_2heJ0P2
+!i122 19
+l24
+Z11 L7 24
+Z12 V>I[BWZ_I?cRHg20Z_`YD[1
+Z13 !s100 4SSFPeOUN1E@fF61Y3G4J1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z14 !s107 /home/usuario/Documentos/Circuitos/adder/adder_4bits/adder_4bits.vhd|
+!i113 1
+R8
+R9
+Efull_adder
+Z15 w1695149025
+!i122 14
+Z16 d/home/usuario/Documentos/Circuitos/adder_4bits
+Z17 8/home/usuario/Documentos/Circuitos/full_adder/full_adder.vhd
+Z18 F/home/usuario/Documentos/Circuitos/full_adder/full_adder.vhd
+l0
+L1 1
+VPS9mnY]LW7kl0kXX7R6g@3
+!s100 HFQ5kC<Qb]SSS;7z5Ro?`1
+R4
+32
+Z19 !s110 1695154824
+!i10b 1
+Z20 !s108 1695154824.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/full_adder/full_adder.vhd|
+Z22 !s107 /home/usuario/Documentos/Circuitos/full_adder/full_adder.vhd|
+!i113 1
+R8
+R9
+Astructural
+DEx4 work 10 full_adder 0 22 PS9mnY]LW7kl0kXX7R6g@3
+!i122 14
+l9
+L8 5
+V:`ZhY@@WO25aGHll0Wc2;3
+!s100 R2oe_d`L4@2[]gi1e<hYz1
+R4
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R8
+R9
+Ehalf_adder
+Z23 w1695147975
+!i122 18
+R16
+Z24 8/home/usuario/Documentos/Circuitos/half_adder/half_adder.vhd
+Z25 F/home/usuario/Documentos/Circuitos/half_adder/half_adder.vhd
+l0
+L1 1
+VLJEH@OH@fW:QML3T:z^Bj1
+!s100 ^>B;nkB5AcCZD0G@GDNOo1
+R4
+32
+Z26 !s110 1695155571
+!i10b 1
+Z27 !s108 1695155571.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/half_adder/half_adder.vhd|
+Z29 !s107 /home/usuario/Documentos/Circuitos/half_adder/half_adder.vhd|
+!i113 1
+R8
+R9
+Astructural
+DEx4 work 10 half_adder 0 22 LJEH@OH@fW:QML3T:z^Bj1
+!i122 18
+l8
+L7 5
+Vo@>F@zOVKKQ_LABgI_<hN2
+!s100 IU1AhjnVLd>[_JT^YjW=J2
+R4
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R8
+R9

@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Código-Fonte de source/algorithms/hierholzer.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="../../dir_1f1e02da0ed68619c8cd86756bb8077c.html">algorithms</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">hierholzer.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d4/d92/hierholzer_8cpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/d6a/simulation_8h.html">simulation.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="../../d7/ddc/namespacesml.html">sml</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d0/d8b/classsml_1_1Simulation.html#af2076a32e351c28d7fb6b7b7083553ec">   12</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#af2076a32e351c28d7fb6b7b7083553ec">Simulation::hierholzer</a> (<span class="keywordtype">void</span>){ </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    cout &lt;&lt; <span class="stringliteral">&quot;Hierholzer&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_struct" href="../../dd/d1d/structsml_1_1Graph.html">Graph</a> g = this-&gt;<a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    vector&lt;int&gt; cycle;          <span class="comment">// Armazena o ciclo euleriano</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    stack&lt;int&gt; currentPath;     <span class="comment">// Pilha para o caminho atual</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    map&lt;int, int&gt; edgeIndex;    <span class="comment">// Armazena o índice atual de exploração de arestas para cada vértice</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    vector&lt;vector&lt;int&gt;&gt; adjList(g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Converter matriz de adjacência em lista de adjacência para facilitar o uso</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>.size(); i++) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i].size(); j++) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <span class="keywordflow">if</span> (g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j] != 0) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                adjList[i].push_back(j);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Inicializar os índices de exploração de arestas</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>; i++) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        edgeIndex[i] = 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// Começar com qualquer vértice que tenha arestas (neste caso, o vértice 4)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">int</span> startVertex = 3;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    currentPath.push(startVertex);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">while</span> (!currentPath.empty()) { </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">int</span> currentVertex = currentPath.top();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="comment">// Se o vértice atual ainda tem arestas não exploradas</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (edgeIndex[currentVertex] &lt; adjList[currentVertex].size()) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">int</span> nextVertex = adjList[currentVertex][edgeIndex[currentVertex]];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            edgeIndex[currentVertex]++;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            currentPath.push(nextVertex);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        } <span class="keywordflow">else</span> { <span class="comment">// Não há mais arestas, &quot;fecha o ciclo&quot; removendo o vértice atual</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            cycle.push_back(currentVertex);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            currentPath.pop();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    cout &lt;&lt; <span class="stringliteral">&quot;Ciclo Euleriano:&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> vertex : cycle) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        cout &lt;&lt; g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">dictionary</a>[vertex] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    cout &lt;&lt; endl; </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+</div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a022c43521a00113a37aa067d9f6b3916"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">sml::Simulation::graph</a></div><div class="ttdeci">Graph graph</div><div class="ttdoc">O grafo da simulação.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00140">simulation.h:140</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_af2076a32e351c28d7fb6b7b7083553ec"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#af2076a32e351c28d7fb6b7b7083553ec">sml::Simulation::hierholzer</a></div><div class="ttdeci">void hierholzer(void)</div><div class="ttdoc">Função que implementa o algoritmo de Hierholzer para identificação de ciclos. Um ciclo eureliano é um...</div><div class="ttdef"><b>Definição</b> <a href="../../d4/d92/hierholzer_8cpp_source.html#l00012">hierholzer.cpp:12</a></div></div>
+<div class="ttc" id="anamespacesml_html"><div class="ttname"><a href="../../d7/ddc/namespacesml.html">sml</a></div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00063">simulation.h:63</a></div></div>
+<div class="ttc" id="asimulation_8h_html"><div class="ttname"><a href="../../dd/d6a/simulation_8h.html">simulation.h</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html">sml::Graph</a></div><div class="ttdoc">Estrutura para representar um grafo.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00088">simulation.h:89</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a36516689d3cbafb224c573d993851f96"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">sml::Graph::dictionary</a></div><div class="ttdeci">map&lt; int, string &gt; dictionary</div><div class="ttdoc">Lista que mantém o nome de cada vértice.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00093">simulation.h:93</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a6f9143cade62cc51cccaad07a3c1f025"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">sml::Graph::n</a></div><div class="ttdeci">int n</div><div class="ttdoc">Número de vértices.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00090">simulation.h:90</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a820c5f9fefba210c80b32f6de4a5e2b5"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">sml::Graph::adj</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; adj</div><div class="ttdoc">Matriz de adjacência.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00092">simulation.h:92</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

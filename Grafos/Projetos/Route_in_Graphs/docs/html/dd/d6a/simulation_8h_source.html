@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotas em Grafos: Código-Fonte de include/simulation.h</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotas em Grafos<span id="projectnumber">&#160;1,0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(1); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">simulation.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dd/d6a/simulation_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SIMULATION_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SIMULATION_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span>std::stoi;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using </span>std::string;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using </span>std::to_string;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using </span>std::ifstream;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using </span>std::istringstream;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">using </span>std::cerr;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">using </span>std::cin;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">using </span>std::cout;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">using </span>std::endl;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">using </span>std::min;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>std::map;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">using </span>std::queue;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">using </span>std::vector;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;climits&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">using </span>std::exception;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">using </span>std::ostream;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">using </span>std::operator&lt;&lt;;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">using </span>std::queue;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">using </span>std::numeric_limits;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">using </span>std::stack;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">using </span>std::set;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">using </span>std::pair;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html">   63</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d7/ddc/namespacesml.html">sml</a> {</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618">   65</a></span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618">simulation_result_e</a></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb">   67</a></span>    <a class="code hl_enumvalue" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb">OK</a> = 0,     </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_enumvalue" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219">ERROR</a>       </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219">   69</a></span>  };</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="../../d9/da4/structsml_1_1SimulationResult.html">   72</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="../../d9/da4/structsml_1_1SimulationResult.html">SimulationResult</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">   74</a></span>    <span class="keywordtype">string</span> <a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">msg</a>;                 </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="../../d9/da4/structsml_1_1SimulationResult.html#a323b1137f56eb0d42d13d15156576124">   75</a></span>    <a class="code hl_enumeration" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618">simulation_result_e</a> <a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a323b1137f56eb0d42d13d15156576124">type</a>;   </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="../../d9/da4/structsml_1_1SimulationResult.html#aca0e29bf490f32023fe6ed3152954653">   77</a></span>    <a class="code hl_function" href="../../d9/da4/structsml_1_1SimulationResult.html#aca0e29bf490f32023fe6ed3152954653">SimulationResult</a>(<span class="keywordtype">string</span> <a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">msg</a>, <a class="code hl_enumeration" href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618">simulation_result_e</a> state): <a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">msg</a>(<a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">msg</a>), <a class="code hl_variable" href="../../d9/da4/structsml_1_1SimulationResult.html#a323b1137f56eb0d42d13d15156576124">type</a>(state){};</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  };</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="};">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7">   81</a></span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7">graph_type_e</a></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6">   83</a></span>    <a class="code hl_enumvalue" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6">DIRECTED</a> = 0,  </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_enumvalue" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3">UNDIRECTED</a>     </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3">   85</a></span>  };</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="};">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="../../dd/d1d/structsml_1_1Graph.html">   88</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="../../dd/d1d/structsml_1_1Graph.html">Graph</a></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">   90</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>;                          </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="../../dd/d1d/structsml_1_1Graph.html#ad7694364246f2fac90eceee36e259ddc">   91</a></span>    <a class="code hl_enumeration" href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7">graph_type_e</a> <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#ad7694364246f2fac90eceee36e259ddc">type</a>;              </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">   92</a></span>    vector&lt;vector&lt;int&gt;&gt; <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>;        </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">   93</a></span>    map&lt;int, string&gt; <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">dictionary</a>;    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="../../dd/d1d/structsml_1_1Graph.html#ad5b13d0d45e956fb079a556663b1ab83">   96</a></span>    <span class="keyword">friend</span> ostream &amp;<a class="code hl_friend" href="../../dd/d1d/structsml_1_1Graph.html#ad5b13d0d45e956fb079a556663b1ab83">operator&lt;&lt;</a>(ostream &amp;cout, <span class="keyword">const</span> <a class="code hl_struct" href="../../dd/d1d/structsml_1_1Graph.html">Graph</a> g)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keywordtype">int</span> numNodes = g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">n</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      map&lt;int, string&gt; dic = g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">dictionary</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      vector&lt;vector&lt;int&gt;&gt; <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a> = g.<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      cout &lt;&lt; <span class="stringliteral">&quot;====================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      cout &lt;&lt; <span class="stringliteral">&quot;                MATRIZ DE ADJACENCIA                &quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      cout &lt;&lt; <span class="stringliteral">&quot;====================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      cout &lt;&lt; <span class="stringliteral">&quot;  \\  &quot;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i{0}; i&lt;numNodes; ++i) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span>(dic[i].length() == <span class="keywordtype">size_t</span>(1)) cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        cout &lt;&lt; dic[i] &lt;&lt;<span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      cout &lt;&lt; <span class="stringliteral">&quot;    &quot;</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i{0}; i&lt;numNodes; ++i) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        cout &lt;&lt; <span class="stringliteral">&quot;____&quot;</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i{0}; i&lt;numNodes; ++i){</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">if</span>(dic[i].length() == 1) cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        cout &lt;&lt; dic[i] &lt;&lt; <span class="stringliteral">&quot;| &quot;</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j{0}; j&lt;numNodes; ++j){</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j] &lt; 10 &amp;&amp; <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j] &gt;= 0) cout &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>          <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j] &lt; 100) cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>          cout &lt;&lt; <a class="code hl_variable" href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">adj</a>[i][j] &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      cout &lt;&lt; endl;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      cout &lt;&lt; <span class="stringliteral">&quot;====================================================&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <span class="keywordflow">return</span> cout;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  };</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="};">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="../../d0/d8b/classsml_1_1Simulation.html">  137</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../d0/d8b/classsml_1_1Simulation.html">Simulation</a> {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">//== Membros privados</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">  140</a></span>      <a class="code hl_struct" href="../../dd/d1d/structsml_1_1Graph.html">Graph</a> <a class="code hl_variable" href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">graph</a>;            </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">//=== Membros públicos</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a2b1441297b295aaa2a7601d42da4c96a">Simulation</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a27ac754f033f7838d95e981d96181bb4">run</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      <a class="code hl_struct" href="../../d9/da4/structsml_1_1SimulationResult.html">SimulationResult</a> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#aee234a5b25a513894cb1cfcefbf8913b">initialize</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="comment">//=== Métodos auxiliares</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a9a25c213aa3a9c667a7c0e99f017cef7">pause</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a124d8b1f83d9d7a01ddc12138ba0d89b">showMenu</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <a class="code hl_struct" href="../../d9/da4/structsml_1_1SimulationResult.html">SimulationResult</a> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#afe9e6abcd0e71e62625c6a3f553e21ac">usage</a>(<span class="keywordtype">string</span> = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a3d90ab0d5288dd354420adedcd91d061">prim</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a395f000bcaf25c415b5203436d883e53">kruskal</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#aa2321eb52355e4b6dd76677762871952">dijkstra</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#af2076a32e351c28d7fb6b7b7083553ec">hierholzer</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#abeb4fffd2318b07d6253ec08dfb1d192">edmondsKarp</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a3954afc5a271833033a9f5abfa56a919">floydWarshall</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#aad60616330b939af92e6cf08d39c8e71">fordFulkerson</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a130bf31897eed82dc4ea5df332ce5a86">chuLiuEdmonds</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a76e12b972244c9d75f93b413187986dc">hierholzerPaths</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordtype">void</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#a1b43feca1f43f04ecd69c12f30176da3">bellmanFord</a>(<span class="keywordtype">int</span> inicio);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d0/d8b/classsml_1_1Simulation.html#ac456bc90a73d5613d8d21adff6288bc8">bfs</a>(vector&lt;int&gt; &amp;<a class="code hl_variable" href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a>, vector&lt;vector&lt;int&gt;&gt; residual, <span class="keywordtype">int</span> src, <span class="keywordtype">int</span> snk);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  };</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>} <span class="comment">// namespace sml</span></div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#endif </span><span class="comment">// SIMULATION_H</span></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html">sml::Simulation</a></div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00137">simulation.h:137</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a022c43521a00113a37aa067d9f6b3916"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a022c43521a00113a37aa067d9f6b3916">sml::Simulation::graph</a></div><div class="ttdeci">Graph graph</div><div class="ttdoc">O grafo da simulação.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00140">simulation.h:140</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a124d8b1f83d9d7a01ddc12138ba0d89b"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a124d8b1f83d9d7a01ddc12138ba0d89b">sml::Simulation::showMenu</a></div><div class="ttdeci">void showMenu(void)</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00029">simulation.cpp:29</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a130bf31897eed82dc4ea5df332ce5a86"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a130bf31897eed82dc4ea5df332ce5a86">sml::Simulation::chuLiuEdmonds</a></div><div class="ttdeci">void chuLiuEdmonds(void)</div><div class="ttdef"><b>Definição</b> <a href="../../dc/dd7/chuLiuEdmonds_8cpp_source.html#l00063">chuLiuEdmonds.cpp:63</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a1b43feca1f43f04ecd69c12f30176da3"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a1b43feca1f43f04ecd69c12f30176da3">sml::Simulation::bellmanFord</a></div><div class="ttdeci">void bellmanFord(int inicio)</div><div class="ttdef"><b>Definição</b> <a href="../../df/dd5/bellmanFord_8cpp_source.html#l00015">bellmanFord.cpp:15</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a27ac754f033f7838d95e981d96181bb4"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a27ac754f033f7838d95e981d96181bb4">sml::Simulation::run</a></div><div class="ttdeci">void run(void)</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00055">simulation.cpp:55</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a2b1441297b295aaa2a7601d42da4c96a"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a2b1441297b295aaa2a7601d42da4c96a">sml::Simulation::Simulation</a></div><div class="ttdeci">Simulation(void)</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00010">simulation.cpp:10</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a3954afc5a271833033a9f5abfa56a919"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a3954afc5a271833033a9f5abfa56a919">sml::Simulation::floydWarshall</a></div><div class="ttdeci">void floydWarshall(void)</div><div class="ttdoc">Esta função implementa o algoritmo de Floyd-Warshall para encontrar as distâncias mínimas entre todos...</div><div class="ttdef"><b>Definição</b> <a href="../../d0/d5e/floydWarshall_8cpp_source.html#l00014">floydWarshall.cpp:14</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a395f000bcaf25c415b5203436d883e53"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a395f000bcaf25c415b5203436d883e53">sml::Simulation::kruskal</a></div><div class="ttdeci">void kruskal(void)</div><div class="ttdoc">Implementação do algoritmo de Kruskal para encontrar a Árvore Geradora Mínima (MST) O algoritmo orden...</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00072">kruskal.cpp:72</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a3d90ab0d5288dd354420adedcd91d061"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a3d90ab0d5288dd354420adedcd91d061">sml::Simulation::prim</a></div><div class="ttdeci">void prim(void)</div><div class="ttdoc">Algoritmos de rotas em redes.</div><div class="ttdef"><b>Definição</b> <a href="../../da/d27/prim_8cpp_source.html#l00015">prim.cpp:15</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a76e12b972244c9d75f93b413187986dc"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a76e12b972244c9d75f93b413187986dc">sml::Simulation::hierholzerPaths</a></div><div class="ttdeci">void hierholzerPaths(void)</div><div class="ttdoc">Esta função é uma implementação do algoritmo de Hierholzer para encontrar caminhos eulerianos em um g...</div><div class="ttdef"><b>Definição</b> <a href="../../d0/d46/hierholzerPaths_8cpp_source.html#l00010">hierholzerPaths.cpp:10</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_a9a25c213aa3a9c667a7c0e99f017cef7"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#a9a25c213aa3a9c667a7c0e99f017cef7">sml::Simulation::pause</a></div><div class="ttdeci">void pause(void)</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00017">simulation.cpp:17</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_aa2321eb52355e4b6dd76677762871952"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#aa2321eb52355e4b6dd76677762871952">sml::Simulation::dijkstra</a></div><div class="ttdeci">void dijkstra(void)</div><div class="ttdoc">Implementação do algoritmo de Dijkstra para encontrar o caminho mais curto O algoritmo encontra a men...</div><div class="ttdef"><b>Definição</b> <a href="../../d8/d68/dijkstra_8cpp_source.html#l00013">dijkstra.cpp:13</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_aad60616330b939af92e6cf08d39c8e71"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#aad60616330b939af92e6cf08d39c8e71">sml::Simulation::fordFulkerson</a></div><div class="ttdeci">void fordFulkerson(void)</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d88/fordFulkerson_8cpp_source.html#l00038">fordFulkerson.cpp:38</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_abeb4fffd2318b07d6253ec08dfb1d192"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#abeb4fffd2318b07d6253ec08dfb1d192">sml::Simulation::edmondsKarp</a></div><div class="ttdeci">void edmondsKarp(void)</div><div class="ttdoc">Esta função é uma implementação do algoritmo de Edmonds-Karp de fluxo em redes. Dado um grafo,...</div><div class="ttdef"><b>Definição</b> <a href="../../d7/d48/edmondsKarp_8cpp_source.html#l00013">edmondsKarp.cpp:13</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_ac456bc90a73d5613d8d21adff6288bc8"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#ac456bc90a73d5613d8d21adff6288bc8">sml::Simulation::bfs</a></div><div class="ttdeci">bool bfs(vector&lt; int &gt; &amp;parent, vector&lt; vector&lt; int &gt; &gt; residual, int src, int snk)</div><div class="ttdoc">Algoritmos auxiliares.</div><div class="ttdef"><b>Definição</b> <a href="../../d7/d48/edmondsKarp_8cpp_source.html#l00075">edmondsKarp.cpp:75</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_aee234a5b25a513894cb1cfcefbf8913b"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#aee234a5b25a513894cb1cfcefbf8913b">sml::Simulation::initialize</a></div><div class="ttdeci">SimulationResult initialize(int argc, char *argv[])</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00127">simulation.cpp:127</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_af2076a32e351c28d7fb6b7b7083553ec"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#af2076a32e351c28d7fb6b7b7083553ec">sml::Simulation::hierholzer</a></div><div class="ttdeci">void hierholzer(void)</div><div class="ttdoc">Função que implementa o algoritmo de Hierholzer para identificação de ciclos. Um ciclo eureliano é um...</div><div class="ttdef"><b>Definição</b> <a href="../../d4/d92/hierholzer_8cpp_source.html#l00012">hierholzer.cpp:12</a></div></div>
+<div class="ttc" id="aclasssml_1_1Simulation_html_afe9e6abcd0e71e62625c6a3f553e21ac"><div class="ttname"><a href="../../d0/d8b/classsml_1_1Simulation.html#afe9e6abcd0e71e62625c6a3f553e21ac">sml::Simulation::usage</a></div><div class="ttdeci">SimulationResult usage(string=&quot;&quot;)</div><div class="ttdef"><b>Definição</b> <a href="../../d2/d93/simulation_8cpp_source.html#l00239">simulation.cpp:239</a></div></div>
+<div class="ttc" id="akruskal_8cpp_html_a95ce245e8f2adfb78d9c96904ff7052a"><div class="ttname"><a href="../../d9/d1c/kruskal_8cpp.html#a95ce245e8f2adfb78d9c96904ff7052a">parent</a></div><div class="ttdeci">static int parent[MAXN]</div><div class="ttdef"><b>Definição</b> <a href="../../d9/d1c/kruskal_8cpp_source.html#l00014">kruskal.cpp:14</a></div></div>
+<div class="ttc" id="anamespacesml_html"><div class="ttname"><a href="../../d7/ddc/namespacesml.html">sml</a></div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00063">simulation.h:63</a></div></div>
+<div class="ttc" id="anamespacesml_html_a0a2ccab3865e2f3ab9ef38e346454618"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618">sml::simulation_result_e</a></div><div class="ttdeci">simulation_result_e</div><div class="ttdoc">Enum para representar o resultado da simulação.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00065">simulation.h:66</a></div></div>
+<div class="ttc" id="anamespacesml_html_a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618a4d350a2fa91107496f43dde97871f219">sml::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdoc">Alguma entrada está faltando ou possui erro.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00069">simulation.h:68</a></div></div>
+<div class="ttc" id="anamespacesml_html_a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#a0a2ccab3865e2f3ab9ef38e346454618acd42593f74020a85ac3f2e5e37616fdb">sml::OK</a></div><div class="ttdeci">@ OK</div><div class="ttdoc">Todas as entradas estão como esperado.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00067">simulation.h:67</a></div></div>
+<div class="ttc" id="anamespacesml_html_aa96b16e3af50f675ed5f663e23e58fb7"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7">sml::graph_type_e</a></div><div class="ttdeci">graph_type_e</div><div class="ttdoc">Enum para representar o tipo de grafo.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00081">simulation.h:82</a></div></div>
+<div class="ttc" id="anamespacesml_html_aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3">sml::UNDIRECTED</a></div><div class="ttdeci">@ UNDIRECTED</div><div class="ttdoc">Grafo não direcionado.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00085">simulation.h:84</a></div></div>
+<div class="ttc" id="anamespacesml_html_aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6"><div class="ttname"><a href="../../d7/ddc/namespacesml.html#aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6">sml::DIRECTED</a></div><div class="ttdeci">@ DIRECTED</div><div class="ttdoc">Grafo direcionado.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00083">simulation.h:83</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html">sml::Graph</a></div><div class="ttdoc">Estrutura para representar um grafo.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00088">simulation.h:89</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a36516689d3cbafb224c573d993851f96"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a36516689d3cbafb224c573d993851f96">sml::Graph::dictionary</a></div><div class="ttdeci">map&lt; int, string &gt; dictionary</div><div class="ttdoc">Lista que mantém o nome de cada vértice.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00093">simulation.h:93</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a6f9143cade62cc51cccaad07a3c1f025"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a6f9143cade62cc51cccaad07a3c1f025">sml::Graph::n</a></div><div class="ttdeci">int n</div><div class="ttdoc">Número de vértices.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00090">simulation.h:90</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_a820c5f9fefba210c80b32f6de4a5e2b5"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#a820c5f9fefba210c80b32f6de4a5e2b5">sml::Graph::adj</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; adj</div><div class="ttdoc">Matriz de adjacência.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00092">simulation.h:92</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_ad5b13d0d45e956fb079a556663b1ab83"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#ad5b13d0d45e956fb079a556663b1ab83">sml::Graph::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;cout, const Graph g)</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00096">simulation.h:96</a></div></div>
+<div class="ttc" id="astructsml_1_1Graph_html_ad7694364246f2fac90eceee36e259ddc"><div class="ttname"><a href="../../dd/d1d/structsml_1_1Graph.html#ad7694364246f2fac90eceee36e259ddc">sml::Graph::type</a></div><div class="ttdeci">graph_type_e type</div><div class="ttdoc">Tipo do grafo.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00091">simulation.h:91</a></div></div>
+<div class="ttc" id="astructsml_1_1SimulationResult_html"><div class="ttname"><a href="../../d9/da4/structsml_1_1SimulationResult.html">sml::SimulationResult</a></div><div class="ttdoc">Estrutura para armazenar o resultado da simulação.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00072">simulation.h:73</a></div></div>
+<div class="ttc" id="astructsml_1_1SimulationResult_html_a323b1137f56eb0d42d13d15156576124"><div class="ttname"><a href="../../d9/da4/structsml_1_1SimulationResult.html#a323b1137f56eb0d42d13d15156576124">sml::SimulationResult::type</a></div><div class="ttdeci">simulation_result_e type</div><div class="ttdoc">Tipo de resultado da simulação.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00075">simulation.h:75</a></div></div>
+<div class="ttc" id="astructsml_1_1SimulationResult_html_a9c6f84abe2f0cbe0d56f9a62d9a81cbb"><div class="ttname"><a href="../../d9/da4/structsml_1_1SimulationResult.html#a9c6f84abe2f0cbe0d56f9a62d9a81cbb">sml::SimulationResult::msg</a></div><div class="ttdeci">string msg</div><div class="ttdoc">Mensagem a ser exibida.</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00074">simulation.h:74</a></div></div>
+<div class="ttc" id="astructsml_1_1SimulationResult_html_aca0e29bf490f32023fe6ed3152954653"><div class="ttname"><a href="../../d9/da4/structsml_1_1SimulationResult.html#aca0e29bf490f32023fe6ed3152954653">sml::SimulationResult::SimulationResult</a></div><div class="ttdeci">SimulationResult(string msg, simulation_result_e state)</div><div class="ttdef"><b>Definição</b> <a href="../../dd/d6a/simulation_8h_source.html#l00077">simulation.h:77</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

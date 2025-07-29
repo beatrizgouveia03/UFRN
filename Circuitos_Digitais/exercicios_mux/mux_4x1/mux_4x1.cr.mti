@@ -1,0 +1,42 @@
+/home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_2.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_2 of mux_4x1
+-- Loading entity mux_4x1
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_6.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_6.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_6 of mux_4x1
+-- Loading entity mux_4x1
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_3.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_3 of mux_4x1
+-- Loading entity mux_4x1
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_4.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_4 of mux_4x1
+-- Loading entity mux_4x1
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_5.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_5 of mux_4x1
+-- Loading entity mux_4x1
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_1.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/arch_1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling architecture arch_1 of mux_4x1
+-- Loading entity mux_4x1
+
+} {} {}} /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/exercicios_mux/mux_4x1/mux_4x1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity mux_4x1
+
+} {} {}}

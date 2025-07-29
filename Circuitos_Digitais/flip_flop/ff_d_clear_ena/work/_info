@@ -1,0 +1,48 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.02, Feb  2 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear
+Eff_d_clear_ena
+Z0 w1696424288
+!i122 0
+Z1 d/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear_ena
+Z2 8/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear_ena/ff_d_clear_ena.vhd
+Z3 F/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear_ena/ff_d_clear_ena.vhd
+l0
+L1 1
+VIY_K]jML:_aib7Em6k=d82
+!s100 J9J5zAzmZ0?BLf;DYZ[^e0
+Z4 OV;C;2021.1;73
+32
+Z5 !s110 1696424841
+!i10b 1
+Z6 !s108 1696424841.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear_ena/ff_d_clear_ena.vhd|
+!s107 /home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear_ena/ff_d_clear_ena.vhd|
+!i113 1
+Z8 o-work work -2002 -explicit
+Z9 tExplicit 1 CvgOpt 0
+Aarch
+DEx4 work 14 ff_d_clear_ena 0 22 IY_K]jML:_aib7Em6k=d82
+!i122 0
+l10
+L9 13
+VhDnVF=LY_N4b2LnPIXI5N2
+!s100 E>R3[>dLVRHB[]0diPgfn1
+R4
+32
+R5
+!i10b 1
+R6
+R7
+Z10 !s107 /home/usuario/Documentos/Circuitos/flip_flop/ff_d_clear_ena/ff_d_clear_ena.vhd|
+!i113 1
+R8
+R9

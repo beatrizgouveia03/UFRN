@@ -1,0 +1,1365 @@
+\doxysection{Referência à classe sml\+::Simulation}
+\hypertarget{classsml_1_1Simulation}{}\label{classsml_1_1Simulation}\index{sml::Simulation@{sml::Simulation}}
+
+
+{\ttfamily \#include $<$simulation.\+h$>$}
+
+
+
+Diagrama de colaboração para sml\+::Simulation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{da/d3e/classsml_1_1Simulation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}{Simulation}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}{run}} (void)
+\item 
+\mbox{\hyperlink{structsml_1_1SimulationResult}{Simulation\+Result}} \mbox{\hyperlink{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}{initialize}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}{show\+Menu}} (void)
+\item 
+\mbox{\hyperlink{structsml_1_1SimulationResult}{Simulation\+Result}} \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}} (string="{}"{})
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a3d90ab0d5288dd354420adedcd91d061}{prim}} (void)
+\begin{DoxyCompactList}\small\item\em Algoritmos de rotas em redes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}{kruskal}} (void)
+\begin{DoxyCompactList}\small\item\em Implementação do algoritmo de Kruskal para encontrar a Árvore Geradora Mínima (MST) O algoritmo ordena as arestas por peso e tenta adicionar cada uma à MST, verificando se não forma ciclo usando Union-\/\+Find. Uma MST é uma árvore que conecta todos os vértices do grafo usando o menor peso total possível. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_aa2321eb52355e4b6dd76677762871952}{dijkstra}} (void)
+\begin{DoxyCompactList}\small\item\em Implementação do algoritmo de Dijkstra para encontrar o caminho mais curto O algoritmo encontra a menor distância entre um vértice inicial e todos os outros vértices do grafo Utiliza uma fila de prioridade para sempre processar o vértice mais próximo do inicial e relaxa as arestas atualizando as distâncias quando encontra caminhos mais curtos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_af2076a32e351c28d7fb6b7b7083553ec}{hierholzer}} (void)
+\begin{DoxyCompactList}\small\item\em Função que implementa o algoritmo de Hierholzer para identificação de ciclos. Um ciclo eureliano é uma cadeia que inicia em um vértice "{}v"{}, passa por todas as arestas do grafo apenas 1 vez e finaliza em "{}v"{}. O algoritmo passa pelas arestas não exploradas de cada vértice e depois adiciona esse vértice(que teve as arestas exploradas) no ciclo(variável cycle). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}{edmonds\+Karp}} (void)
+\begin{DoxyCompactList}\small\item\em Esta função é uma implementação do algoritmo de Edmonds-\/\+Karp de fluxo em redes. Dado um grafo, ele determina qual o fluxo máximo possível,se utilizando de uma busca em largura(bfs) para achar o menor caminho entre a origem e o destino. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}{floyd\+Warshall}} (void)
+\begin{DoxyCompactList}\small\item\em Esta função implementa o algoritmo de Floyd-\/\+Warshall para encontrar as distâncias mínimas entre todos os pares de vértices de um grafo ponderado. O algoritmo atualiza a matriz de distâncias e a matriz de predecessores para reconstrução de caminhos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_aad60616330b939af92e6cf08d39c8e71}{ford\+Fulkerson}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a130bf31897eed82dc4ea5df332ce5a86}{chu\+Liu\+Edmonds}} (void)
+\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a76e12b972244c9d75f93b413187986dc}{hierholzer\+Paths}} (void)
+\begin{DoxyCompactList}\small\item\em Esta função é uma implementação do algoritmo de Hierholzer para encontrar caminhos eulerianos em um grafo direcionado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsml_1_1Simulation_a1b43feca1f43f04ecd69c12f30176da3}{bellman\+Ford}} (int inicio)
+\item 
+bool \mbox{\hyperlink{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}{bfs}} (vector$<$ int $>$ \&\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}, vector$<$ vector$<$ int $>$ $>$ residual, int src, int snk)
+\begin{DoxyCompactList}\small\item\em Algoritmos auxiliares. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsml_1_1Graph}{Graph}} \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}
+\begin{DoxyCompactList}\small\item\em O grafo da simulação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00137}{137}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\Hypertarget{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a}\label{classsml_1_1Simulation_a2b1441297b295aaa2a7601d42da4c96a} 
+\index{sml::Simulation@{sml::Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}}
+{\footnotesize\ttfamily Simulation\+::\+Simulation (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! Construtor padrão da classe \doxylink{classsml_1_1Simulation}{Simulation} 
+
+Definido na linha \mbox{\hyperlink{simulation_8cpp_source_l00010}{10}} do ficheiro \mbox{\hyperlink{simulation_8cpp_source}{simulation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \textcolor{comment}{//\ Inicializa\ a\ simulação}}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classsml_1_1Simulation_a1b43feca1f43f04ecd69c12f30176da3}\label{classsml_1_1Simulation_a1b43feca1f43f04ecd69c12f30176da3} 
+\index{sml::Simulation@{sml::Simulation}!bellmanFord@{bellmanFord}}
+\index{bellmanFord@{bellmanFord}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{bellmanFord()}{bellmanFord()}}
+{\footnotesize\ttfamily void Simulation\+::bellman\+Ford (\begin{DoxyParamCaption}\item[{int}]{inicio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+! Função que implementa o algoritmo de melhor caminho Bellman-\/\+Ford. Todas as distâncias iniciam de INFINITO(no nosso caso, o máximo valor inteiro), exceto o inicial que tem distância 0. Dado um grafo, é realizado o "{}relaxamento"{} das arestas, que é a verificação se a distância para um vértice pode ser menor ou reduzida passando por outro vértice. Por último, é feito mais uma verificação nas arestas, caso exista uma opção de distância melhor então existe um ciclo negativo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em inicio} & Vértice inicial \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \mbox{\hyperlink{bellmanFord_8cpp_source_l00015}{15}} do ficheiro \mbox{\hyperlink{bellmanFord_8cpp_source}{bellman\+Ford.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Bellman-\/Ford"{}}\ <<\ endl;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ g\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}};\ \textcolor{comment}{//\ Variável\ do\ graph,\ apenas\ atalho\ para\ this-\/>graph}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();\ \ \textcolor{comment}{//\ Define\ o\ valor\ de\ infinito}}
+\DoxyCodeLine{00020\ \ \ \ \ vector<int>\ dist(g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}},\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}});\ \textcolor{comment}{//Distâncias\ iniciais}}
+\DoxyCodeLine{00021\ \ \ \ \ vector<int>\ predecessor(g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}},\ -\/1);\ \textcolor{comment}{//\ Para\ armazenar\ o\ caminho}}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//Inicializando\ }}
+\DoxyCodeLine{00024\ \ \ \ \ dist[inicio\ -\/\ 1]\ =\ 0;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Relaxação\ das\ arestas\ (n-\/1\ vezes)}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ -\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ u\ =\ 0;\ u\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ u++)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ v\ =\ 0;\ v\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ v++)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v]\ !=\ -\/1)\ \{\ \textcolor{comment}{//\ Aresta\ existe}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist[u]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ dist[u]\ +\ g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v]\ <\ dist[v])\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[v]\ =\ dist[u]\ +\ g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v];}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ predecessor[v]\ =\ u;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Verificação\ da\ existência\ de\ ciclos\ negativos}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ u\ =\ 0;\ u\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ u++)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ v\ =\ 0;\ v\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ v++)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v]\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist[u]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ dist[u]\ +\ g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v]\ <\ dist[v])\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Ha\ um\ ciclo\ negativo"{}}\ <<\ endl;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Distancias\ a\ partir\ do\ vertice\ "{}}\ <<\ g.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[inicio\ -\/\ 1]\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ endl;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ i++)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ cout\ <<\ g.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[i]\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (dist[i]\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ ?\ \textcolor{stringliteral}{"{}INF"{}}\ :\ to\_string(dist[i]))\ <<\ endl;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}\label{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8} 
+\index{sml::Simulation@{sml::Simulation}!bfs@{bfs}}
+\index{bfs@{bfs}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily bool Simulation\+::bfs (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{parent,  }\item[{vector$<$ vector$<$ int $>$ $>$}]{residual,  }\item[{int}]{src,  }\item[{int}]{snk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Algoritmos auxiliares. 
+
+Função auxiliar do algoritmo de Edmonds-\/\+Karp. Implementação do algoritmo de busca em largura usada para determinar o menor caminho entre a origem e o destino de um grafo, através de sua matriz de adjacência, caso exista, e atualizar um vetor de nós-\/pais para a futura reconstrução do caminho determinado. Ela retorna um booleano indicando se a busca foi sucedida.
+
+! 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Endereço do vetor de nós-\/pais a ser atualizado \\
+\hline
+{\em residual} & Matriz residual do grafo \\
+\hline
+{\em src} & Ìndice do nó de origem do grafo \\
+\hline
+{\em snk} & Ìndice do nó de destino do grafo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um booleano indicando se foi possível achar um caminho(\+TRUE) ou não(\+FALSE) 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Vetor que indica quais nós foram visitados
+
+\texorpdfstring{$<$}{<} Fila de nós a serem visitados
+
+Definido na linha \mbox{\hyperlink{edmondsKarp_8cpp_source_l00075}{75}} do ficheiro \mbox{\hyperlink{edmondsKarp_8cpp_source}{edmonds\+Karp.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ n\ =\ residual.size();}
+\DoxyCodeLine{00077\ \ \ \ \ vector<bool>\ visited(n,\ \textcolor{keyword}{false});\ }
+\DoxyCodeLine{00078\ \ \ \ \ queue<int>\ q;\ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ q.push(src);}
+\DoxyCodeLine{00080\ \ \ \ \ visited[src]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//Enquanto\ houver\ nó\ a\ ser\ visitado}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{while}(!q.empty())\{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Recuperar\ o\ nó\ na\ frente\ da\ fila}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ f\ =\ q.front();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Visitar\ todos\ os\ nós-\/filhos\ desse\ nó\ e\ adicioná-\/los\ na\ fila}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{0\};\ i<n;\ ++i)\{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!visited[i]\ \&\&\ residual[f][i]\ >\ 0)\{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.push(i);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ visited[i]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]\ =\ f;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Caso\ o\ nó\ visitado\ seja\ o\ destino,\ retornar\ true}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ ==\ snk)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a130bf31897eed82dc4ea5df332ce5a86}\label{classsml_1_1Simulation_a130bf31897eed82dc4ea5df332ce5a86} 
+\index{sml::Simulation@{sml::Simulation}!chuLiuEdmonds@{chuLiuEdmonds}}
+\index{chuLiuEdmonds@{chuLiuEdmonds}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{chuLiuEdmonds()}{chuLiuEdmonds()}}
+{\footnotesize\ttfamily void Simulation\+::chu\+Liu\+Edmonds (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definido na linha \mbox{\hyperlink{chuLiuEdmonds_8cpp_source_l00063}{63}} do ficheiro \mbox{\hyperlink{chuLiuEdmonds_8cpp_source}{chu\+Liu\+Edmonds.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{int}\ n\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{int}\ root\ =\ 0;\ \textcolor{comment}{//\ Assume\ que\ o\ nó\ raiz\ sempre\ será\ 0}}
+\DoxyCodeLine{00066\ \ \ vector<vector<int>>\ adj\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};}
+\DoxyCodeLine{00067\ \ \ vector<bool>\ visited(n,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00068\ \ \ vector<vector<int>>\ tmp(n,\ vector<int>(n));}
+\DoxyCodeLine{00069\ \ \ vector<vector<int>>\ idx(n\ +\ 1,\ vector<int>(n\ +\ 1));}
+\DoxyCodeLine{00070\ \ \ vector<Edge>\ s;}
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ aux;}
+\DoxyCodeLine{00072\ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ =\ n;}
+\DoxyCodeLine{00073\ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{comment}{/*\ Passo\ 1:}}
+\DoxyCodeLine{00076\ \textcolor{comment}{\ \ \ *\ Descarte\ os\ arcos\ que\ entram\ na\ raiz,\ se\ houver;\ Para\ cada\ nó}}
+\DoxyCodeLine{00077\ \textcolor{comment}{\ \ \ *\ diferente\ da\ raiz,\ selecione\ o\ arco\ de\ entrada\ com\ o\ menor\ custo;}}
+\DoxyCodeLine{00078\ \textcolor{comment}{\ \ \ *\ Defina\ os\ n-\/1\ arcos\ selecionados\ como\ o\ conjunto\ S.}}
+\DoxyCodeLine{00079\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ !=\ root)\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ min\_weight\ =\ numeric\_limits<int>::max();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ min\_from\ =\ -\/1;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ j++)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adj[j][i]\ >\ 0\ \&\&\ adj[j][i]\ <\ min\_weight)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ min\_weight\ =\ adj[j][i];}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ min\_from\ =\ j;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (min\_from\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ s.push\_back(\mbox{\hyperlink{structEdge}{Edge}}(min\_from,\ i,\ min\_weight));}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{comment}{//\ Passo\ 2}}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ vector<vector<int>>\ cycle\_graph(n,\ vector<int>(n,\ 0));}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structEdge}{Edge}}\ \&e\ :\ s)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ cycle\_graph[e.from][e.to]\ =\ e.weight;}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{auto}\ [hasCycle,\ cycle]\ =\ \mbox{\hyperlink{chuLiuEdmonds_8cpp_a7148a15f8d54af52f833565d91e7a18a}{findCycle}}(cycle\_graph,\ n);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Se\ nenhum\ ciclo\ for\ formado,\ G\ =\ (N,\ S)\ é\ uma\ árvore\ geradora\ mínima}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (!hasCycle)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ Caso\ contrário,\ continue}}
+\DoxyCodeLine{00111\ \ \ \ \ vector<bool>\ inCycle(n,\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ v\ :\ cycle)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ inCycle[v]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ vector<Edge>\ k;}
+\DoxyCodeLine{00118\ \ \ \ \ vector<Edge>\ new\_s;}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ k\_id\ =\ -\/10;}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//\ Passo\ 3:}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structEdge}{Edge}}\ e\ :\ s)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inCycle[e.from]\ \&\&\ inCycle[e.to])\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ k.push\_back(e);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ new\_s.push\_back(e);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \textcolor{comment}{//\ \ for\ (const\ Edge\ \&e\ :\ new\_s)\ \{}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ printf("{}\%d\ -\/>\ \%d:\ \%d"{},\ e.from,\ e.to,\ e.weight);}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \textcolor{comment}{//\ \ for\ (int\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ if\ (inCycle[i])}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ continue;}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ for\ (int\ v\ :\ cycle)\ \{}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ if\ (adj[i][v]\ >\ 0)\ \{}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ int\ w\ =\ adj[i][v];}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ new\_s.push\_back(Edge(i,\ k\_id,\ w));}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \}}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \textcolor{comment}{//\ idx[i][k\_id]\ =\ v;}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \}}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \textcolor{comment}{/*\ Passo\ 4:}}
+\DoxyCodeLine{00144\ \textcolor{comment}{\ \ \ \ \ \ \ *\ Para\ cada\ pseudo-\/nó,\ selecione\ o\ arco\ de\ entrada\ que\ tem\ o\ menor\ custo}}
+\DoxyCodeLine{00145\ \textcolor{comment}{\ \ \ \ \ \ \ *\ modificado;\ Substitua\ o\ arco\ que\ entra\ no\ mesmo\ nó\ real\ em\ S\ pelo\ novo}}
+\DoxyCodeLine{00146\ \textcolor{comment}{\ \ \ \ \ \ \ *\ arco\ selecionado.}}
+\DoxyCodeLine{00147\ \textcolor{comment}{\ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \textcolor{comment}{//\ int\ min\_w\ =\ INT\_MAX;}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \textcolor{comment}{//\ int\ min\_idx\ =\ -\/1;}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \textcolor{comment}{//\ Edge\ min\_e\ =\ Edge(-\/1,-\/1,-\/1);}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \textcolor{comment}{//\ for(auto\ e\ :\ new\_s)\{}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ if(e.to\ ==\ k\_id\ \&\&\ e.weight\ <\ min\_w)\{}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ min\_idx\ =\ idx[e.from][e.to];}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ min\_w\ =\ e.weight;}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ min\_e\ =\ e;}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ vector<Edge>\ final\_s;}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \textcolor{comment}{//\ final\_s\ =\ new\_s;}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \textcolor{comment}{//\ final\_s.push\_back(Edge(min\_e.from,\ min\_idx,\ min\_w));}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ s\ =\ new\_s;}
+\DoxyCodeLine{00165\ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//\ Limpa\ matriz\ antiga}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ j++)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ adj[i][j]\ =\ 0;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{comment}{//\ Atualiza\ com\ os\ valores\ das\ arestas}}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{structEdge}{Edge}}\ \&e\ :\ s)\ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ adj[e.from][e.to]\ =\ e.weight;}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ adj;}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Grafo\ novo\ gerado:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00182\ \ \ \ \ cout\ <<\ aux;}
+\DoxyCodeLine{00183\ \ \ \}}
+\DoxyCodeLine{00184\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_aa2321eb52355e4b6dd76677762871952}\label{classsml_1_1Simulation_aa2321eb52355e4b6dd76677762871952} 
+\index{sml::Simulation@{sml::Simulation}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily void Simulation\+::dijkstra (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Implementação do algoritmo de Dijkstra para encontrar o caminho mais curto O algoritmo encontra a menor distância entre um vértice inicial e todos os outros vértices do grafo Utiliza uma fila de prioridade para sempre processar o vértice mais próximo do inicial e relaxa as arestas atualizando as distâncias quando encontra caminhos mais curtos. 
+
+Fila de prioridade que mantém os vértices ordenados pela menor distância Usa pair$<$int,int$>$ onde\+: first\+: distância até o vértice second\+: índice do vértice greater$<$$>$ garante que o topo será o vértice com menor distância
+
+Definido na linha \mbox{\hyperlink{dijkstra_8cpp_source_l00013}{13}} do ficheiro \mbox{\hyperlink{dijkstra_8cpp_source}{dijkstra.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//Define\ infinito\ como\ o\ maior\ valor\ possível\ do\ tipo\ int}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ str;}
+\DoxyCodeLine{00018\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ vertice\ inicial:\ "{}};}
+\DoxyCodeLine{00019\ \ \ \ \ std::getline(std::cin,\ str);}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Encontrar\ o\ índice\ do\ vértice\ inicial\ procurando\ no\ dicionário\ de\ vértices}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ start\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ pair\ :\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.dictionary)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(pair.second\ ==\ str)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ start\ =\ pair.first;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Inicialização\ dos\ vetores\ auxiliares}}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<int>\ dist(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}},\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}});}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<int>\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}},\ -\/1);}
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<bool>\ visited(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ std::priority\_queue<}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::pair<int,\ int>,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::vector<std::pair<int,\ int>>,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::greater<std::pair<int,\ int>>}
+\DoxyCodeLine{00046\ \ \ \ \ >\ pq;}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//Inicializa\ o\ vértice\ inicial\ com\ distância\ 0}}
+\DoxyCodeLine{00049\ \ \ \ \ dist[start]\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ pq.push(std::make\_pair(0,\ start));}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//Loop\ principal\ do\ algoritmo}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{while}(!pq.empty())\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ u\ =\ pq.top().second;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ pq.pop();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Pula\ vértices\ já\ processados}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(visited[u])\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ visited[u]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Explora\ todos\ os\ vértices\ adjacentes\ ao\ atual\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ v\ =\ 0;\ v\ <\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ v++)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v]\ ==\ -\/1)\ \textcolor{keywordflow}{continue};\ \ \textcolor{comment}{//\ Ignora\ se\ não\ há\ aresta}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Relaxamento:\ atualiza\ a\ distância\ se\ encontrou\ um\ caminho\ mais\ curto}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!visited[v]\ \&\&\ dist[u]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[u]\ +\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v]\ <\ dist[v])\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[v]\ =\ dist[u]\ +\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[u][v];}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[v]\ =\ u;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pq.push(std::make\_pair(dist[v],\ v));}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//Impressão\ dos\ resultados\ para\ cada\ vértice}}
+\DoxyCodeLine{00076\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nResultados\ do\ algoritmo\ de\ Dijkstra\ a\ partir\ do\ vertice\ "{}}\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[start]\ <<\ \textcolor{stringliteral}{"{}:\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ i++)\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ ==\ start)\ \textcolor{keywordflow}{continue};\textcolor{comment}{//\ Pula\ o\ vértice\ inicial}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Imprime\ a\ distância\ até\ o\ vértice\ atual}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Distancia\ ate\ "{}}\ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[i]\ <<\ \textcolor{stringliteral}{"{}:\ "{}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dist[i]\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}INF\ (não\ alcançável)\(\backslash\)n"{}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::cout\ <<\ dist[i]\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Reconstrói\ e\ imprime\ o\ caminho\ usando\ o\ vetor\ de\ pais}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Caminho:\ "{}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ std::vector<int>\ path;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ current\ =\ i;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(current\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ path.push\_back(current);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ current\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[current];}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Imprime\ o\ caminho\ na\ ordem\ correta\ (do\ inicial\ até\ o\ destino)}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ path.size()\ -\/\ 1;\ j\ >=\ 0;\ j-\/-\/)\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[path[j]];}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(j\ >\ 0)\ std::cout\ <<\ \textcolor{stringliteral}{"{}\ -\/>\ "{}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}\label{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192} 
+\index{sml::Simulation@{sml::Simulation}!edmondsKarp@{edmondsKarp}}
+\index{edmondsKarp@{edmondsKarp}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{edmondsKarp()}{edmondsKarp()}}
+{\footnotesize\ttfamily void Simulation\+::edmonds\+Karp (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Esta função é uma implementação do algoritmo de Edmonds-\/\+Karp de fluxo em redes. Dado um grafo, ele determina qual o fluxo máximo possível,se utilizando de uma busca em largura(bfs) para achar o menor caminho entre a origem e o destino. 
+
+!  \texorpdfstring{$<$}{<} Lista auxiliar para recuperar o caminho achado pela BFS
+
+\texorpdfstring{$<$}{<} Índices do nó origem e do nó destino.
+
+\texorpdfstring{$<$}{<} Matriz residual
+
+Definido na linha \mbox{\hyperlink{edmondsKarp_8cpp_source_l00013}{13}} do ficheiro \mbox{\hyperlink{edmondsKarp_8cpp_source}{edmonds\+Karp.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ vector<int>\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}(this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}});\ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ source\ =\ 0,\ sink\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ -\/\ 1;\ }
+\DoxyCodeLine{00016\ \ \ \ \ vector<vector<int>>\ residual\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ aux;}
+\DoxyCodeLine{00019\ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};}
+\DoxyCodeLine{00020\ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ maxFlow\ =\ 0,\ count\ =\ 0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Enquanto\ houver\ caminho\ entre\ a\ origem\ e\ o\ destino}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{classsml_1_1Simulation_ac456bc90a73d5613d8d21adff6288bc8}{bfs}}(\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}},\ residual,\ source,\ sink))\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();\ \ \textcolor{comment}{//\ Define\ o\ valor\ de\ infinito}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pathFlow\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ s\ =\ sink;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Determina\ o\ gargalo\ desse\ caminho}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(s\ !=\ source)\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[s];}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ pathFlow\ =\ min(pathFlow,\ residual[p][s]);\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ s\ =\ p;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Atualiza\ a\ matriz\ residual\ de\ acordo\ com\ o\ gargalo}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{sink\};\ i!=source;\ i\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i])\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ residual[\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]][i]\ -\/=\ pathFlow;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ residual[i][\mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i]]\ +=\ pathFlow;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Soma\ ao\ fluxo\ total\ o\ fluxo\ máximo\ do\ caminho\ achado}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ maxFlow\ +=\ pathFlow;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ aux.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ residual;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ "{}}\ <<\ ++count\ <<\ \textcolor{stringliteral}{"{}a\ PASSAGEM:\ (FLUXO\ RESTANTE)\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ cout\ <<\ aux\ <<\ endl;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FLUXO\ MAXIMO\ DO\ CAMINHO:\ "{}}\ <<\ pathFlow\ <<\ endl<<\ endl;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{00053\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00054\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FLUXO\ MAXIMO\ DO\ GRAFO:\ "{}}\ <<\ maxFlow\ <<\ endl;}
+\DoxyCodeLine{00055\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00056\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}===================================================="{}}\ <<\ endl;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00059\ \};}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}\label{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919} 
+\index{sml::Simulation@{sml::Simulation}!floydWarshall@{floydWarshall}}
+\index{floydWarshall@{floydWarshall}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{floydWarshall()}{floydWarshall()}}
+{\footnotesize\ttfamily void Simulation\+::floyd\+Warshall (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Esta função implementa o algoritmo de Floyd-\/\+Warshall para encontrar as distâncias mínimas entre todos os pares de vértices de um grafo ponderado. O algoritmo atualiza a matriz de distâncias e a matriz de predecessores para reconstrução de caminhos. 
+
+! 
+
+Definido na linha \mbox{\hyperlink{floydWarshall_8cpp_source_l00014}{14}} do ficheiro \mbox{\hyperlink{floydWarshall_8cpp_source}{floyd\+Warshall.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();\ \ \textcolor{comment}{//\ Define\ o\ valor\ de\ infinito}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ \ \textcolor{comment}{//\ Número\ de\ vértices\ no\ grafo}}
+\DoxyCodeLine{00018\ \ \ \ \ vector<vector<int>>\ adj\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ \ \textcolor{comment}{//\ Matriz\ de\ adjacência}}
+\DoxyCodeLine{00019\ \ \ \ \ vector<vector<int>>\ dist(n,\ vector<int>(n,\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}));\ \ \textcolor{comment}{//\ Matriz\ de\ distâncias}}
+\DoxyCodeLine{00020\ \ \ \ \ vector<vector<int>>\ pred(n,\ vector<int>(n,\ -\/1));\ \ \ \textcolor{comment}{//\ Matriz\ de\ predecessores}}
+\DoxyCodeLine{00021\ \ \ \ \ map<int,\ string>\ dic\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}};\ \ \ \ \textcolor{comment}{//\ Lista\ que\ mantém\ o\ nome\ de\ cada\ vértice}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Inicializa\ as\ distâncias\ e\ os\ predecessores}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ ++j)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adj[i][j]\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[i][j]\ =\ adj[i][j];}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pred[i][j]\ =\ i;\ \textcolor{comment}{//\ Inicializa\ o\ predecessor}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ j)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[i][j]\ =\ 0;\ \ \textcolor{comment}{//\ A\ distância\ para\ si\ mesmo\ é\ 0}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pred[i][j]\ =\ i;\ \ \textcolor{comment}{//\ Predecessor\ de\ si\ mesmo\ é\ o\ próprio\ vértice}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Algoritmo\ de\ Floyd-\/Warshall}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ n;\ ++k)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ ++j)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist[i][k]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ dist[k][j]\ !=\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ \&\&\ dist[i][j]\ >\ dist[i][k]\ +\ dist[k][j])\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist[i][j]\ =\ dist[i][k]\ +\ dist[k][j];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pred[i][j]\ =\ pred[k][j];\ \ \textcolor{comment}{//\ Atualiza\ o\ predecessor}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Solicita\ ao\ usuário\ o\ vértice\ inicial\ para\ exibir\ as\ distâncias}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ start;}
+\DoxyCodeLine{00051\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ vertice\ inicial:\ "{}};}
+\DoxyCodeLine{00052\ \ \ \ \ cin\ >>\ start;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ start\ -\/=\ 1;\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}\ (start\ <\ 0\ ||\ start\ >=\ n)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Erro:\ vértice\ inválido!"{}}\ <<\ endl;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Exibe\ as\ distâncias\ a\ partir\ do\ vértice\ inicial}}
+\DoxyCodeLine{00062\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Floyd-\/Warshall"{}}\ <<\ endl;}
+\DoxyCodeLine{00063\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Distancias\ a\ partir\ do\ vertice\ "{}}\ <<\ dic[start]\ <<\ \textcolor{stringliteral}{"{}:"{}}\ <<\ endl;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ ++i)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ cout\ <<\ (i\ +\ 1)\ <<\ \textcolor{stringliteral}{"{}:\ "{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist[start][i]\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}INF"{}}\ <<\ endl;\ \ \textcolor{comment}{//\ Infinito\ quando\ não\ alcançavel}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Distancia:\ "{}}\ <<\ dist[start][i]\ <<\ \textcolor{stringliteral}{"{}/\ Predecessor:\ "{}}\ <<\ dic[pred[start][i]]\ <<\ endl;\ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_aad60616330b939af92e6cf08d39c8e71}\label{classsml_1_1Simulation_aad60616330b939af92e6cf08d39c8e71} 
+\index{sml::Simulation@{sml::Simulation}!fordFulkerson@{fordFulkerson}}
+\index{fordFulkerson@{fordFulkerson}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{fordFulkerson()}{fordFulkerson()}}
+{\footnotesize\ttfamily void Simulation\+::ford\+Fulkerson (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definido na linha \mbox{\hyperlink{fordFulkerson_8cpp_source_l00038}{38}} do ficheiro \mbox{\hyperlink{fordFulkerson_8cpp_source}{ford\+Fulkerson.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{int}\ initial\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{int}\ numNodes\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};}
+\DoxyCodeLine{00041\ \ \ std::vector<std::vector<int>>\ residualG\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};}
+\DoxyCodeLine{00042\ \ \ vector<int>\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}(numNodes,\ -\/1);}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{int}\ max\_flow\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{int}\ s\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordtype}{int}\ t\ =\ numNodes\ -\/\ 1;}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{int}\ u;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{comment}{/*\ Enquanto\ houver\ caminho\ de\ s\ até\ t,\ isto\ é,\ enquanto\ a\ aresta\ (s,t)}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ *\ tiver\ peso\ maior\ que\ 0,\ os\ valores\ de\ fluxo\ são\ atualizados}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ */}}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{fordFulkerson_8cpp_aed7344cdb0d738dd8959577b50656918}{dfs}}(this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}},\ residualG,\ s,\ t,\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}))\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ path\_flow\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ t;\ i\ !=\ s;\ i\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i])\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ u\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i];}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ path\_flow\ =\ std::min(path\_flow,\ residualG[u][i]);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ t;\ i\ !=\ s;\ i\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i])\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ u\ =\ \mbox{\hyperlink{kruskal_8cpp_a95ce245e8f2adfb78d9c96904ff7052a}{parent}}[i];}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ residualG[u][i]\ -\/=\ path\_flow;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ residualG[i][u]\ +=\ path\_flow;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ max\_flow\ +=\ path\_flow;}
+\DoxyCodeLine{00063\ \ \ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Ford-\/Fulkerson:\ "{}}\ <<\ max\_flow\ <<\ std::endl;}
+\DoxyCodeLine{00066\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_af2076a32e351c28d7fb6b7b7083553ec}\label{classsml_1_1Simulation_af2076a32e351c28d7fb6b7b7083553ec} 
+\index{sml::Simulation@{sml::Simulation}!hierholzer@{hierholzer}}
+\index{hierholzer@{hierholzer}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{hierholzer()}{hierholzer()}}
+{\footnotesize\ttfamily void Simulation\+::hierholzer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Função que implementa o algoritmo de Hierholzer para identificação de ciclos. Um ciclo eureliano é uma cadeia que inicia em um vértice "{}v"{}, passa por todas as arestas do grafo apenas 1 vez e finaliza em "{}v"{}. O algoritmo passa pelas arestas não exploradas de cada vértice e depois adiciona esse vértice(que teve as arestas exploradas) no ciclo(variável cycle). 
+
+! 
+
+Definido na linha \mbox{\hyperlink{hierholzer_8cpp_source_l00012}{12}} do ficheiro \mbox{\hyperlink{hierholzer_8cpp_source}{hierholzer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ }
+\DoxyCodeLine{00013\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Hierholzer"{}}\ <<\ endl;}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{structsml_1_1Graph}{Graph}}\ g\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}};}
+\DoxyCodeLine{00015\ \ \ \ \ vector<int>\ cycle;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Armazena\ o\ ciclo\ euleriano}}
+\DoxyCodeLine{00016\ \ \ \ \ stack<int>\ currentPath;\ \ \ \ \ \textcolor{comment}{//\ Pilha\ para\ o\ caminho\ atual}}
+\DoxyCodeLine{00017\ \ \ \ \ map<int,\ int>\ edgeIndex;\ \ \ \ \textcolor{comment}{//\ Armazena\ o\ índice\ atual\ de\ exploração\ de\ arestas\ para\ cada\ vértice}}
+\DoxyCodeLine{00018\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ vector<vector<int>>\ adjList(g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Converter\ matriz\ de\ adjacência\ em\ lista\ de\ adjacência\ para\ facilitar\ o\ uso}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}.size();\ i++)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i].size();\ j++)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (g.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ !=\ 0)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ adjList[i].push\_back(j);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Inicializar\ os\ índices\ de\ exploração\ de\ arestas}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ g.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ i++)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ edgeIndex[i]\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Começar\ com\ qualquer\ vértice\ que\ tenha\ arestas\ (neste\ caso,\ o\ vértice\ 4)}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ startVertex\ =\ 3;}
+\DoxyCodeLine{00037\ \ \ \ \ currentPath.push(startVertex);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{while}\ (!currentPath.empty())\ \{\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentVertex\ =\ currentPath.top();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ o\ vértice\ atual\ ainda\ tem\ arestas\ não\ exploradas}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (edgeIndex[currentVertex]\ <\ adjList[currentVertex].size())\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nextVertex\ =\ adjList[currentVertex][edgeIndex[currentVertex]];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ edgeIndex[currentVertex]++;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.push(nextVertex);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//\ Não\ há\ mais\ arestas,\ "{}fecha\ o\ ciclo"{}\ removendo\ o\ vértice\ atual}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ cycle.push\_back(currentVertex);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.pop();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Ciclo\ Euleriano:"{}}\ <<\ endl;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ vertex\ :\ cycle)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ cout\ <<\ g.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[vertex]\ <<\ \textcolor{stringliteral}{"{}\ "{}};\ }
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ cout\ <<\ endl;\ }
+\DoxyCodeLine{00057\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a76e12b972244c9d75f93b413187986dc}\label{classsml_1_1Simulation_a76e12b972244c9d75f93b413187986dc} 
+\index{sml::Simulation@{sml::Simulation}!hierholzerPaths@{hierholzerPaths}}
+\index{hierholzerPaths@{hierholzerPaths}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{hierholzerPaths()}{hierholzerPaths()}}
+{\footnotesize\ttfamily void Simulation\+::hierholzer\+Paths (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Esta função é uma implementação do algoritmo de Hierholzer para encontrar caminhos eulerianos em um grafo direcionado. 
+
+!  \texorpdfstring{$<$}{<} Número de vértices
+
+\texorpdfstring{$<$}{<} Matriz auxilia
+
+\texorpdfstring{$<$}{<} Vetores de graus de entrada e saída
+
+\texorpdfstring{$<$}{<} Vetor de graus
+
+\texorpdfstring{$<$}{<} Vetor para armazenar o caminho euleriano
+
+\texorpdfstring{$<$}{<} Pilha para armazenar o caminho atual
+
+\texorpdfstring{$<$}{<} Vértice inicial
+
+\texorpdfstring{$<$}{<} Adiciona o vértice inicial ao caminho em construção
+
+\texorpdfstring{$<$}{<} Vértice atual
+
+\texorpdfstring{$<$}{<} Vértice atual
+
+Definido na linha \mbox{\hyperlink{hierholzerPaths_8cpp_source_l00010}{10}} do ficheiro \mbox{\hyperlink{hierholzerPaths_8cpp_source}{hierholzer\+Paths.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ n\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ vector<vector<int>>\ aux\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ }
+\DoxyCodeLine{00013\ \ \ \ \ vector<int>\ in(n,\ 0),\ out(n,\ 0);\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ Calcular\ graus\ de\ entrada\ e\ saída}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ n;\ j++)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ (aux[i][j]\ >\ 0)\ ?\ out[i]++,\ in[j]++\ :\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Calcular\ graus\ de\ cada\ vértice}}
+\DoxyCodeLine{00023\ \ \ \ \ vector<int>\ degrees(n,\ 0);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ degrees[i]\ =\ out[i]\ -\/\ in[i];}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ Printar\ tabela\ de\ graus}}
+\DoxyCodeLine{00029\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Tabela\ de\ graus:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\{0\};\ i<n;\ ++i)\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Vértice"{}}\ <<\ i+1\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ degrees[i]\ <<\ endl;\ }
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Verificar\ a\ condição\ de\ existência\ de\ um\ caminho\ euleriano\ em\ um\ digrafo}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ start\ =\ 0,\ end\ =\ n\ -\/\ 1;\ \textcolor{comment}{//\ Vértices\ de\ início\ e\ fim\ (1\ e\ 19)}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (degrees[start]\ !=\ 1\ ||\ degrees[end]\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nao\ ha\ caminho\ euleriano:\ grau\ de\ origem\ ou\ destino\ inválido"{}}\ <<\ endl;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ n-\/1;\ i++)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (degrees[i]\%2\ !=\ 0)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nao\ ha\ caminho\ euleriano:\ grau\ de\ vértice\ interno\ impar."{}}\ <<\ endl;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ Inicializar\ pilha\ para\ armazenar\ caminho\ euleriano}}
+\DoxyCodeLine{00051\ \ \ \ \ vector<int>\ eulerianPath;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ stack<int>\ currentPath;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//1.\ Escolher\ o\ vértice\ inicial\ v\ de\ G}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ v\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ currentPath.push(v);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//2.\ Construir\ uma\ cadeia\ fechada\ C,\ a\ partir\ de\ v,\ percorrendo\ as\ arestas\ de\ G}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//aleatoriamente.}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{while}\ (!currentPath.empty())\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currVertex\ =\ currentPath.top();\ \ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aux[currVertex][i]\ >=\ 0)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adicionar\ a\ aresta\ ao\ caminho\ em\ construção}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.push(i);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remover\ a\ aresta\ do\ grafo}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aux[currVertex][i]\ =\ -\/1;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualizar\ os\ graus}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ degrees[currVertex]-\/-\/;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ degrees[i]++;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!flag)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//3.\ Remover\ de\ G\ as\ arestas\ de\ C}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ eulerianPath.push\_back(currVertex);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.pop();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{comment}{//4.\ Enquanto\ (M\ ≠\ Ø)\ Fazer}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//5.\ Escolher\ v\ tal\ que\ d(v)\ >\ 0\ e\ v\ ∈\ C}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (degrees[i]\ >\ 0)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.push(i);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!flag)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//6.\ Construir\ uma\ cadeia\ fechada\ H,\ a\ partir\ de\ v,\ percorrendo\ as\ arestas\ de\ G}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ vector<int>\ temp;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ temp.push\_back(currentPath.top());}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ flag\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currVertex\ =\ currentPath.top();\ \ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ n;\ i++)\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (aux[currVertex][i]\ >=\ 0)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ flag\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adicionar\ a\ aresta\ ao\ caminho\ em\ construção}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.push(i);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remover\ a\ aresta\ do\ grafo}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aux[currVertex][i]\ =\ -\/1;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualizar\ os\ graus}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ degrees[currVertex]-\/-\/;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ degrees[i]++;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!flag)\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp.push\_back(currVertex);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentPath.pop();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//7.\ Remover\ de\ G\ as\ arestas\ de\ H}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Já\ removidas\ no\ passo\ 6}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//8.\ C\ ←\ H\ ∪\ C}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(eulerianPath.begin(),\ eulerianPath.end(),\ v);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ eulerianPath.end())\{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ eulerianPath.insert(it+1,\ temp.begin(),\ temp.end());}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//9.\ H\ ←\ Ø}}
+\DoxyCodeLine{00139\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//10.\ Fim\_do\_enquanto}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//11.\ Imprimir\ C}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ eulerianPath.size();\ i++)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ cout\ <<\ eulerianPath[i]\ +\ 1\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00145\ \ \ \ \ \};}
+\DoxyCodeLine{00146\ \}\ \ \ }
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b}\label{classsml_1_1Simulation_aee234a5b25a513894cb1cfcefbf8913b} 
+\index{sml::Simulation@{sml::Simulation}!initialize@{initialize}}
+\index{initialize@{initialize}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsml_1_1SimulationResult}{Simulation\+Result}} Simulation\+::initialize (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+! Esta função inicializa a simulação lendo o arquivo de entrada e criando representações do grafo como lista de adjacência, matriz de adjacência e matriz de incidência.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em argc} & Um inteiro indicando a quantidade de argumentos passados no terminal \\
+\hline
+{\em argv} & A lista de argumentos passados no terminal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma estrutura indicando se a inicialização foi bem-\/sucedida 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Lista que mantém o nome de cada vértice
+
+\texorpdfstring{$<$}{<} Matriz de adjacência
+
+Definido na linha \mbox{\hyperlink{simulation_8cpp_source_l00127}{127}} do ficheiro \mbox{\hyperlink{simulation_8cpp_source}{simulation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \textcolor{comment}{//\ Inicializa\ a\ simulação}}
+\DoxyCodeLine{00129\ \ \ \textcolor{comment}{//\ Processa\ os\ argumentos\ da\ linha\ de\ comando}}
+\DoxyCodeLine{00130\ \ \ \textcolor{keywordflow}{if}\ (argc\ <=\ 1)\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{stringliteral}{"{}Erro:\ Nome\ do\ arquivo\ ausente"{}});}
+\DoxyCodeLine{00132\ \ \ \}\ }
+\DoxyCodeLine{00133\ \ \ }
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordtype}{string}\ filename\ =\ argv[1];}
+\DoxyCodeLine{00135\ \ \ ifstream\ file(filename);}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Inicializando\ a\ simulacao..."{}}\ <<\ endl;}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \textcolor{keywordflow}{if}\ (!file.is\_open())\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{stringliteral}{"{}Erro:\ Nao\ foi\ possivel\ abrir\ o\ arquivo"{}});}
+\DoxyCodeLine{00141\ \ \ \}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \textcolor{comment}{//\ Leitura\ da\ entrada}}
+\DoxyCodeLine{00144\ \ \ \textcolor{keywordflow}{while}\ (!file.eof())\ \{}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ cout\ <<\ filename\ <<\ endl;}
+\DoxyCodeLine{00147\ \ \ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ graph\ from\ the\ file}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ v1,\ v2,\ w;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numNodes;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ type;}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Reading\ number\ of\ nodes..."{}}\ <<\ endl;}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ file\ >>\ type\ >>\ numNodes;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ map<int,\ string>\ dictionary;\ \ \ \ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ vector<vector<int>>\ adj\ =\ vector<vector<int>>(numNodes,\ vector<int>(numNodes,\ -\/1));\ }
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ connections\ from\ the\ file}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(file,\ line))\ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (line\ ==\ \textcolor{keywordtype}{string}())}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ istringstream\ ss(line);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ getline(ss,\ v1,\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ getline(ss,\ v2,\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ getline(ss,\ w);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dictionary.empty())\{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(v1\ ==\ \textcolor{stringliteral}{"{}s"{}})\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[0]\ =\ \textcolor{stringliteral}{"{}s"{}};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{1\};\ i<numNodes-\/1;\ ++i)\{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[i]\ =\ string(1,\ \textcolor{charliteral}{'a'}\ +\ (i-\/1));}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[numNodes-\/1]\ =\ \textcolor{stringliteral}{"{}t"{}};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\{0\};\ i<numNodes;\ ++i)\{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dictionary[i]\ =\ to\_string(i+1);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Reading\ connection\ "{}}\ <<\ v1\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ v2\ <<\ \textcolor{stringliteral}{"{}\ weighting\ "{}}\ <<\ w\ <<\ endl;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ x\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}},\ y\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Update\ the\ dictionary}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\{0\};\ i<dictionary.size();++i)\{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dictionary[i]\ ==\ v1)\{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ size\_t(i);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dictionary[i]\ ==\ v2)\{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ size\_t(i);}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(x\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ x\ =\ dictionary.size();}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ dictionary[int(x)]\ =\ v1;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(y\ ==\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}})\{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ y\ =\ dictionary.size();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ dictionary[int(y)]\ =\ v2;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dictionary.size()\ >\ numNodes)\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}(\textcolor{stringliteral}{"{}Error:\ Node\ out-\/of-\/index"{}});}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ }
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ adj[x][y]\ =\ stoi(w);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ (type\ ==\ \textcolor{charliteral}{'G'})\ ?\ adj[y][x]\ =\ stoi(w)\ :\ -\/1;}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}\ =\ adj;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}}\ =\ numNodes;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}\ =\ dictionary;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_ad7694364246f2fac90eceee36e259ddc}{type}}\ =\ (type\ ==\ \textcolor{charliteral}{'G'})?\ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7afb834055fca142f3508a673d480d1cb6}{DIRECTED}}\ :\ \mbox{\hyperlink{namespacesml_aa96b16e3af50f675ed5f663e23e58fb7af09a3c1f865cbccde902d335738a2dc3}{UNDIRECTED}};}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00225\ \ \ \}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Inicializacao\ concluida\ com\ sucesso"{}}\ <<\ endl;}
+\DoxyCodeLine{00228\ \ \ cout\ <<\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}\ <<\ endl;}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00230\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}(\textcolor{stringliteral}{"{}"{}},\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}(0));}
+\DoxyCodeLine{00231\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}\label{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53} 
+\index{sml::Simulation@{sml::Simulation}!kruskal@{kruskal}}
+\index{kruskal@{kruskal}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{kruskal()}{kruskal()}}
+{\footnotesize\ttfamily void Simulation\+::kruskal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Implementação do algoritmo de Kruskal para encontrar a Árvore Geradora Mínima (MST) O algoritmo ordena as arestas por peso e tenta adicionar cada uma à MST, verificando se não forma ciclo usando Union-\/\+Find. Uma MST é uma árvore que conecta todos os vértices do grafo usando o menor peso total possível. 
+
+
+
+Definido na linha \mbox{\hyperlink{kruskal_8cpp_source_l00072}{72}} do ficheiro \mbox{\hyperlink{kruskal_8cpp_source}{kruskal.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//Converter\ matriz\ de\ adjacência\ para\ lista\ de\ arestas}}
+\DoxyCodeLine{00074\ \ \ \ \ std::vector<std::pair<int,\ std::pair<size\_t,\ size\_t>>>\ edges;}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ i++)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ j\ =\ i\ +\ 1;\ j\ <\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ j++)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j]\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ edges.push\_back(\{\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}}[i][j],\ \{i,\ j\}\});}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//Inicializar\ estruturas\ do\ Union-\/Find\ e\ ordenar\ arestas\ por\ peso}}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a8042d2d97432684c1138a39c7f2e086d}{init}}(\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}});}
+\DoxyCodeLine{00086\ \ \ \ \ sort(edges.begin(),\ edges.end());}
+\DoxyCodeLine{00087\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//Estruturas\ para\ armazenar\ o\ resultado\ (arestas\ da\ MST\ e\ peso\ total)}}
+\DoxyCodeLine{00089\ \ \ \ \ std::vector<std::pair<int,\ std::pair<size\_t,\ size\_t>>>\ mst;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{int}\ total\_weight\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//Algoritmo\ principal\ de\ Kruskal}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ edge\ :\ edges)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ u\ =\ edge.second.first;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ v\ =\ edge.second.second;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verifica\ se\ adicionar\ a\ aresta\ não\ forma\ ciclo}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(u)\ !=\ \mbox{\hyperlink{kruskal_8cpp_ae5fb952ebf13a267114d621806d30b04}{find}}(v))\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{kruskal_8cpp_a5e5f1014cb4d2d4da254dbcfa081560b}{join}}(u,\ v);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ mst.push\_back(edge);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ total\_weight\ +=\ edge.first;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//Imprime\ as\ arestas\ selecionadas\ e\ o\ peso\ total\ da\ MST}}
+\DoxyCodeLine{00106\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nArvore\ Geradora\ Minima\ encontrada\ pelo\ algoritmo\ de\ Kruskal:\(\backslash\)n"{}};}
+\DoxyCodeLine{00107\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Arestas\ da\ AGM:\(\backslash\)n"{}};}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ edge\ :\ mst)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ std::cout\ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[edge.second.first]\ <<\ \textcolor{stringliteral}{"{}\ -\/-\/\ "{}}\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a36516689d3cbafb224c573d993851f96}{dictionary}}[edge.second.second]\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ edge.first\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Peso\ total\ da\ AGM:\ "{}}\ <<\ total\_weight\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00114\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}\label{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7} 
+\index{sml::Simulation@{sml::Simulation}!pause@{pause}}
+\index{pause@{pause}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Simulation\+::pause (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+! Esta função espera por uma entrada no terminal para finalizar. 
+
+Definido na linha \mbox{\hyperlink{simulation_8cpp_source_l00017}{17}} do ficheiro \mbox{\hyperlink{simulation_8cpp_source}{simulation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Para\ retornar\ ao\ menu\ principal,\ pressione\ Enter..."{}};}
+\DoxyCodeLine{00019\ \ \ cin.get();\ \textcolor{comment}{//\ Aguarda\ uma\ entrada}}
+\DoxyCodeLine{00020\ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a3d90ab0d5288dd354420adedcd91d061}\label{classsml_1_1Simulation_a3d90ab0d5288dd354420adedcd91d061} 
+\index{sml::Simulation@{sml::Simulation}!prim@{prim}}
+\index{prim@{prim}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{prim()}{prim()}}
+{\footnotesize\ttfamily void Simulation\+::prim (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Algoritmos de rotas em redes. 
+
+Esta função implementa o algoritmo de Prim para encontrar a Árvore Geradora Mínima (AGM) de um grafo. O algoritmo começa em um vértice e vai adicionando as arestas de menor peso que conectam o conjunto Z de vértices já incluídos à árvore, ao conjunto V de vértices restantes.
+
+! 
+
+Definido na linha \mbox{\hyperlink{prim_8cpp_source_l00015}{15}} do ficheiro \mbox{\hyperlink{prim_8cpp_source}{prim.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}}\ =\ numeric\_limits<int>::max();\ \ \textcolor{comment}{//\ Define\ o\ valor\ de\ infinito}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ N\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a6f9143cade62cc51cccaad07a3c1f025}{n}};\ \ \textcolor{comment}{//\ Número\ de\ vértices\ no\ grafo}}
+\DoxyCodeLine{00019\ \ \ \ \ vector<vector<int>>\ D\ =\ this-\/>\mbox{\hyperlink{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}{graph}}.\mbox{\hyperlink{structsml_1_1Graph_a820c5f9fefba210c80b32f6de4a5e2b5}{adj}};\ \ \textcolor{comment}{//\ Matriz\ de\ adjacência\ como\ matriz\ de\ distância}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Substituir\ valores\ -\/1\ por\ INF}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ N;\ ++i)\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ N;\ ++j)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (D[i][j]\ ==\ -\/1)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ D[i][j]\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ set<int>\ Z;\ \ \textcolor{comment}{//\ Conjunto\ de\ vértices\ já\ incluídos\ na\ AGM}}
+\DoxyCodeLine{00031\ \ \ \ \ set<int>\ V;\ \ \textcolor{comment}{//\ Conjunto\ de\ vértices\ restantes}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ Z.insert(0);\ \ \textcolor{comment}{//\ Escolhe\ o\ vértice\ inicial\ (índice\ 0)}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ N;\ ++i)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ V.insert(i);\ \ \textcolor{comment}{//\ Inicializa\ o\ conjunto\ V}}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ vector<pair<int,\ int>>\ TMin;\ \ \textcolor{comment}{//\ Conjunto\ das\ arestas\ da\ AGM}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Algoritmo\ de\ Prim}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{while}\ (Z.size()\ !=\ N)\ \{\ \ \textcolor{comment}{//\ Enquanto\ nem\ todos\ os\ vértices\ forem\ incluídos}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ minWeight\ =\ \mbox{\hyperlink{fordFulkerson_8cpp_a14c9dbab105f1b8b8182a022d73e610c}{INF}};\ \ \textcolor{comment}{//\ Peso\ mínimo\ das\ arestas}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j\ =\ -\/1,\ k\ =\ -\/1;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ pela\ aresta\ de\ peso\ mínimo\ que\ conecta\ Z\ a\ V}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ u\ :\ Z)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ v\ :\ V)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (D[u][v]\ <\ minWeight)\ \{\ \ \textcolor{comment}{//\ Considera\ arestas\ com\ peso\ menor}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ minWeight\ =\ D[u][v];}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ j\ =\ u;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k\ =\ v;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ !=\ -\/1\ \&\&\ k\ !=\ -\/1)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ Z.insert(k);\ \ \textcolor{comment}{//\ Adiciona\ k\ à\ AGM}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ V.erase(k);\ \ \ \textcolor{comment}{//\ Remove\ k\ de\ V}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ TMin.push\_back(\{j,\ k\});\ \ \textcolor{comment}{//\ Adiciona\ a\ aresta\ (j,\ k)\ à\ AGM}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Erro:\ Grafo\ desconexo."{}}\ <<\ endl;\ \ \textcolor{comment}{//\ Caso\ o\ grafo\ seja\ desconexo}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Exibe\ as\ arestas\ da\ Árvore\ Geradora\ Mínima}}
+\DoxyCodeLine{00067\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Arestas\ da\ Arvore\ Geradora\ Minima:"{}}\ <<\ endl;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ totalWeight\ =\ 0;\ \ \textcolor{comment}{//\ Peso\ total\ da\ árvore}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \&edge\ :\ TMin)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j\ =\ edge.first;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ edge.second;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ cout\ <<\ j\ +\ 1\ <<\ \textcolor{stringliteral}{"{}\ -\/\ "{}}\ <<\ k\ +\ 1\ \ \textcolor{comment}{//\ Convertendo\ para\ 1-\/based\ index}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ (Peso:\ "{}}\ <<\ D[j][k]\ <<\ \textcolor{stringliteral}{"{})"{}}\ <<\ endl;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ totalWeight\ +=\ D[j][k];\ \ \textcolor{comment}{//\ Atualiza\ o\ peso\ total}}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Peso\ total\ da\ AGM:\ "{}}\ <<\ totalWeight\ <<\ endl;}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4}\label{classsml_1_1Simulation_a27ac754f033f7838d95e981d96181bb4} 
+\index{sml::Simulation@{sml::Simulation}!run@{run}}
+\index{run@{run}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Simulation\+::run (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+! Esta função percorre o menu principal chamando as funções relacionadas a ele, até que o usuário escolha encerrar o programa. 
+
+Definido na linha \mbox{\hyperlink{simulation_8cpp_source_l00055}{55}} do ficheiro \mbox{\hyperlink{simulation_8cpp_source}{simulation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{int}\ opt\ =\ -\/1;}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{string}\ str;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordflow}{while}(opt\ !=\ 0)\{}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}{showMenu}}();}
+\DoxyCodeLine{00061\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Enter\ your\ option:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00062\ \ \ \ \ getline(cin,\ str);}
+\DoxyCodeLine{00063\ \ \ \ \ opt\ =\ stoi(str);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{switch}\ (opt)\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 0:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a395f000bcaf25c415b5203436d883e53}{kruskal}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a3d90ab0d5288dd354420adedcd91d061}{prim}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a130bf31897eed82dc4ea5df332ce5a86}{chuLiuEdmonds}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_aa2321eb52355e4b6dd76677762871952}{dijkstra}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ initialVertex;\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Digite\ o\ vertice\ inicial:\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ getline(cin,\ str);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ initialVertex\ =\ stoi(str);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a1b43feca1f43f04ecd69c12f30176da3}{bellmanFord}}(initialVertex);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a3954afc5a271833033a9f5abfa56a919}{floydWarshall}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_af2076a32e351c28d7fb6b7b7083553ec}{hierholzer}}();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a76e12b972244c9d75f93b413187986dc}{hierholzerPaths}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_aad60616330b939af92e6cf08d39c8e71}{fordFulkerson}}();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_abeb4fffd2318b07d6253ec08dfb1d192}{edmondsKarp}}();}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_a9a25c213aa3a9c667a7c0e99f017cef7}{pause}}();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \}}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b}\label{classsml_1_1Simulation_a124d8b1f83d9d7a01ddc12138ba0d89b} 
+\index{sml::Simulation@{sml::Simulation}!showMenu@{showMenu}}
+\index{showMenu@{showMenu}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{showMenu()}{showMenu()}}
+{\footnotesize\ttfamily void Simulation\+::show\+Menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+! Essa função exibe o menu principal da simulação no terminal.
+
+O menu principal serve como ponto de partida para o usuário interagir com as funcionalidades da simulação. 
+
+Definido na linha \mbox{\hyperlink{simulation_8cpp_source_l00029}{29}} do ficheiro \mbox{\hyperlink{simulation_8cpp_source}{simulation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}============================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00031\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Menu\ Principal\ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}}\ <<\ endl;}
+\DoxyCodeLine{00032\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}============================================"{}}\ <<\ endl;}
+\DoxyCodeLine{00033\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Arvores\ Geradoras\ Minimas\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}1.\ Kruskal"{}}\ <<\ endl;}
+\DoxyCodeLine{00035\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}2.\ Prim"{}}\ <<\ endl;}
+\DoxyCodeLine{00036\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}3.\ Chu-\/Liu/Edmonds"{}}\ <<\ endl;}
+\DoxyCodeLine{00037\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Caminho\ mais\ curto\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00038\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}4.\ Dijkstra"{}}\ <<\ endl;}
+\DoxyCodeLine{00039\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}5.\ Bellman-\/Ford"{}}\ <<\ endl;}
+\DoxyCodeLine{00040\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}6.\ Floyd-\/Warshall"{}}\ <<\ endl;}
+\DoxyCodeLine{00041\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Grafos\ Eulerianos\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00042\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}7.\ Hierholzer\ (Ciclos)"{}}\ <<\ endl;}
+\DoxyCodeLine{00043\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}8.\ Hierholzer\ (Caminhos)"{}}\ <<\ endl;}
+\DoxyCodeLine{00044\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/\ Fluxo\ em\ redes\ -\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00045\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}9.\ Ford-\/Fulkerson"{}}\ <<\ endl;}
+\DoxyCodeLine{00046\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}10.\ Edmonds-\/Karp"{}}\ <<\ endl;}
+\DoxyCodeLine{00047\ \ \ cout\ <<\ \textcolor{stringliteral}{"{}0.\ Encerrar\ programa"{}}\ <<\ endl;}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}\label{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac} 
+\index{sml::Simulation@{sml::Simulation}!usage@{usage}}
+\index{usage@{usage}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{usage()}{usage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsml_1_1SimulationResult}{Simulation\+Result}} Simulation\+::usage (\begin{DoxyParamCaption}\item[{string}]{message = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+! Esta função exibe no terminal as opções de uso.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em message} & A mensagem de descrição do erro de uso a ser exibida \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma estrutura indicando que a leitura falhou e a mensagem de erro 
+\end{DoxyReturn}
+
+
+Definido na linha \mbox{\hyperlink{simulation_8cpp_source_l00239}{239}} do ficheiro \mbox{\hyperlink{simulation_8cpp_source}{simulation.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00240\ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}\ =\ \textcolor{stringliteral}{"{}>>>\ Uso:\ Route\_in\_Graphs\ <arquivo\_de\_entrada>\(\backslash\)n"{}};}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \textcolor{keywordflow}{if}(message\ !=\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{00243\ \ \ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}}\ =\ \textcolor{stringliteral}{"{}>>>\ "{}}\ +\ message\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ \mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}};}
+\DoxyCodeLine{00245\ \ \ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structsml_1_1SimulationResult}{SimulationResult}}(\mbox{\hyperlink{classsml_1_1Simulation_afe9e6abcd0e71e62625c6a3f553e21ac}{usage}},\ \mbox{\hyperlink{namespacesml_a0a2ccab3865e2f3ab9ef38e346454618}{simulation\_result\_e}}(1));}
+\DoxyCodeLine{00248\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação dos dados membro}
+\Hypertarget{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916}\label{classsml_1_1Simulation_a022c43521a00113a37aa067d9f6b3916} 
+\index{sml::Simulation@{sml::Simulation}!graph@{graph}}
+\index{graph@{graph}!sml::Simulation@{sml::Simulation}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsml_1_1Graph}{Graph}} sml\+::\+Simulation\+::graph\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+O grafo da simulação. 
+
+
+
+Definido na linha \mbox{\hyperlink{simulation_8h_source_l00140}{140}} do ficheiro \mbox{\hyperlink{simulation_8h_source}{simulation.\+h}}.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{simulation_8h}{simulation.\+h}}\item 
+source/algorithms/\mbox{\hyperlink{bellmanFord_8cpp}{bellman\+Ford.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{chuLiuEdmonds_8cpp}{chu\+Liu\+Edmonds.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{dijkstra_8cpp}{dijkstra.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{edmondsKarp_8cpp}{edmonds\+Karp.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{floydWarshall_8cpp}{floyd\+Warshall.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{fordFulkerson_8cpp}{ford\+Fulkerson.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{hierholzer_8cpp}{hierholzer.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{hierholzerPaths_8cpp}{hierholzer\+Paths.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{kruskal_8cpp}{kruskal.\+cpp}}\item 
+source/algorithms/\mbox{\hyperlink{prim_8cpp}{prim.\+cpp}}\item 
+source/\mbox{\hyperlink{simulation_8cpp}{simulation.\+cpp}}\end{DoxyCompactItemize}

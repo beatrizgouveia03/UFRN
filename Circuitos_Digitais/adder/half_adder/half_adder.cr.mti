@@ -1,0 +1,7 @@
+/home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/usuario/Documentos/Circuitos/adder/half_adder/half_adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2021.1 Compiler 2021.02 Feb  2 2021
+-- Loading package STANDARD
+-- Compiling entity half_adder
+-- Compiling architecture structural of half_adder
+
+} {} {}}
