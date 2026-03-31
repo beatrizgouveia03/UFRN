@@ -20,18 +20,11 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 signed main(){ _ 
-    int N; 
+    int A, B, C;
 
-    while(in N && N != 0){
-        for (auto i{0}; i<N; ++i){
-            out setw(3) << setfill(' ') << 1;
-            for (auto j{1}; j<N; ++j)
-            {
-                out setw(4) << setfill(' ') << min(min(i, N - 1 - i), min(j, N - 1 - j)) + 1;
-            }
-            out endl;
-        }
-        out endl;
+    while( in A && A != 0){
+        in B >> C;
+
+        out int(sqrt((A*B)/(C/100.0))) end;
     }
-
 }

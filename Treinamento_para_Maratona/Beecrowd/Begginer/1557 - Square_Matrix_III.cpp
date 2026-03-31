@@ -23,11 +23,13 @@ signed main(){ _
     int N; 
 
     while(in N && N != 0){
-        for (auto i{0}; i<N; ++i){
-            out setw(3) << setfill(' ') << 1;
-            for (auto j{1}; j<N; ++j)
+        string str = to_string(1 << (2 * N - 2));
+
+        for(auto i{0}; i<N; ++i){
+            out setw(str.size()) << setfill(' ') << (1 << i);
+            for(auto j{1}; j<N; ++j)
             {
-                out setw(4) << setfill(' ') << min(min(i, N - 1 - i), min(j, N - 1 - j)) + 1;
+                out " " << setw(str.size()) << setfill(' ')  << (1 << i + j);
             }
             out endl;
         }

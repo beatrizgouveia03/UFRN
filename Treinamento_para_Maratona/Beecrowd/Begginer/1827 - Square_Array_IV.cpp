@@ -20,18 +20,21 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 signed main(){ _ 
-    int N; 
+    int n; 
 
-    while(in N && N != 0){
-        for (auto i{0}; i<N; ++i){
-            out setw(3) << setfill(' ') << 1;
-            for (auto j{1}; j<N; ++j)
-            {
-                out setw(4) << setfill(' ') << min(min(i, N - 1 - i), min(j, N - 1 - j)) + 1;
+    while(in n){
+        int m = n/2, t = n/3;
+
+        for(auto i{0}; i<n; i++){
+            for(auto j{0}; j<n; j++){
+                if(i == m && j == m){ out 4; } 
+                else if(i >= t && i < n-t && j >= t && j < n-t){ out 1;}
+                else if(i == j){ out 2;}
+                else if(i+j == n-1){ out 3;}
+                else{ out 0;}
             }
             out endl;
-        }
-        out endl;
+        }   
+        out endl;  
     }
-
 }

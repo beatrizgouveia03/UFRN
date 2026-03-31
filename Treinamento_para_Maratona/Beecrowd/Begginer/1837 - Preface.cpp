@@ -20,18 +20,17 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 signed main(){ _ 
-    int N; 
+    int a, b; in a >> b;
 
-    while(in N && N != 0){
-        for (auto i{0}; i<N; ++i){
-            out setw(3) << setfill(' ') << 1;
-            for (auto j{1}; j<N; ++j)
-            {
-                out setw(4) << setfill(' ') << min(min(i, N - 1 - i), min(j, N - 1 - j)) + 1;
-            }
-            out endl;
-        }
-        out endl;
+    int q;
+
+    if(a>=0){
+        if(b>=0){ q=a/b;}
+        else{ q=ceil((double)a/b);}
+    } else {
+        if(b>=0){ q=floor((double)a/b);}
+        else{ q=ceil((double)a/b);}
     }
 
+    out q << " " << a-(b*q) end;
 }

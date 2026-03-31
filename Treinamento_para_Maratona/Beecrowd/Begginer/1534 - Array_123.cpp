@@ -22,16 +22,16 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 signed main(){ _ 
     int N; 
 
-    while(in N && N != 0){
-        for (auto i{0}; i<N; ++i){
-            out setw(3) << setfill(' ') << 1;
-            for (auto j{1}; j<N; ++j)
+    while(in N){
+        for(auto i{0}; i<N; ++i){
+            for(auto j{0}; j<N; ++j)
             {
-                out setw(4) << setfill(' ') << min(min(i, N - 1 - i), min(j, N - 1 - j)) + 1;
+                if(i+j+1 == N){ out 2;}
+                else if(i == j){ out 1;}
+                else{ out 3;}
             }
             out endl;
         }
-        out endl;
     }
 
 }
