@@ -33,7 +33,7 @@ signed main(){ _
             out a << " " << b << ' ' << c end;
         } 
 
-        ((l>=0 && al) || (l<0 && a<l))  ? a=l : 0;
+        ((l>=0 && a>l) || (l<0 && a<l))  ? a=l : 0;
         (b>r) ? b=r : 0;
 
         //out a << " " << b end;

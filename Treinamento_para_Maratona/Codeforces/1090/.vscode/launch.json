@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/panda/Documentos/UFRN/Treinamento_para_Maratona/treinamento2026/beecrowd",
-      "program": "/home/panda/Documentos/UFRN/Treinamento_para_Maratona/treinamento2026/beecrowd/build/Debug/outDebug",
+      "cwd": "/home/panda/Documentos/UFRN/Treinamento_para_Maratona/Codeforces/1090",
+      "program": "/home/panda/Documentos/UFRN/Treinamento_para_Maratona/Codeforces/1090/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
