@@ -20,11 +20,19 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 signed main(){ _ 
-   int x; in x;
+   ll x; in x;
 
    while (x--)
    {
-    int a; in a;
-    out a end;
+    ll n; in n;
+    ll min = 1, max = n*3;
+
+    out max-- << " " << max-- << " " << min++;
+
+    while(min < max){
+        out " " << max-- << " " << max-- << " "<< min++;
+    }
+    out endl;
+
    }  
 }

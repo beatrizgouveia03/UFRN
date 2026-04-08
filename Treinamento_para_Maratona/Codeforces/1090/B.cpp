@@ -24,7 +24,12 @@ signed main(){ _
 
    while (x--)
    {
-    int a; in a;
-    out a end;
+    int total=0, m=INT_MIN;
+    for(int i{0}; i<7; i++){
+        int a; in a;
+        total += a;
+        m = max(m, a);
+    }
+    out (m*2-total) end;
    }  
 }

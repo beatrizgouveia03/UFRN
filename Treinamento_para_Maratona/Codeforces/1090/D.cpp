@@ -20,11 +20,23 @@ const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 signed main(){ _ 
-   int x; in x;
+   ll x; in x;
 
    while (x--)
    {
-    int a; in a;
-    out a end;
+    ll n; in n;
+    ll a=2, odd = 5;
+
+    out a;
+    
+    for(ll i{1}; i<n; i++){
+        a *= 2;
+        if(a >= 1e18){a = odd; odd +=2;}
+        out " " << a;
+
+    }
+
+    out endl;
+
    }  
 }
