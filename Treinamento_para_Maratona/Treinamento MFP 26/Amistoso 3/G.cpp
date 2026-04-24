@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define endl '\n'
+#define F first
+#define S second
+#define PB push_back
+#define MP make_pair
+#define in cin >>
+#define out cout << 
+#define end << endl
+#define pi pair<int,int>
+#define vi vector<int>
+#define vb vector<bool>
+#define REP(i,a,b) for(auto i{a}; i<b; i++)
+#define precise fixed << setprecision(4)
+#define _ ios_base::sync_with_stdio(0);cin.tie(0);
+
+typedef long long int ll;
+
+const int INF = 0x3f3f3f3f;
+const ll LINF = 0x3f3f3f3f3f3f3f3fll;
+
+signed main(){ _ 
+   ll a, b; in a >> b;
+   bool possible = false;
+   ll total = b, min_neg = 0; 
+
+
+   while(--a){
+      ll x; in x;
+
+      if(x>=0) {total+=x;}
+      else{
+         if(min_neg == 0){ min_neg = x; }
+         else{ min_neg = max(min_neg, x);}
+      }
+      if(abs(x) <= total) possible = true; 
+   }
+
+   if(possible && total == b) total += min_neg;
+
+   out ((possible)? total : -1) end;
+}
