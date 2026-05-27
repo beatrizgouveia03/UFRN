@@ -24,21 +24,38 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fll;
 
 signed main(){ 
     ll n; in n;
-    ll r[n];
+    ll a, b; in a >> b;
 
-    ll f; in f;
-
-    r[0]=0;
-
-    REP(i,1,n){
-        ll s; in s;
-        r[i] = s-f;
-        f=s;
+    if (a==b) {
+        out 0 end;
+        return 0;
     }
 
-    REP(i,1,n) {
-        if(r[i] == 0 || r[i+1] == 0){ out 0 end; return 0;}
-        if((r[i]>0 && r[i+1] > 0) || (r[i]<0 && r[i+1]<0)){ out 0 end; return 0;}
+    ll s;
+    if(a>b) s = 1;
+    else s = -1;
+
+    a=b;
+
+    REP(i,2,n){
+        in b;
+
+        if (a==b) {
+            out 0 end;
+            return 0;
+        }   
+
+        ll new_s;
+        if(a>b) new_s = 1;
+        else new_s = -1;
+
+        if(new_s == s) {
+            out 0 end;
+            return 0;
+        }
+
+        a=b;
+        s=new_s;
     }
 
     out 1 end;

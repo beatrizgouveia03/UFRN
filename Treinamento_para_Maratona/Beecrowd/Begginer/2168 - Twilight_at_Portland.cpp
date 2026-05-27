@@ -14,25 +14,34 @@ using namespace std;
 #define vi vector<int>
 #define vb vector<bool>
 #define REP(i,a,b) for(auto i{a}; i<b; i++)
-#define precise fixed << setprecision(2)
+#define precise fixed << setprecision(10)
 #define _ ios_base::sync_with_stdio(0);cin.tie(0);
 
 typedef unsigned long long int ll;
 
-const int INF = 0x3f3f3f3f;
-const ll LINF = 0x3f3f3f3f3f3f3f3fll;
+ll mtx[110][110];
+
+string check(ll x, ll y){
+    ll safe = mtx[x][y]+mtx[x][y+1]+mtx[x+1][y]+mtx[x+1][y+1];
+
+    if(safe >= 2) return "S";
+    else return "U";
+}
+
 
 signed main(){ _ 
-    ll t; in t;
+    ll n; in n;
 
-    while(t != 0){
-        REP(i,0,t){
-            ll n; in n;
-            if(n%2 == 0) out ((n-2)*2+2) end;
-            else out (((n-1)*2)+1) end;
+    REP(i,0,n+1){
+        REP(j,0,n+1){
+           in mtx[i][j];
         }
-
-        in t;
     }
-        
+    
+    REP(i,0,n){
+        REP(j,0,n){
+            out check(i,j);
+        }
+        out endl;
+    }
 }

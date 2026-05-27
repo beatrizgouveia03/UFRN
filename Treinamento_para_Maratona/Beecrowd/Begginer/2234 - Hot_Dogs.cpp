@@ -19,20 +19,7 @@ using namespace std;
 
 typedef unsigned long long int ll;
 
-const int INF = 0x3f3f3f3f;
-const ll LINF = 0x3f3f3f3f3f3f3f3fll;
-
 signed main(){ _ 
-    ll t; in t;
-
-    while(t != 0){
-        REP(i,0,t){
-            ll n; in n;
-            if(n%2 == 0) out ((n-2)*2+2) end;
-            else out (((n-1)*2)+1) end;
-        }
-
-        in t;
-    }
-        
+    double h, p; in h >> p;
+    out precise << round((h/p)*100)/100 end;
 }

@@ -19,20 +19,24 @@ using namespace std;
 
 typedef unsigned long long int ll;
 
-const int INF = 0x3f3f3f3f;
-const ll LINF = 0x3f3f3f3f3f3f3f3fll;
-
 signed main(){ _ 
-    ll t; in t;
+    ll n; in n;
 
-    while(t != 0){
-        REP(i,0,t){
-            ll n; in n;
-            if(n%2 == 0) out ((n-2)*2+2) end;
-            else out (((n-1)*2)+1) end;
+    REP(i,0,n){
+        string s; in s;
+        double max_score = -1.0, min_score = 11.0;
+        double sum = 0.0, dif;
+
+        in dif;
+
+        REP(j,0,7){
+            double x; in x;
+            sum += x;
+            max_score = max(max_score, x);
+            min_score = min(min_score, x);
         }
 
-        in t;
+        out precise << s << " ";
+        out (sum-(max_score+min_score))*dif end;
     }
-        
 }

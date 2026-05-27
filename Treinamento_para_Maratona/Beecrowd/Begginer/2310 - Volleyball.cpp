@@ -19,20 +19,22 @@ using namespace std;
 
 typedef unsigned long long int ll;
 
-const int INF = 0x3f3f3f3f;
-const ll LINF = 0x3f3f3f3f3f3f3f3fll;
+ll stats[6];
 
 signed main(){ _ 
-    ll t; in t;
+    ll n; in n;
 
-    while(t != 0){
-        REP(i,0,t){
-            ll n; in n;
-            if(n%2 == 0) out ((n-2)*2+2) end;
-            else out (((n-1)*2)+1) end;
+    REP(i,0,n){
+        string s; in s;
+
+        REP(j,0,6){
+            ll x; in x;
+            stats[j]+=x;
         }
-
-        in t;
     }
-        
+
+    out precise;
+    out "Pontos de Saque: " << (stats[3]/(double)stats[0])*100 << " %." end;
+    out "Pontos de Bloqueio: " << (stats[4]/(double)stats[1])*100 << " %." end;
+    out "Pontos de Ataque: " << (stats[5]/(double)stats[2])*100 << " %." end;
 }

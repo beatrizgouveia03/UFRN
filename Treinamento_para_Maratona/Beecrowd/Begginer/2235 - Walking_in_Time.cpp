@@ -19,20 +19,9 @@ using namespace std;
 
 typedef unsigned long long int ll;
 
-const int INF = 0x3f3f3f3f;
-const ll LINF = 0x3f3f3f3f3f3f3f3fll;
-
 signed main(){ _ 
-    ll t; in t;
-
-    while(t != 0){
-        REP(i,0,t){
-            ll n; in n;
-            if(n%2 == 0) out ((n-2)*2+2) end;
-            else out (((n-1)*2)+1) end;
-        }
-
-        in t;
-    }
-        
+    ll a, b, c; in a >> b >> c;
+    if(a==b||b==c||a==c) out "S" end;
+    else if(a+b==c||b+c==a||a+c==b) out "S" end;
+    else out "N" end;
 }
